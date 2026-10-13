@@ -55,11 +55,15 @@ if ($Name -or $From) {
 $items = Get-ChildItem -Directory | Where-Object { $_.Name -notmatch '^[._]' -and (Test-Path (Join-Path $_.FullName 'index.html')) } | ForEach-Object {
     $h = Get-Content (Join-Path $_.FullName 'index.html') -Raw
     $t = if ($h -match '(?is)<title>\s*(.*?)\s*</title>') { $Matches[1] } else { $_.Name }
-    [pscustomobject]@{ Name = $_.Name; Title = $t; Date = (Get-Item (Join-Path $_.FullName 'index.html')).LastWriteTime }
-} | Sort-Object Title
+    # published date = commit that first added the page; today if not yet committed
+    $first = git log --diff-filter=A --format=%aI --reverse -- "$($_.Name)/index.html" 2>$null | Select-Object -First 1
+    $d = if ($first) { [datetime]::Parse($first, [cultureinfo]::InvariantCulture) } else { Get-Date }
+    [pscustomobject]@{ Name = $_.Name; Title = $t; Date = $d }
+} | Sort-Object Date -Descending
 
 $links = ($items | ForEach-Object {
-    "      <li><a href=`"$($_.Name)/`"><span class=`"t`">$($_.Title)</span><span class=`"u`">/$($_.Name)</span></a></li>"
+    $when = $_.Date.ToString('d MMM yyyy', [cultureinfo]::InvariantCulture)
+    "      <li><a href=`"$($_.Name)/`"><span class=`"main`"><span class=`"t`">$($_.Title)</span><span class=`"u`">/$($_.Name)</span></span><time datetime=`"$($_.Date.ToString('yyyy-MM-dd'))`">$when</time></a></li>"
 }) -join "`n"
 
 @"
@@ -79,9 +83,11 @@ $links = ($items | ForEach-Object {
   p.sub { color:var(--muted); margin:0 0 2.5rem; }
   ul { list-style:none; padding:0; margin:0; border-top:1px solid var(--line); }
   li { border-bottom:1px solid var(--line); }
-  a { display:flex; justify-content:space-between; gap:1rem; padding:1rem 0; color:inherit; text-decoration:none; }
+  a { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:1rem 0; color:inherit; text-decoration:none; }
   a:hover .t { color:var(--accent); }
-  .u { color:var(--muted); font-size:.9rem; font-family:ui-monospace,Consolas,monospace; }
+  .main { display:flex; flex-direction:column; min-width:0; }
+  .u { color:var(--muted); font-size:.85rem; font-family:ui-monospace,Consolas,monospace; }
+  time { color:var(--muted); font-size:.9rem; white-space:nowrap; font-variant-numeric:tabular-nums; }
 </style>
 </head>
 <body>
