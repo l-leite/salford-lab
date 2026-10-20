@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple architecture studio guide to combining Think, Make and Show. Four steps, fifteen hybrid archetypes, and a starting point for your own design.">
+  <meta name="theme-color" content="#f8f7f3">
+  <title>Think, Make, Show — A guide to hybrid archetypes</title>
+  <style>
+    :root {
+      --paper: #f8f7f3; --white: #fffefa; --ink: #292b2e; --muted: #62625e; --line: #d9d7cf;
+      --think: #275bb0; --think-tint: #eaf0fb;
+      --make: #aa4228; --make-tint: #f9ece5;
+      --show: #75429b; --show-tint: #f1eafa;
+      font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--paper);
+      font-synthesis: none; scroll-behavior: smooth;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: inherit; text-underline-offset: 4px; }
+    button { font: inherit; cursor: pointer; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--think); outline-offset: 5px; }
+    [hidden] { display: none !important; }
+    ::selection { background: #e0e8f9; color: #202b40; }
+    .wrap { width: min(1240px, calc(100% - 96px)); margin-inline: auto; }
+    .skip { position: absolute; left: 20px; top: -100px; padding: 12px; background: white; z-index: 10; }
+    .skip:focus { top: 12px; }
+    .masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; border-bottom: 1px solid var(--line); }
+    .wordmark { text-decoration: none; font-size: 14px; font-weight: 750; letter-spacing: .06em; white-space: nowrap; }
+    .wordmark .slash { color: #a6a39b; padding: 0 6px; font-weight: 400; }
+    .masthead nav { display: flex; align-items: center; gap: 26px; font-size: 13px; }
+    .masthead nav a { text-decoration: none; }
+    .masthead nav a:hover { text-decoration: underline; }
+    .print { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 9px 14px; border-radius: 4px; font-size: 12px; }
+    .print:hover { background: #eceae3; }
+    .eyebrow { font-size: 11px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+    .muted { color: var(--muted); }
+    .hero { padding-block: 64px 48px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: end; }
+    h1 { font-size: clamp(43px, 4.7vw, 68px); line-height: 1.04; letter-spacing: -.055em; font-weight: 600; margin: 23px 0 24px; }
+    .hero-intro { max-width: 530px; font-size: 18px; line-height: 1.65; margin: 0; color: var(--muted); }
+    .hero-intro strong { color: var(--ink); font-weight: 600; }
+    .hero-note { margin: 25px 0 0; font-size: 12px; color: var(--muted); }
+    .hero-sketch { padding: 27px 26px 23px; background: var(--white); border: 1px solid var(--line); }
+    .hero-sketch svg { display: block; width: 100%; height: auto; margin-top: 8px; }
+    .hero-sketch .caption { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .hero-sketch .caption strong { color: var(--ink); }
+    .think { color: var(--think); } .make { color: var(--make); } .show { color: var(--show); }
+    .mode-key { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; padding-block: 26px 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .key-item { display: flex; gap: 13px; align-items: start; }
+    .mode-dot { width: 11px; height: 11px; border-radius: 50%; background: currentColor; flex: 0 0 auto; margin-top: 5px; }
+    .key-item strong { display: block; font-size: 14px; letter-spacing: .04em; }
+    .key-item p { color: var(--muted); font-size: 13px; line-height: 1.55; margin: 6px 0 0; }
+    section { scroll-margin-top: 24px; }
+    .section { padding-top: 62px; }
+    .section-title { display: flex; align-items: baseline; gap: 18px; margin-bottom: 26px; }
+    .section-index { font-family: Consolas, monospace; font-size: 12px; color: var(--muted); }
+    h2 { font-size: clamp(26px, 3vw, 36px); letter-spacing: -.035em; font-weight: 600; margin: 0; line-height: 1.2; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 27px; }
+    .step { border-top: 2px solid var(--ink); padding-top: 15px; }
+    .step-number { font-size: 12px; color: var(--muted); }
+    .step h3 { margin: 16px 0 10px; font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
+    .step p { font-size: 14px; line-height: 1.7; margin: 0; color: var(--muted); }
+    .step .mini { margin-top: 12px; font-size: 12px; }
+    .connection { margin-top: 32px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; padding: 30px; background: #eeede6; }
+    .connection h3 { font-size: 21px; font-weight: 600; letter-spacing: -.025em; margin: 10px 0; }
+    .connection p { font-size: 14px; line-height: 1.65; margin: 0; color: var(--muted); }
+    .connection-flow { display: grid; grid-template-columns: 1fr auto 1.1fr auto 1fr; gap: 10px; align-items: center; }
+    .flow-space { padding: 18px 12px; background: var(--white); border-top: 3px solid currentColor; text-align: center; }
+    .flow-space strong { display: block; font-size: 15px; color: var(--ink); margin-top: 8px; }
+    .flow-space small { display: block; font-size: 12px; color: var(--muted); margin-top: 7px; line-height: 1.4; }
+    .flow-space.middle { border: 1px dashed #99978b; color: var(--ink); background: transparent; }
+    .flow-arrow { color: var(--muted); }
+    .flow-note { grid-column: 1 / -1; font-size: 12px !important; margin-top: 5px !important; }
+    .catalogue-intro { display: flex; justify-content: space-between; gap: 34px; align-items: end; margin-bottom: 23px; }
+    .catalogue-intro .section-title { margin-bottom: 13px; }
+    .catalogue-intro p { color: var(--muted); font-size: 14px; line-height: 1.7; max-width: 650px; margin: 0; }
+    .count { font-size: 12px; color: var(--muted); white-space: nowrap; margin-bottom: 4px; }
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; padding-block: 0 26px; }
+    .filter-bar button { display: flex; gap: 6px; align-items: center; border: 1px solid var(--line); border-radius: 5px; padding: 10px 14px; background: transparent; color: var(--ink); font-size: 12px; }
+    .filter-bar button:hover { background: #eeede6; }
+    .filter-bar button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: white; }
+    .filter-bar button[aria-pressed="true"] span { color: inherit; }
+    .pair-group + .pair-group { margin-top: 38px; }
+    .group-heading { display: flex; align-items: baseline; gap: 13px; padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+    .group-heading h3 { font-size: 18px; letter-spacing: -.02em; margin: 0; font-weight: 650; }
+    .group-heading p { margin: 0; font-size: 13px; color: var(--muted); }
+    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .archetype { --a: var(--think); --b: var(--make); background: var(--white); border: 1px solid var(--line); position: relative; padding: 23px 23px 21px; display: flex; flex-direction: column; }
+    .archetype::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 4px; background: linear-gradient(to right, var(--a) 0 50%, var(--b) 50% 100%); }
+    .pair-group[data-pair="make-show"] .archetype { --a: var(--make); --b: var(--show); }
+    .pair-group[data-pair="think-show"] .archetype { --a: var(--think); --b: var(--show); }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 17px; }
+    .card-id { font-family: Consolas, monospace; font-size: 12px; color: var(--muted); }
+    .mode-pair { display: flex; gap: 6px; align-items: center; font-size: 9px; letter-spacing: .07em; font-weight: 700; white-space: nowrap; }
+    .mode-tag { padding: 4px 6px; border-radius: 2px; }
+    .mode-tag.think { background: var(--think-tint); } .mode-tag.make { background: var(--make-tint); } .mode-tag.show { background: var(--show-tint); }
+    .archetype h4 { font-size: 23px; line-height: 1.2; letter-spacing: -.035em; margin: 0 0 13px; font-weight: 600; }
+    .spaces { font-size: 13px; line-height: 1.65; font-weight: 600; margin: 0 0 15px; }
+    .spaces .plus { font-weight: 400; color: var(--muted); margin-inline: 3px; }
+    .description { font-size: 14px; line-height: 1.65; margin: 0 0 19px; }
+    .sketch-prompt { border-top: 1px solid var(--line); padding-top: 14px; margin-top: auto; }
+    .sketch-prompt strong { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; font-weight: 650; }
+    .sketch-prompt p { font-size: 13px; line-height: 1.65; margin: 6px 0 0; color: var(--muted); }
+    .question { font-size: 13px; line-height: 1.6; margin: 13px 0 0; font-style: italic; }
+    .start { margin-top: 62px; padding: 37px; border: 1px solid var(--line); background: #eeede6; }
+    .start-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 60px; }
+    .start .section-title { margin-bottom: 22px; }
+    .sentence { font-size: 23px; line-height: 1.7; letter-spacing: -.025em; margin: 0; }
+    .blank { color: var(--muted); border-bottom: 1px solid #99978b; }
+    .start h3 { font-size: 15px; margin: 0 0 13px; font-weight: 650; }
+    .checklist { padding-left: 20px; margin: 0; font-size: 14px; line-height: 1.7; }
+    .checklist li + li { margin-top: 8px; }
+    .scale-note { margin-top: 27px; padding-top: 23px; border-top: 1px solid #d0cec3; display: flex; gap: 24px; align-items: baseline; }
+    .scale-note strong { font-size: 23px; letter-spacing: -.025em; white-space: nowrap; font-weight: 600; }
+    .scale-note p { font-size: 13px; line-height: 1.65; color: var(--muted); margin: 0; max-width: 690px; }
+    footer { display: flex; justify-content: space-between; gap: 24px; font-size: 11px; line-height: 1.7; color: var(--muted); padding-block: 26px 35px; }
+    footer p { margin: 0; }
+    @media (max-width: 1050px) {
+      .wrap { width: calc(100% - 56px); } .hero { gap: 32px; } .steps { grid-template-columns: repeat(2, 1fr); gap: 26px; }
+      .connection { grid-template-columns: 1fr; gap: 23px; } .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .start-grid { gap: 30px; } .archetype { padding: 21px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 36px); } .masthead { flex-wrap: wrap; gap: 17px; padding-block: 20px; }
+      .masthead nav { width: 100%; justify-content: space-between; gap: 16px; font-size: 12px; }
+      .hero { grid-template-columns: 1fr; padding-block: 38px 30px; gap: 30px; } h1 { font-size: 47px; }
+      .hero-intro { font-size: 16px; } .hero-note { line-height: 1.6; }
+      .mode-key { grid-template-columns: 1fr; gap: 21px; } .key-item p { margin-top: 4px; }
+      .section { padding-top: 40px; } .section-title { gap: 12px; } .steps { gap: 24px 18px; }
+      .step h3 { font-size: 17px; } .step p { font-size: 13px; } .connection { padding: 21px; gap: 20px; }
+      .connection-flow { gap: 5px; grid-template-columns: 1fr auto 1fr auto 1fr; } .flow-space { padding: 13px 6px; }
+      .flow-space strong { font-size: 12px; } .flow-space .eyebrow { font-size: 9px; } .flow-space small { font-size: 11px; }
+      .catalogue-intro { display: block; } .count { display: block; margin-top: 12px; }
+      .filter-bar { gap: 7px; } .filter-bar button { padding: 10px; font-size: 11px; }
+      .group-heading { align-items: start; flex-direction: column; gap: 5px; }
+      .card-grid { grid-template-columns: 1fr; gap: 16px; } .archetype { padding: 23px; }
+      .start { margin-top: 40px; padding: 24px; } .start-grid { grid-template-columns: 1fr; gap: 30px; }
+      .sentence { font-size: 21px; } .scale-note { flex-direction: column; gap: 10px; } footer { flex-direction: column; gap: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
+    @page { size: A4; margin: 14mm; }
+    @media print {
+      :root { background: white; } body { font-size: 10pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .wrap { width: 100%; } .masthead { min-height: 32px; } .masthead nav, .skip, .filter-bar, .count, footer a { display: none !important; }
+      .hero { padding-block: 24px; gap: 25px; } h1 { font-size: 36px; } .hero-intro { font-size: 12px; }
+      .hero-note { font-size: 10px; } .hero-sketch { padding: 16px; } .hero-sketch .caption { font-size: 10px; }
+      .mode-key { padding-block: 15px; gap: 16px; } .key-item strong { font-size: 12px; } .key-item p { font-size: 10px; }
+      .section { padding-top: 26px; } h2 { font-size: 25px; } .section-title { margin-bottom: 17px; }
+      .steps { grid-template-columns: repeat(4, 1fr); gap: 14px; } .step h3 { font-size: 14px; margin-top: 10px; }
+      .step p, .step .mini { font-size: 10px; } .connection { grid-template-columns: 1fr 1.3fr; gap: 20px; padding: 18px; margin-top: 22px; break-inside: avoid; }
+      .connection h3 { font-size: 17px; } .connection p { font-size: 10px; } .flow-space { padding: 12px 8px; }
+      .flow-space strong { font-size: 11px; } .flow-space small { font-size: 10px; } .flow-note { font-size: 10px !important; }
+      .catalogue-intro p { font-size: 11px; } #examples { break-before: page; }
+      .pair-group[hidden] { display: block !important; } .pair-group + .pair-group { margin-top: 25px; }
+      .group-heading { break-after: avoid; margin-bottom: 15px; } .group-heading p { font-size: 10px; }
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+      .archetype { break-inside: avoid; padding: 16px; } .archetype h4 { font-size: 20px; }
+      .card-top { margin-bottom: 12px; } .spaces, .description { font-size: 11px; margin-bottom: 12px; }
+      .sketch-prompt p, .question { font-size: 10px; } .start { padding: 22px; margin-top: 30px; break-inside: avoid; }
+      .start-grid { gap: 24px; } .sentence { font-size: 18px; } .checklist { font-size: 11px; }
+      .scale-note p { font-size: 10px; } footer { font-size: 9px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to guide</a>
+  <header class="masthead wrap">
+    <a href="#" class="wordmark" aria-label="Think, Make, Show — back to top"><span class="think">THINK</span><span class="slash">/</span><span class="make">MAKE</span><span class="slash">/</span><span class="show">SHOW</span></a>
+    <nav aria-label="Page sections">
+      <a href="#method">The method</a><a href="#examples">15 examples</a><a href="#your-turn">Your turn</a>
+      <button class="print" type="button" hidden>Print guide ↗</button>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <div class="hero">
+      <div>
+        <span class="eyebrow muted">DS2A · University of Salford · Studio guide</span>
+        <h1>Two modes.<br>One meaningful<br>place.</h1>
+        <p class="hero-intro">Combine two familiar spaces. Find <strong>what connects their activities</strong>. Use that relationship to invent a hybrid archetype: a starting idea for your architecture.</p>
+        <p class="hero-note">15 possibilities to explore. You can adapt one, or invent your own.</p>
+      </div>
+      <figure class="hero-sketch" style="margin:0">
+        <span class="eyebrow muted">The idea, in one diagram</span>
+        <svg viewBox="0 0 440 235" role="img" aria-labelledby="diagram-title diagram-desc">
+          <title id="diagram-title">Two activities connected by a shared purpose</title>
+          <desc id="diagram-desc">A blue Think space and a terracotta Make space overlap at a shared table. The overlap represents the relationship to design, rather than a fixed floor plan.</desc>
+          <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="7" stroke="#a29c91" stroke-width="1"/></pattern></defs>
+          <rect x="27" y="35" width="225" height="140" fill="#eaf0fb" stroke="#275bb0" stroke-width="1.5"/>
+          <rect x="186" y="69" width="225" height="140" fill="#f9ece5" stroke="#aa4228" stroke-width="1.5"/>
+          <rect x="186" y="69" width="66" height="106" fill="url(#hatch)"/>
+          <path d="M95 118H340" stroke="#767167" stroke-width="1.2" stroke-dasharray="4 5"/>
+          <path d="m332 113 8 5-8 5" fill="none" stroke="#767167" stroke-width="1.2"/>
+          <rect x="198" y="107" width="42" height="28" rx="2" fill="#fffefa" stroke="#4e4c45"/>
+          <text x="49" y="62" font-size="13" font-weight="700" fill="#275bb0" font-family="Segoe UI,Arial,sans-serif">THINK</text>
+          <text x="283" y="190" font-size="13" font-weight="700" fill="#aa4228" font-family="Segoe UI,Arial,sans-serif">MAKE</text>
+          <text x="49" y="151" font-size="12" fill="#275bb0" font-family="Segoe UI,Arial,sans-serif">Read &amp; imagine</text>
+          <text x="272" y="96" font-size="12" fill="#aa4228" font-family="Segoe UI,Arial,sans-serif">Test &amp; produce</text>
+          <path d="M220 68V21H309" fill="none" stroke="#62625e"/>
+          <text x="315" y="25" font-size="11" fill="#62625e" font-family="Segoe UI,Arial,sans-serif">The connection</text>
+        </svg>
+        <figcaption class="caption"><strong>Design what happens between.</strong><br>A shared table, a view, a threshold, a journey…<br>This is a relationship sketch, not a floor plan.</figcaption>
+      </figure>
+    </div>
+
+    <div class="mode-key" aria-label="The three modes of work and their colours">
+      <div class="key-item think"><span class="mode-dot" aria-hidden="true"></span><div><strong>THINK</strong><p>Read, research, reflect, imagine, discuss, listen.</p></div></div>
+      <div class="key-item make"><span class="mode-dot" aria-hidden="true"></span><div><strong>MAKE</strong><p>Craft, repair, grow, cook, print, prototype.</p></div></div>
+      <div class="key-item show"><span class="mode-dot" aria-hidden="true"></span><div><strong>SHOW</strong><p>Exhibit, demonstrate, exchange, teach, broadcast.</p></div></div>
+    </div>
+
+    <section id="method" class="section" aria-labelledby="method-heading">
+      <div class="section-title"><span class="section-index">01 /</span><h2 id="method-heading">Build your idea in four steps.</h2></div>
+      <div class="steps">
+        <div class="step"><span class="step-number">STEP 01</span><h3>Choose two modes.</h3><p>Which activities do you want to bring together?</p><p class="mini"><span class="think">THINK</span> + <span class="make">MAKE</span><br><span class="make">MAKE</span> + <span class="show">SHOW</span><br><span class="think">THINK</span> + <span class="show">SHOW</span></p></div>
+        <div class="step"><span class="step-number">STEP 02</span><h3>Find two spaces.</h3><p>Choose one familiar spatial type for each mode. Think about who comes and what they do.</p><p class="mini">For example: reading room + print workshop.</p></div>
+        <div class="step"><span class="step-number">STEP 03</span><h3>Find the connection.</h3><p>Why do they belong together? Can one activity feed, support or challenge the other?</p><p class="mini">Try a sequence, contrast, exchange, view, transformation or shared activity.</p></div>
+        <div class="step"><span class="step-number">STEP 04</span><h3>Name it. Sketch it.</h3><p>Describe the shared purpose in a sentence. Draw the relationship and ask one architectural question.</p><p class="mini">Explore the connection before committing to a floor plan.</p></div>
+      </div>
+      <div class="connection">
+        <div><span class="eyebrow muted">A worked example · The Paper House</span><h3>Ideas become printed objects.</h3><p>Reading and writing feed a print workshop; prints return to the reading room to be discussed. A shared editing table could connect the two.</p></div>
+        <div class="connection-flow" aria-label="Think: Reading room, connected by a shared editing table, to Make: Print workshop">
+          <div class="flow-space think"><span class="eyebrow">THINK</span><strong>Reading room</strong><small>Research &amp; write</small></div>
+          <span class="flow-arrow" aria-hidden="true">↔</span>
+          <div class="flow-space middle"><span class="eyebrow">CONNECTION</span><strong>Shared table</strong><small>Edit &amp; discuss</small></div>
+          <span class="flow-arrow" aria-hidden="true">↔</span>
+          <div class="flow-space make"><span class="eyebrow">MAKE</span><strong>Print workshop</strong><small>Print &amp; bind</small></div>
+          <p class="flow-note">Question: how can people stay connected while quiet reading is protected from workshop noise?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section" aria-labelledby="examples-heading">
+      <div class="catalogue-intro"><div><div class="section-title"><span class="section-index">02 /</span><h2 id="examples-heading">15 ways to begin.</h2></div><p>Each example combines two familiar spaces with a shared purpose. The sketch prompts are possibilities to test. These are starting points, not prescribed buildings or room lists.</p></div><span class="count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 15 examples</span></div>
+      <div class="filter-bar" role="group" aria-label="Filter examples by mode pair" hidden>
+        <button type="button" data-filter="all" aria-pressed="true">All 15</button>
+        <button type="button" data-filter="think-make" aria-pressed="false"><span class="think">THINK</span> + <span class="make">MAKE</span></button>
+        <button type="button" data-filter="make-show" aria-pressed="false"><span class="make">MAKE</span> + <span class="show">SHOW</span></button>
+        <button type="button" data-filter="think-show" aria-pressed="false"><span class="think">THINK</span> + <span class="show">SHOW</span></button>
+      </div>
+
+      <section class="pair-group" data-pair="think-make" aria-labelledby="think-make-heading">
+        <div class="group-heading"><h3 id="think-make-heading"><span class="think">THINK</span> + <span class="make">MAKE</span></h3><p>Thought informs making. Making gives you something to think about.</p></div>
+        <div class="card-grid">
+          <article class="archetype" id="archetype-01">
+            <div class="card-top"><span class="card-id">01</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>The Slow Commons</h4><p class="spaces"><span class="make">Café</span> <span class="plus">+</span> <span class="think">Study Room</span></p>
+            <p class="description">Food is prepared and shared while students, researchers and neighbours read, work and exchange ideas around a common table.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Place a shared eating-and-working table between food preparation and quieter study.</p></div>
+            <p class="question">How can sociable cooking support quiet concentration?</p>
+          </article>
+          <article class="archetype" id="archetype-02">
+            <div class="card-top"><span class="card-id">02</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>The Listening Forge</h4><p class="spaces"><span class="make">Instrument Workshop</span> <span class="plus">+</span> <span class="think">Contemplative Room</span></p>
+            <p class="description">Makers craft and repair instruments, then listen closely to their sound; what they hear guides the next adjustment.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Connect a workbench to a listening room through an acoustic buffer.</p></div>
+            <p class="question">How do you move from the noise of making to careful listening?</p>
+          </article>
+          <article class="archetype" id="archetype-06">
+            <div class="card-top"><span class="card-id">06</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>The Paper House</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="make">Print Workshop</span></p>
+            <p class="description">Readers, writers and illustrators turn researched ideas into books, posters and small publications, then return to discuss them.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Draw a route from reading to editing, printing and binding, with a shared review table.</p></div>
+            <p class="question">Where does a private idea become something tangible and shared?</p>
+          </article>
+          <article class="archetype" id="archetype-07">
+            <div class="card-top"><span class="card-id">07</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>The Mending Library</h4><p class="spaces"><span class="think">Library</span> <span class="plus">+</span> <span class="make">Repair Workshop</span></p>
+            <p class="description">Neighbours learn how everyday objects work and use that knowledge to repair them together, rather than replace them.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Put a diagnostic table between reference shelves and a shared repair bench.</p></div>
+            <p class="question">How can learning and repairing happen side by side?</p>
+          </article>
+          <article class="archetype" id="archetype-08">
+            <div class="card-top"><span class="card-id">08</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>The Clay Cloister</h4><p class="spaces"><span class="make">Ceramics Atelier</span> <span class="plus">+</span> <span class="think">Contemplative Courtyard</span></p>
+            <p class="description">People shape clay, pause to observe light and texture in a quiet courtyard, then return to making with fresh ideas.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Arrange working edges and places to pause around a courtyard; test the threshold between them.</p></div>
+            <p class="question">How can a pause in making become part of the creative process?</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pair-group" data-pair="make-show" aria-labelledby="make-show-heading">
+        <div class="group-heading"><h3 id="make-show-heading"><span class="make">MAKE</span> + <span class="show">SHOW</span></h3><p>Let people encounter the process as well as its results.</p></div>
+        <div class="card-grid">
+          <article class="archetype" id="archetype-03">
+            <div class="card-top"><span class="card-id">03</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Repair Salon</h4><p class="spaces"><span class="make">Garage</span> <span class="plus">+</span> <span class="show">Showroom</span></p>
+            <p class="description">Enthusiasts repair, restore or customise bicycles, vehicles or mechanical objects, then share the work and its story with visitors.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Give visitors a view into a repair bay and trace a separate route for moving objects.</p></div>
+            <p class="question">How can repair become visible while work and visitor routes stay safe?</p>
+          </article>
+          <article class="archetype" id="archetype-04">
+            <div class="card-top"><span class="card-id">04</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Growing Exchange</h4><p class="spaces"><span class="make">Greenhouse</span> <span class="plus">+</span> <span class="show">Marketplace</span></p>
+            <p class="description">Growers cultivate plants and food, then exchange produce, seeds and knowledge with neighbours who can see where it all begins.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Link growing beds to an exchange table, allowing space for harvesting and washing along the way.</p></div>
+            <p class="question">How can a journey from growing to exchange make production understandable?</p>
+          </article>
+          <article class="archetype" id="archetype-09">
+            <div class="card-top"><span class="card-id">09</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Stitch Exchange</h4><p class="spaces"><span class="make">Textile Workshop</span> <span class="plus">+</span> <span class="show">Market Arcade</span></p>
+            <p class="description">People make, alter and mend textiles, then display, exchange or sell them along a public edge where neighbours can join in.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Let a workshop open onto a sheltered arcade through a demonstration or mending table.</p></div>
+            <p class="question">Where can a passer-by become a participant?</p>
+          </article>
+          <article class="archetype" id="archetype-10">
+            <div class="card-top"><span class="card-id">10</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Play Foundry</h4><p class="spaces"><span class="make">Toy Workshop</span> <span class="plus">+</span> <span class="show">Playground</span></p>
+            <p class="description">Makers build toys and games that others try through play; watching how they are used helps improve the next version.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Connect a protected making area to a supervised play space through a testing threshold.</p></div>
+            <p class="question">How can play become feedback for making?</p>
+          </article>
+          <article class="archetype" id="archetype-11">
+            <div class="card-top"><span class="card-id">11</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Light Foundry</h4><p class="spaces"><span class="make">Fabrication Workshop</span> <span class="plus">+</span> <span class="show">Light Chamber</span></p>
+            <p class="description">People make lamps and light installations, then invite visitors to experience and discuss their effects on shadow and atmosphere.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Draw a transition from a well-lit workbench to a chamber with controlled light.</p></div>
+            <p class="question">How does the journey from making to darkness prepare someone to see?</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pair-group" data-pair="think-show" aria-labelledby="think-show-heading">
+        <div class="group-heading"><h3 id="think-show-heading"><span class="think">THINK</span> + <span class="show">SHOW</span></h3><p>Turn individual enquiry into shared understanding.</p></div>
+        <div class="card-grid">
+          <article class="archetype" id="archetype-05">
+            <div class="card-top"><span class="card-id">05</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Idea Assembly</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="show">Public Forum</span></p>
+            <p class="description">People research and develop ideas, then share and challenge them through informal talks and small public discussions.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Connect quiet reading places to a modest discussion space through a shared gathering edge.</p></div>
+            <p class="question">How can someone move between private reflection and public debate?</p>
+          </article>
+          <article class="archetype" id="archetype-12">
+            <div class="card-top"><span class="card-id">12</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Atlas Room</h4><p class="spaces"><span class="think">Research Library</span> <span class="plus">+</span> <span class="show">Public Mapping Room</span></p>
+            <p class="description">Researchers and neighbours investigate the city, share their findings through maps and invite others to add local knowledge.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Extend a research table into a public mapping surface where visitors can contribute.</p></div>
+            <p class="question">How can private research become knowledge that others can question?</p>
+          </article>
+          <article class="archetype" id="archetype-13">
+            <div class="card-top"><span class="card-id">13</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Signal House</h4><p class="spaces"><span class="think">Research Studio</span> <span class="plus">+</span> <span class="show">Broadcasting Room</span></p>
+            <p class="description">People investigate contemporary questions and share their findings through podcasts, radio conversations and small public broadcasts.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Link a research table to an acoustically protected broadcast room with a visible public edge.</p></div>
+            <p class="question">How can a quiet recording space connect with an audience?</p>
+          </article>
+          <article class="archetype" id="archetype-14">
+            <div class="card-top"><span class="card-id">14</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Climate Lantern</h4><p class="spaces"><span class="think">Observation Laboratory</span> <span class="plus">+</span> <span class="show">Public Display</span></p>
+            <p class="description">People study local weather, light and temperature, then make their observations visible so neighbours can understand changing conditions.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Link an observation point to a public wall or light display that responds to its findings.</p></div>
+            <p class="question">How can a building help people notice an environmental change?</p>
+          </article>
+          <article class="archetype" id="archetype-15">
+            <div class="card-top"><span class="card-id">15</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Night Observatory</h4><p class="spaces"><span class="think">Study Room</span> <span class="plus">+</span> <span class="show">Sky Terrace</span></p>
+            <p class="description">People study the sky and celestial movements, then gather on a shared terrace to observe, explain and discuss their discoveries.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Draw an accessible journey from a study table to an open sky view, with a dimly lit transition.</p></div>
+            <p class="question">How can a shared place reveal the night sky while limiting light spill?</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="your-turn" class="start" aria-labelledby="start-heading">
+      <div class="section-title"><span class="section-index">03 /</span><h2 id="start-heading">Now make the idea yours.</h2></div>
+      <div class="start-grid">
+        <div><p class="sentence">The <span class="blank">[name]</span> is a place where <span class="blank">[people]</span> come to <span class="blank">[activity A]</span> and <span class="blank">[activity B]</span>, connected through <span class="blank">[shared purpose]</span>.</p></div>
+        <div><h3>Bring three things to the table:</h3><ol class="checklist"><li><strong>One sentence</strong> explaining who it is for and why the activities belong together.</li><li><strong>One relationship diagram</strong> showing activities, connections and any conflict to resolve.</li><li><strong>One architectural question</strong> about light, sound, access, visibility, thresholds or atmosphere.</li></ol></div>
+      </div>
+      <div class="scale-note"><strong>500–750 m² GFA</strong><p>Work towards a modest building, usually one or two storeys: one substantial shared space, a complementary space and a few supporting functions. Test the scale, servicing and access of your chosen activities. Start with the relationship; develop the plan afterwards.</p></div>
+    </section>
+  </main>
+  <footer class="wrap"><p>THINK / MAKE / SHOW · Second-year architecture studio · University of Salford<br>Working ideas, open to adaptation. Original example numbers retained.</p><p><a href="think_make_show_archetypes_codex_handoff.md">Project reference ↗</a></p></footer>
+  <script>
+    (() => {
+      const bar = document.querySelector('.filter-bar');
+      const buttons = [...bar.querySelectorAll('button')];
+      const groups = [...document.querySelectorAll('.pair-group')];
+      const count = document.querySelector('#result-count');
+      const printButton = document.querySelector('.print');
+      bar.hidden = false;
+      printButton.hidden = false;
+      buttons.forEach(button => button.addEventListener('click', () => {
+        const selected = button.dataset.filter;
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        groups.forEach(group => { group.hidden = selected !== 'all' && group.dataset.pair !== selected; });
+        const total = groups.filter(group => !group.hidden).reduce((sum, group) => sum + group.querySelectorAll('.archetype').length, 0);
+        count.textContent = selected === 'all' ? 'Showing all 15 examples' : `Showing ${total} of 15 examples · ${button.textContent.trim()}`;
+      }));
+      printButton.addEventListener('click', () => window.print());
+    })();
+  </script>
+</body>
+</html>
