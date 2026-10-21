@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A simple architecture studio guide to combining Think, Make and Show. Four steps, fifteen hybrid archetypes, and a starting point for your own design.">
+  <meta name="description" content="Think, Make, Show: a guide to modes of work, sixteen spatial strategies and eighteen examples for Design Studio 2A.">
   <meta name="theme-color" content="#f8f7f3">
-  <title>Think, Make, Show — A guide to hybrid archetypes</title>
+  <title>Think, Make, Show — Modes of work</title>
   <style>
     :root {
       --paper: #f8f7f3; --white: #fffefa; --ink: #292b2e; --muted: #62625e; --line: #d9d7cf;
-      --think: #275bb0; --think-tint: #eaf0fb;
-      --make: #aa4228; --make-tint: #f9ece5;
-      --show: #75429b; --show-tint: #f1eafa;
+      --think: #9cafd9; --think-ink: #334d7b; --think-tint: #e8edf7;
+      --make: #dfa39b; --make-ink: #854338; --make-tint: #f8e9e5;
+      --show: #a7c6ac; --show-ink: #355d43; --show-tint: #eaf2e9;
+      --think-make: #c4a7d2; --make-show: #e3d39c; --think-show: #9fcbd0;
       font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--paper);
       font-synthesis: none; scroll-behavior: smooth;
     }
@@ -19,7 +20,7 @@
     body { margin: 0; }
     a { color: inherit; text-underline-offset: 4px; }
     button { font: inherit; cursor: pointer; }
-    a:focus-visible, button:focus-visible { outline: 3px solid var(--think); outline-offset: 5px; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--think-ink); outline-offset: 5px; }
     [hidden] { display: none !important; }
     ::selection { background: #e0e8f9; color: #202b40; }
     .wrap { width: min(1240px, calc(100% - 96px)); margin-inline: auto; }
@@ -28,26 +29,32 @@
     .masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; border-bottom: 1px solid var(--line); }
     .wordmark { text-decoration: none; font-size: 14px; font-weight: 750; letter-spacing: .06em; white-space: nowrap; }
     .wordmark .slash { color: #a6a39b; padding: 0 6px; font-weight: 400; }
-    .masthead nav { display: flex; align-items: center; gap: 26px; font-size: 13px; }
+    .wordmark .think, .wordmark .make, .wordmark .show { padding: 4px 7px; border: 1px solid; border-radius: 4px; }
+    .wordmark .think { background: var(--think-tint); border-color: var(--think); }
+    .wordmark .make { background: var(--make-tint); border-color: var(--make); }
+    .wordmark .show { background: var(--show-tint); border-color: var(--show); }
+    .masthead nav { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; font-size: 13px; }
     .masthead nav a { text-decoration: none; }
     .masthead nav a:hover { text-decoration: underline; }
     .print { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 9px 14px; border-radius: 4px; font-size: 12px; }
     .print:hover { background: #eceae3; }
     .eyebrow { font-size: 11px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
     .muted { color: var(--muted); }
-    .hero { padding-block: 64px 48px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: end; }
+    .hero { padding-block: 64px 48px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: center; }
     h1 { font-size: clamp(43px, 4.7vw, 68px); line-height: 1.04; letter-spacing: -.055em; font-weight: 600; margin: 23px 0 24px; }
     .hero-intro { max-width: 530px; font-size: 18px; line-height: 1.65; margin: 0; color: var(--muted); }
     .hero-intro strong { color: var(--ink); font-weight: 600; }
     .hero-note { margin: 25px 0 0; font-size: 12px; color: var(--muted); }
-    .hero-sketch { padding: 27px 26px 23px; background: var(--white); border: 1px solid var(--line); }
-    .hero-sketch svg { display: block; width: 100%; height: auto; margin-top: 8px; }
+    .hero-sketch { width: 100%; max-width: 420px; justify-self: end; padding: 27px 26px 23px; background: var(--white); border: 1px solid var(--line); }
+    .hero-sketch svg { display: block; width: min(100%, 300px); height: auto; margin: 12px auto 0; }
     .hero-sketch .caption { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .hero-sketch .caption strong { color: var(--ink); }
-    .think { color: var(--think); } .make { color: var(--make); } .show { color: var(--show); }
+    .think { color: var(--think-ink); } .make { color: var(--make-ink); } .show { color: var(--show-ink); }
     .mode-key { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; padding-block: 26px 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .key-item { display: flex; gap: 13px; align-items: start; }
-    .mode-dot { width: 11px; height: 11px; border-radius: 50%; background: currentColor; flex: 0 0 auto; margin-top: 5px; }
+    .key-item { display: flex; gap: 13px; align-items: start; min-width: 0; }
+    .key-item > div { min-width: 0; }
+    .mode-dot { width: 11px; height: 11px; border-radius: 50%; flex: 0 0 auto; margin-top: 5px; border: 1px solid #0003; }
+    .think .mode-dot { background: var(--think); } .make .mode-dot { background: var(--make); } .show .mode-dot { background: var(--show); }
     .key-item strong { display: block; font-size: 14px; letter-spacing: .04em; }
     .key-item p { color: var(--muted); font-size: 13px; line-height: 1.55; margin: 6px 0 0; }
     section { scroll-margin-top: 24px; }
@@ -61,16 +68,50 @@
     .step h3 { margin: 16px 0 10px; font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
     .step p { font-size: 14px; line-height: 1.7; margin: 0; color: var(--muted); }
     .step .mini { margin-top: 12px; font-size: 12px; }
-    .connection { margin-top: 32px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; padding: 30px; background: #eeede6; }
-    .connection h3 { font-size: 21px; font-weight: 600; letter-spacing: -.025em; margin: 10px 0; }
-    .connection p { font-size: 14px; line-height: 1.65; margin: 0; color: var(--muted); }
-    .connection-flow { display: grid; grid-template-columns: 1fr auto 1.1fr auto 1fr; gap: 10px; align-items: center; }
-    .flow-space { padding: 18px 12px; background: var(--white); border-top: 3px solid currentColor; text-align: center; }
-    .flow-space strong { display: block; font-size: 15px; color: var(--ink); margin-top: 8px; }
-    .flow-space small { display: block; font-size: 12px; color: var(--muted); margin-top: 7px; line-height: 1.4; }
-    .flow-space.middle { border: 1px dashed #99978b; color: var(--ink); background: transparent; }
-    .flow-arrow { color: var(--muted); }
-    .flow-note { grid-column: 1 / -1; font-size: 12px !important; margin-top: 5px !important; }
+    .mode-definition, .section-intro { max-width: 850px; font-size: 15px; line-height: 1.75; color: var(--muted); margin: 0 0 24px; }
+    .mode-definition { max-width: 640px; }
+    .mode-definition strong { color: var(--ink); }
+    .colour-key { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 15px; margin-top: 18px; font-size: 12px; }
+    .colour-key span { display: flex; align-items: center; gap: 8px; }
+    .swatch { width: 13px; height: 13px; flex: 0 0 auto; border: 1px solid #0003; background: var(--swatch); }
+    .colour-diagram { margin-top: 20px; }
+    .colour-diagram summary { cursor: pointer; width: fit-content; color: var(--ink); border: 1px solid var(--line); border-radius: 5px; padding: 10px 14px; font-size: 12px; font-weight: 600; line-height: 1.6; }
+    .colour-diagram summary:hover { background: var(--paper); }
+    .colour-diagram .when-open, .colour-diagram[open] .when-closed { display: none; }
+    .colour-diagram[open] .when-open { display: inline; }
+    .colour-diagram p { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 12px 0 0; }
+    .processes { list-style: none; display: flex; flex-wrap: wrap; align-content: start; gap: 7px; margin: 17px 0 0; padding: 0; }
+    .process-token { display: inline-flex; align-items: center; padding: 5px 10px; border: 1px solid; border-radius: 999px; font-size: 12px; line-height: 1.4; max-width: 100%; }
+    .process-token.think { color: var(--think-ink); background: var(--think-tint); border-color: var(--think); }
+    .process-token.make { color: var(--make-ink); background: var(--make-tint); border-color: var(--make); }
+    .process-token.show { color: var(--show-ink); background: var(--show-tint); border-color: var(--show); }
+    .example-processes { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 16px; }
+    .example-processes .process-token { font-size: 11px; padding: 4px 8px; }
+    .strategy-toolbar { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-bottom: 18px; }
+    .strategy-switcher { display: flex; flex-wrap: wrap; gap: 8px; }
+    .strategy-switcher button, .strategy-swap { background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: 5px; padding: 10px 17px; font-size: 13px; }
+    .strategy-switcher button:hover, .strategy-swap:hover { border-color: var(--muted); }
+    .strategy-swap { margin-left: auto; }
+    .strategy-swap[aria-pressed="true"] { background: var(--paper); border-color: var(--ink); }
+    .strategy-switcher button[aria-pressed="true"] { background: var(--strategy-pair); border-color: var(--ink); box-shadow: inset 0 -2px var(--ink); }
+    #arrangements { --mode-a: var(--think); --mode-b: var(--make); --strategy-a: var(--mode-a); --strategy-b: var(--mode-b); --strategy-pair: var(--think-make); }
+    #arrangements[data-strategy-pair="make-show"] { --mode-a: var(--make); --mode-b: var(--show); --strategy-pair: var(--make-show); }
+    #arrangements[data-strategy-pair="show-think"] { --mode-a: var(--show); --mode-b: var(--think); --strategy-pair: var(--think-show); }
+    #arrangements[data-colours-swapped="true"] { --strategy-a: var(--mode-b); --strategy-b: var(--mode-a); }
+    .strategy-status { font-size: 12px; color: var(--muted); margin: 0; }
+    .arrangement-key { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 12px; margin-bottom: 22px; }
+    .arrangement-key span { display: flex; align-items: center; gap: 7px; }
+    .pair-arrow { display: block; width: clamp(24px, 8vw, 100px); height: 12px; flex-shrink: 0; color: var(--muted); }
+    .arrangements { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .arrangement { margin: 0; padding: 20px; border: 1px solid var(--line); background: var(--white); }
+    .arrangement svg { width: 100%; height: auto; display: block; margin-bottom: 18px; }
+    .arrangement h3 { font-size: 17px; margin: 0 0 9px; font-weight: 600; letter-spacing: -.025em; }
+    .arrangement h3 span { color: var(--muted); font-family: Consolas, monospace; font-size: 13px; margin-right: 7px; }
+    .arrangement p { font-size: 13px; line-height: 1.65; margin: 0; color: var(--muted); }
+    .worked-example { margin-top: 24px; padding: 26px; background: #eeede6; }
+    .worked-example h3 { font-size: 21px; font-weight: 600; margin: 10px 0; }
+    .worked-example p { margin: 0; font-size: 14px; line-height: 1.75; max-width: 950px; }
+    .worked-example p + p { margin-top: 12px; }
     .catalogue-intro { display: flex; justify-content: space-between; gap: 34px; align-items: end; margin-bottom: 23px; }
     .catalogue-intro .section-title { margin-bottom: 13px; }
     .catalogue-intro p { color: var(--muted); font-size: 14px; line-height: 1.7; max-width: 650px; margin: 0; }
@@ -85,14 +126,14 @@
     .group-heading h3 { font-size: 18px; letter-spacing: -.02em; margin: 0; font-weight: 650; }
     .group-heading p { margin: 0; font-size: 13px; color: var(--muted); }
     .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .archetype { --a: var(--think); --b: var(--make); background: var(--white); border: 1px solid var(--line); position: relative; padding: 23px 23px 21px; display: flex; flex-direction: column; }
-    .archetype::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 4px; background: linear-gradient(to right, var(--a) 0 50%, var(--b) 50% 100%); }
-    .pair-group[data-pair="make-show"] .archetype { --a: var(--make); --b: var(--show); }
-    .pair-group[data-pair="think-show"] .archetype { --a: var(--think); --b: var(--show); }
+    .archetype { --pair: var(--think-make); background: var(--white); border: 1px solid var(--line); position: relative; padding: 23px 23px 21px; display: flex; flex-direction: column; }
+    .archetype::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 4px; background: var(--pair); }
+    .pair-group[data-pair="make-show"] .archetype { --pair: var(--make-show); }
+    .pair-group[data-pair="think-show"] .archetype { --pair: var(--think-show); }
     .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 17px; }
     .card-id { font-family: Consolas, monospace; font-size: 12px; color: var(--muted); }
     .mode-pair { display: flex; gap: 6px; align-items: center; font-size: 9px; letter-spacing: .07em; font-weight: 700; white-space: nowrap; }
-    .mode-tag { padding: 4px 6px; border-radius: 2px; }
+    .mode-tag { padding: 4px 6px; border-radius: 999px; }
     .mode-tag.think { background: var(--think-tint); } .mode-tag.make { background: var(--make-tint); } .mode-tag.show { background: var(--show-tint); }
     .archetype h4 { font-size: 23px; line-height: 1.2; letter-spacing: -.035em; margin: 0 0 13px; font-weight: 600; }
     .spaces { font-size: 13px; line-height: 1.65; font-weight: 600; margin: 0 0 15px; }
@@ -116,20 +157,25 @@
     footer { display: flex; justify-content: space-between; gap: 24px; font-size: 11px; line-height: 1.7; color: var(--muted); padding-block: 26px 35px; }
     footer p { margin: 0; }
     @media (max-width: 1050px) {
+      .masthead { flex-wrap: wrap; padding-block: 20px; gap: 18px; }
       .wrap { width: calc(100% - 56px); } .hero { gap: 32px; } .steps { grid-template-columns: repeat(2, 1fr); gap: 26px; }
-      .connection { grid-template-columns: 1fr; gap: 23px; } .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .arrangements { grid-template-columns: repeat(2, minmax(0, 1fr)); } .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .start-grid { gap: 30px; } .archetype { padding: 21px; }
     }
     @media (max-width: 680px) {
       .wrap { width: calc(100% - 36px); } .masthead { flex-wrap: wrap; gap: 17px; padding-block: 20px; }
       .masthead nav { width: 100%; justify-content: space-between; gap: 16px; font-size: 12px; }
       .hero { grid-template-columns: 1fr; padding-block: 38px 30px; gap: 30px; } h1 { font-size: 47px; }
+      .hero-sketch { justify-self: start; }
       .hero-intro { font-size: 16px; } .hero-note { line-height: 1.6; }
       .mode-key { grid-template-columns: 1fr; gap: 21px; } .key-item p { margin-top: 4px; }
       .section { padding-top: 40px; } .section-title { gap: 12px; } .steps { gap: 24px 18px; }
-      .step h3 { font-size: 17px; } .step p { font-size: 13px; } .connection { padding: 21px; gap: 20px; }
-      .connection-flow { gap: 5px; grid-template-columns: 1fr auto 1fr auto 1fr; } .flow-space { padding: 13px 6px; }
-      .flow-space strong { font-size: 12px; } .flow-space .eyebrow { font-size: 9px; } .flow-space small { font-size: 11px; }
+      .step h3 { font-size: 17px; } .step p { font-size: 13px; }
+      .arrangements { grid-template-columns: 1fr; } .arrangement svg { max-width: 340px; margin-inline: auto; }
+      .arrangement-key { gap: 8px; }
+      .strategy-toolbar { gap: 12px; } .strategy-switcher button, .strategy-swap { padding-inline: 8px; }
+      .strategy-status { order: 3; flex-basis: 100%; }
+      .worked-example { padding: 21px; } .hero-sketch svg { max-height: 240px; }
       .catalogue-intro { display: block; } .count { display: block; margin-top: 12px; }
       .filter-bar { gap: 7px; } .filter-bar button { padding: 10px; font-size: 11px; }
       .group-heading { align-items: start; flex-direction: column; gap: 5px; }
@@ -141,22 +187,35 @@
     @page { size: A4; margin: 14mm; }
     @media print {
       :root { background: white; } body { font-size: 10pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-      .wrap { width: 100%; } .masthead { min-height: 32px; } .masthead nav, .skip, .filter-bar, .count, footer a { display: none !important; }
-      .hero { padding-block: 24px; gap: 25px; } h1 { font-size: 36px; } .hero-intro { font-size: 12px; }
-      .hero-note { font-size: 10px; } .hero-sketch { padding: 16px; } .hero-sketch .caption { font-size: 10px; }
+      .wrap { width: 100%; } .masthead { min-height: 32px; padding-block: 10px; } .masthead nav, .skip, .filter-bar, .count, footer a { display: none !important; }
+      .hero { padding-block: 12px; gap: 25px; } h1 { font-size: 36px; margin-block: 12px; } .hero-intro { font-size: 12px; }
+      .hero-note { font-size: 10px; margin-top: 12px; } .hero-sketch { padding: 16px; break-inside: avoid; } .hero-sketch .caption { font-size: 10px; }
+      .hero-sketch svg { width: min(100%, 140px); }
       .mode-key { padding-block: 15px; gap: 16px; } .key-item strong { font-size: 12px; } .key-item p { font-size: 10px; }
-      .section { padding-top: 26px; } h2 { font-size: 25px; } .section-title { margin-bottom: 17px; }
-      .steps { grid-template-columns: repeat(4, 1fr); gap: 14px; } .step h3 { font-size: 14px; margin-top: 10px; }
-      .step p, .step .mini { font-size: 10px; } .connection { grid-template-columns: 1fr 1.3fr; gap: 20px; padding: 18px; margin-top: 22px; break-inside: avoid; }
-      .connection h3 { font-size: 17px; } .connection p { font-size: 10px; } .flow-space { padding: 12px 8px; }
-      .flow-space strong { font-size: 11px; } .flow-space small { font-size: 10px; } .flow-note { font-size: 10px !important; }
-      .catalogue-intro p { font-size: 11px; } #examples { break-before: page; }
-      .pair-group[hidden] { display: block !important; } .pair-group + .pair-group { margin-top: 25px; }
+      .section { padding-top: 26px; } h2 { font-size: 25px; } .section-title { margin-bottom: 17px; break-after: avoid; }
+      .steps { grid-template-columns: repeat(4, 1fr); gap: 14px; break-inside: avoid; } .step h3 { font-size: 14px; margin-top: 10px; }
+      .step p, .step .mini { font-size: 10px; }
+      .arrangements { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+      .arrangement { padding: 6px; break-inside: avoid; } .arrangement h3 { font-size: 12px; } .arrangement p { font-size: 9px; line-height: 1.5; }
+      .arrangement svg { height: 48px; margin-bottom: 4px; } .section-intro, .mode-definition { font-size: 11px; }
+      .section-intro { margin-bottom: 16px; } .arrangement-key { margin-bottom: 14px; }
+      .strategy-toolbar { margin-bottom: 10px; } .strategy-status { font-size: 10px; } .strategy-help { display: none; }
+      .worked-example { margin-top: 12px; padding: 12px; break-inside: avoid; } .worked-example p { font-size: 10px; }
+      .worked-example h3 { font-size: 17px; margin-block: 8px; }
+      .mode-key { grid-template-columns: repeat(3, minmax(0, 1fr)); } .colour-key { font-size: 9px; }
+      .processes { gap: 4px; margin-top: 10px; } .process-token { padding: 3px 7px; font-size: 9px; break-inside: avoid; }
+      .colour-diagram summary, .strategy-switcher, .strategy-swap { display: none; }
+      .colour-diagram { margin-top: 0; } .colour-diagram[open] { margin-top: 10px; } .colour-diagram p { font-size: 9px; }
+      .example-processes { gap: 4px; margin-bottom: 8px; } .example-processes .process-token { font-size: 9px; padding: 3px 6px; }
+      .catalogue-intro p { font-size: 11px; } .catalogue-intro { margin-bottom: 16px; } #examples { break-before: page; padding-top: 10px; }
+      .pair-group[hidden] { display: block !important; } .pair-group + .pair-group { margin-top: 0; break-before: page; }
       .group-heading { break-after: avoid; margin-bottom: 15px; } .group-heading p { font-size: 10px; }
-      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
-      .archetype { break-inside: avoid; padding: 16px; } .archetype h4 { font-size: 20px; }
-      .card-top { margin-bottom: 12px; } .spaces, .description { font-size: 11px; margin-bottom: 12px; }
-      .sketch-prompt p, .question { font-size: 10px; } .start { padding: 22px; margin-top: 30px; break-inside: avoid; }
+      .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+      .archetype { break-inside: avoid; padding: 10px; } .archetype h4 { font-size: 17px; margin-bottom: 10px; }
+      .card-top { margin-bottom: 8px; } .spaces, .description { font-size: 11px; margin-bottom: 8px; }
+      .description { line-height: 1.55; } .sketch-prompt { padding-top: 10px; }
+      .sketch-prompt p, .question { font-size: 10px; line-height: 1.5; } .start { padding: 22px; margin-top: 30px; break-inside: avoid; }
+      .sketch-prompt p { margin-top: 4px; } .question { margin-top: 10px; }
       .start-grid { gap: 24px; } .sentence { font-size: 18px; } .checklist { font-size: 11px; }
       .scale-note p { font-size: 10px; } footer { font-size: 9px; }
     }
@@ -165,9 +224,9 @@
 <body>
   <a class="skip" href="#main">Skip to guide</a>
   <header class="masthead wrap">
-    <a href="#" class="wordmark" aria-label="Think, Make, Show — back to top"><span class="think">THINK</span><span class="slash">/</span><span class="make">MAKE</span><span class="slash">/</span><span class="show">SHOW</span></a>
+    <a href="../" class="wordmark" aria-label="Think, Make, Show — all studio resources" title="All studio resources"><span class="think">THINK</span><span class="slash">/</span><span class="make">MAKE</span><span class="slash">/</span><span class="show">SHOW</span></a>
     <nav aria-label="Page sections">
-      <a href="#method">The method</a><a href="#examples">15 examples</a><a href="#your-turn">Your turn</a>
+      <a href="#method">Method</a><a href="#arrangements">Diagrams</a><a href="#examples">Examples</a><a href="#your-turn">Your turn</a>
       <button class="print" type="button" hidden>Print guide ↗</button>
     </nav>
   </header>
@@ -175,64 +234,167 @@
     <div class="hero">
       <div>
         <span class="eyebrow muted">DS2A · University of Salford · Studio guide</span>
-        <h1>Two modes.<br>One meaningful<br>place.</h1>
-        <p class="hero-intro">Combine two familiar spaces. Find <strong>what connects their activities</strong>. Use that relationship to invent a hybrid archetype: a starting idea for your architecture.</p>
-        <p class="hero-note">15 possibilities to explore. You can adapt one, or invent your own.</p>
+        <h1>Think, Make,<br>Show</h1>
+        <p class="hero-intro">The brief asks you to design <strong>a space for work.</strong> A <strong>mode of work</strong> describes a way of working: THINK, MAKE or SHOW. Choose two modes to guide your proposal.</p>
+        <p class="hero-note">Sixteen spatial strategies. Eighteen examples. A starting point for your own proposal.</p>
       </div>
       <figure class="hero-sketch" style="margin:0">
-        <span class="eyebrow muted">The idea, in one diagram</span>
-        <svg viewBox="0 0 440 235" role="img" aria-labelledby="diagram-title diagram-desc">
-          <title id="diagram-title">Two activities connected by a shared purpose</title>
-          <desc id="diagram-desc">A blue Think space and a terracotta Make space overlap at a shared table. The overlap represents the relationship to design, rather than a fixed floor plan.</desc>
-          <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="7" stroke="#a29c91" stroke-width="1"/></pattern></defs>
-          <rect x="27" y="35" width="225" height="140" fill="#eaf0fb" stroke="#275bb0" stroke-width="1.5"/>
-          <rect x="186" y="69" width="225" height="140" fill="#f9ece5" stroke="#aa4228" stroke-width="1.5"/>
-          <rect x="186" y="69" width="66" height="106" fill="url(#hatch)"/>
-          <path d="M95 118H340" stroke="#767167" stroke-width="1.2" stroke-dasharray="4 5"/>
-          <path d="m332 113 8 5-8 5" fill="none" stroke="#767167" stroke-width="1.2"/>
-          <rect x="198" y="107" width="42" height="28" rx="2" fill="#fffefa" stroke="#4e4c45"/>
-          <text x="49" y="62" font-size="13" font-weight="700" fill="#275bb0" font-family="Segoe UI,Arial,sans-serif">THINK</text>
-          <text x="283" y="190" font-size="13" font-weight="700" fill="#aa4228" font-family="Segoe UI,Arial,sans-serif">MAKE</text>
-          <text x="49" y="151" font-size="12" fill="#275bb0" font-family="Segoe UI,Arial,sans-serif">Read &amp; imagine</text>
-          <text x="272" y="96" font-size="12" fill="#aa4228" font-family="Segoe UI,Arial,sans-serif">Test &amp; produce</text>
-          <path d="M220 68V21H309" fill="none" stroke="#62625e"/>
-          <text x="315" y="25" font-size="11" fill="#62625e" font-family="Segoe UI,Arial,sans-serif">The connection</text>
+        <span class="eyebrow muted">The TMS colour key</span>
+        <div class="colour-key">
+          <span><i class="swatch" style="--swatch:var(--think)" aria-hidden="true"></i>THINK · Soft blue</span>
+          <span><i class="swatch" style="--swatch:var(--think-make)" aria-hidden="true"></i>T + M · Mauve</span>
+          <span><i class="swatch" style="--swatch:var(--make)" aria-hidden="true"></i>MAKE · Coral</span>
+          <span><i class="swatch" style="--swatch:var(--make-show)" aria-hidden="true"></i>M + S · Straw</span>
+          <span><i class="swatch" style="--swatch:var(--show)" aria-hidden="true"></i>SHOW · Sage</span>
+          <span><i class="swatch" style="--swatch:var(--think-show)" aria-hidden="true"></i>S + T · Turquoise</span>
+        </div>
+        <details class="colour-diagram">
+          <summary><span class="when-closed">Show colour diagram</span><span class="when-open">Hide colour diagram</span></summary>
+        <svg viewBox="0 0 340 270" role="img" aria-labelledby="diagram-title diagram-desc">
+          <title id="diagram-title">Think, Make and Show: colour diagram</title>
+          <desc id="diagram-desc">Think is soft blue, Make is coral and Show is sage. Think plus Make is mauve; Make plus Show is straw; Show plus Think is turquoise. The overlaps identify pairs of modes.</desc>
+          <defs>
+            <clipPath id="venn-think"><circle cx="125" cy="95" r="70"/></clipPath>
+            <clipPath id="venn-make"><circle cx="215" cy="95" r="70"/></clipPath>
+          </defs>
+          <rect width="340" height="270" fill="var(--paper)" rx="4"/>
+          <circle cx="125" cy="95" r="70" fill="var(--think)"/>
+          <circle cx="215" cy="95" r="70" fill="var(--make)"/>
+          <circle cx="170" cy="165" r="70" fill="var(--show)"/>
+          <circle cx="215" cy="95" r="70" fill="var(--think-make)" clip-path="url(#venn-think)"/>
+          <circle cx="170" cy="165" r="70" fill="var(--think-show)" clip-path="url(#venn-think)"/>
+          <circle cx="170" cy="165" r="70" fill="var(--make-show)" clip-path="url(#venn-make)"/>
+          <g clip-path="url(#venn-think)"><circle cx="170" cy="165" r="70" fill="var(--white)" clip-path="url(#venn-make)"/></g>
+          <g font-family="Segoe UI,Arial,sans-serif" font-weight="700" text-anchor="middle">
+            <text x="104" y="88" fill="var(--ink)" font-size="26">T</text>
+            <text x="238" y="88" fill="var(--ink)" font-size="26">M</text>
+            <text x="170" y="207" fill="var(--ink)" font-size="26">S</text>
+            <g fill="var(--ink)" font-size="12"><text x="170" y="78">T+M</text><text x="127" y="149">T+S</text><text x="214" y="149">M+S</text></g>
+          </g>
         </svg>
-        <figcaption class="caption"><strong>Design what happens between.</strong><br>A shared table, a view, a threshold, a journey…<br>This is a relationship sketch, not a floor plan.</figcaption>
+          <p>The softened colours identify modes and pairs of modes.</p>
+        </details>
+        <figcaption class="caption">Colours identify modes and pairs of modes. Select <strong>two primary modes</strong>; the third may remain secondary.</figcaption>
       </figure>
     </div>
 
-    <div class="mode-key" aria-label="The three modes of work and their colours">
-      <div class="key-item think"><span class="mode-dot" aria-hidden="true"></span><div><strong>THINK</strong><p>Read, research, reflect, imagine, discuss, listen.</p></div></div>
-      <div class="key-item make"><span class="mode-dot" aria-hidden="true"></span><div><strong>MAKE</strong><p>Craft, repair, grow, cook, print, prototype.</p></div></div>
-      <div class="key-item show"><span class="mode-dot" aria-hidden="true"></span><div><strong>SHOW</strong><p>Exhibit, demonstrate, exchange, teach, broadcast.</p></div></div>
-    </div>
-
-    <section id="method" class="section" aria-labelledby="method-heading">
-      <div class="section-title"><span class="section-index">01 /</span><h2 id="method-heading">Build your idea in four steps.</h2></div>
-      <div class="steps">
-        <div class="step"><span class="step-number">STEP 01</span><h3>Choose two modes.</h3><p>Which activities do you want to bring together?</p><p class="mini"><span class="think">THINK</span> + <span class="make">MAKE</span><br><span class="make">MAKE</span> + <span class="show">SHOW</span><br><span class="think">THINK</span> + <span class="show">SHOW</span></p></div>
-        <div class="step"><span class="step-number">STEP 02</span><h3>Find two spaces.</h3><p>Choose one familiar spatial type for each mode. Think about who comes and what they do.</p><p class="mini">For example: reading room + print workshop.</p></div>
-        <div class="step"><span class="step-number">STEP 03</span><h3>Find the connection.</h3><p>Why do they belong together? Can one activity feed, support or challenge the other?</p><p class="mini">Try a sequence, contrast, exchange, view, transformation or shared activity.</p></div>
-        <div class="step"><span class="step-number">STEP 04</span><h3>Name it. Sketch it.</h3><p>Describe the shared purpose in a sentence. Draw the relationship and ask one architectural question.</p><p class="mini">Explore the connection before committing to a floor plan.</p></div>
-      </div>
-      <div class="connection">
-        <div><span class="eyebrow muted">A worked example · The Paper House</span><h3>Ideas become printed objects.</h3><p>Reading and writing feed a print workshop; prints return to the reading room to be discussed. A shared editing table could connect the two.</p></div>
-        <div class="connection-flow" aria-label="Think: Reading room, connected by a shared editing table, to Make: Print workshop">
-          <div class="flow-space think"><span class="eyebrow">THINK</span><strong>Reading room</strong><small>Research &amp; write</small></div>
-          <span class="flow-arrow" aria-hidden="true">↔</span>
-          <div class="flow-space middle"><span class="eyebrow">CONNECTION</span><strong>Shared table</strong><small>Edit &amp; discuss</small></div>
-          <span class="flow-arrow" aria-hidden="true">↔</span>
-          <div class="flow-space make"><span class="eyebrow">MAKE</span><strong>Print workshop</strong><small>Print &amp; bind</small></div>
-          <p class="flow-note">Question: how can people stay connected while quiet reading is protected from workshop noise?</p>
-        </div>
+    <section aria-labelledby="modes-heading">
+      <div class="section-title"><h2 id="modes-heading">What is a mode of work?</h2></div>
+      <p class="mode-definition">A <strong>mode</strong> is a way of working. The term supports this studio brief: THINK, MAKE and SHOW each include many processes and can share a space. Choose a <strong>pair of modes</strong>, then define who uses the workspace and what their work needs.</p>
+      <div class="mode-key" aria-label="The three modes of work and their processes">
+        <div class="key-item think"><span class="mode-dot" aria-hidden="true"></span><div><strong>THINK</strong><p>Intellectual, cognitive and contemplative processes.</p><ul class="processes" aria-label="THINK processes"><li><span class="process-token think">Thought</span></li><li><span class="process-token think">contemplation</span></li><li><span class="process-token think">ideation</span></li><li><span class="process-token think">reflection</span></li><li><span class="process-token think">imagination</span></li><li><span class="process-token think">inspiration</span></li><li><span class="process-token think">research</span></li><li><span class="process-token think">inquiry</span></li><li><span class="process-token think">investigation</span></li><li><span class="process-token think">sublimation</span></li><li><span class="process-token think">analysis</span></li><li><span class="process-token think">reasoning</span></li><li><span class="process-token think">study</span></li><li><span class="process-token think">concentration</span></li><li><span class="process-token think">reverie</span></li><li><span class="process-token think">introspection</span></li><li><span class="process-token think">meditation</span></li><li><span class="process-token think">discussion</span></li><li><span class="process-token think">interpretation</span></li><li><span class="process-token think">abstraction</span></li><li><span class="process-token think">planning</span></li><li><span class="process-token think">problem-solving</span></li><li><span class="process-token think">learning</span></li><li><span class="process-token think">reading</span></li><li><span class="process-token think">musing</span></li><li><span class="process-token think">spiritual</span></li><li><span class="process-token think">individuation</span></li></ul></div></div>
+        <div class="key-item make"><span class="mode-dot" aria-hidden="true"></span><div><strong>MAKE</strong><p>Practical, material and productive processes.</p><ul class="processes" aria-label="MAKE processes"><li><span class="process-token make">Creation</span></li><li><span class="process-token make">craft</span></li><li><span class="process-token make">growing</span></li><li><span class="process-token make">production</span></li><li><span class="process-token make">fabrication</span></li><li><span class="process-token make">construction</span></li><li><span class="process-token make">assembly</span></li><li><span class="process-token make">prototyping</span></li><li><span class="process-token make">experimentation</span></li><li><span class="process-token make">repair</span></li><li><span class="process-token make">restoration</span></li><li><span class="process-token make">transformation</span></li><li><span class="process-token make">sewing</span></li><li><span class="process-token make">cultivation</span></li><li><span class="process-token make">preparation</span></li><li><span class="process-token make">manufacture</span></li><li><span class="process-token make">processing</span></li><li><span class="process-token make">modelling</span></li><li><span class="process-token make">recycling</span></li><li><span class="process-token make">cooking</span></li><li><span class="process-token make">casting</span></li><li><span class="process-token make">sculpting</span></li><li><span class="process-token make">playing</span></li><li><span class="process-token make">composing</span></li><li><span class="process-token make">programming</span></li><li><span class="process-token make">engineering</span></li><li><span class="process-token make">drawing</span></li><li><span class="process-token make">testing</span></li><li><span class="process-token make">printing</span></li><li><span class="process-token make">composting</span></li></ul></div></div>
+        <div class="key-item show"><span class="mode-dot" aria-hidden="true"></span><div><strong>SHOW</strong><p>Communicative, expressive and social processes.</p><ul class="processes" aria-label="SHOW processes"><li><span class="process-token show">Exhibition</span></li><li><span class="process-token show">display</span></li><li><span class="process-token show">presentation</span></li><li><span class="process-token show">demonstration</span></li><li><span class="process-token show">performance</span></li><li><span class="process-token show">expression</span></li><li><span class="process-token show">communication</span></li><li><span class="process-token show">exchange</span></li><li><span class="process-token show">debate</span></li><li><span class="process-token show">dialogue</span></li><li><span class="process-token show">education</span></li><li><span class="process-token show">publication</span></li><li><span class="process-token show">broadcast</span></li><li><span class="process-token show">representation</span></li><li><span class="process-token show">storytelling</span></li><li><span class="process-token show">celebration</span></li><li><span class="process-token show">interaction</span></li><li><span class="process-token show">participation</span></li><li><span class="process-token show">critique</span></li><li><span class="process-token show">exposure</span></li><li><span class="process-token show">promoting</span></li><li><span class="process-token show">networking</span></li><li><span class="process-token show">witnessing</span></li><li><span class="process-token show">teaching</span></li><li><span class="process-token show">screening</span></li><li><span class="process-token show">informing</span></li><li><span class="process-token show">entertaining</span></li><li><span class="process-token show">sharing</span></li><li><span class="process-token show">celebrating</span></li></ul></div></div>
       </div>
     </section>
 
+    <section id="method" class="section" aria-labelledby="method-heading">
+      <div class="section-title"><span class="section-index">01 /</span><h2 id="method-heading">Develop your proposal in four steps.</h2></div>
+      <div class="steps">
+        <div class="step"><span class="step-number">STEP 01</span><h3>Choose two modes.</h3><p>Which pair of modes will drive your proposal?</p><p class="mini"><span class="think">THINK</span> + <span class="make">MAKE</span><br><span class="make">MAKE</span> + <span class="show">SHOW</span><br><span class="think">THINK</span> + <span class="show">SHOW</span></p></div>
+        <div class="step"><span class="step-number">STEP 02</span><h3>Define the work.</h3><p>Identify credible users and the processes each mode supports. Ask what spatial conditions they need.</p><p class="mini">For THINK + MAKE: researching, writing, printing and binding.</p></div>
+        <div class="step"><span class="step-number">STEP 03</span><h3>Test arrangements.</h3><p>Explore how the modes relate: nested, adjacent, overlapping, separated or fully combined.</p><p class="mini">A hybrid can occupy one space, several spaces or related buildings.</p></div>
+        <div class="step"><span class="step-number">STEP 04</span><h3>State it. Sketch it.</h3><p>Explain the purpose of your pair of modes. Compare spatial diagrams and ask an architectural question.</p><p class="mini">Test light, sound, access, structure and atmosphere before fixing a plan.</p></div>
+      </div>
+    </section>
+
+    <section id="arrangements" class="section" data-strategy-pair="think-make" aria-labelledby="arrangements-heading">
+      <div class="section-title"><span class="section-index">02 /</span><h2 id="arrangements-heading">How can two modes share space?</h2></div>
+      <p class="section-intro">These diagrams are indicative. Other arrangements are possible: you are encouraged to explore, combine and develop your own.<span class="strategy-help" hidden> Choose a pair or swap the colour positions.</span></p>
+      <div class="strategy-toolbar">
+        <div class="strategy-switcher" role="group" aria-label="Choose the pair of modes for all spatial strategies" hidden>
+          <button type="button" data-strategy="think-make" aria-label="THINK plus MAKE" aria-pressed="true">T + M</button>
+          <button type="button" data-strategy="make-show" aria-label="MAKE plus SHOW" aria-pressed="false">M + S</button>
+          <button type="button" data-strategy="show-think" aria-label="SHOW plus THINK" aria-pressed="false">S + T</button>
+        </div>
+        <p class="strategy-status" id="strategy-status" role="status" aria-live="polite" aria-atomic="true">Showing THINK + MAKE spatial strategies.</p>
+        <button class="strategy-swap" type="button" aria-pressed="false" aria-label="Swap the mode colour positions in all spatial strategies" hidden>Swap colours</button>
+      </div>
+      <div class="arrangement-key" aria-label="Spatial strategy colour key">
+        <span><i class="swatch" style="--swatch:var(--strategy-a)" aria-hidden="true"></i><span id="strategy-mode-a">THINK</span></span>
+        <span><i class="swatch" style="--swatch:var(--strategy-b)" aria-hidden="true"></i><span id="strategy-mode-b">MAKE</span></span>
+        <svg class="pair-arrow" viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true"><path d="M1 6H97m-6-5 6 5-6 5" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+        <span><i class="swatch" style="--swatch:var(--strategy-pair)" aria-hidden="true"></i><span id="strategy-pair-label">THINK + MAKE</span></span>
+      </div>
+      <div class="arrangements">
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-a"><title id="arr-a" data-description="A: a smaller rectangle near the left edge of a larger rectangle.">A: a smaller rectangle near the left edge of a larger rectangle. Pair: THINK + MAKE.</title><rect x="20" y="15" width="200" height="110" fill="var(--strategy-b)"/><rect x="32" y="45" width="76" height="48" fill="var(--strategy-a)"/></svg>
+          <figcaption><h3><span>A</span>Serviced space</h3><p>A room or building within another. Test which spaces support others, drawing on <a href="https://www.moma.org/collection/works/397">Louis Kahn’s served and servant spaces</a>.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-b"><title id="arr-b" data-description="B: two rectangles meeting along a shared edge.">B: two rectangles meeting along a shared edge. Pair: THINK + MAKE.</title><rect x="20" y="25" width="100" height="90" fill="var(--strategy-b)"/><rect x="120" y="25" width="100" height="90" fill="var(--strategy-a)"/></svg>
+          <figcaption><h3><span>B</span>Side by side</h3><p>Spaces meet along an edge; they can also be stacked vertically. Test an open, glazed, solid or adjustable boundary.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-c"><title id="arr-c" data-description="C: offset rectangles with a shared overlap.">C: offset rectangles with a shared overlap. Pair: THINK + MAKE.</title><rect x="20" y="15" width="135" height="80" fill="var(--strategy-b)"/><rect x="85" y="55" width="135" height="70" fill="var(--strategy-a)"/><rect x="85" y="55" width="70" height="40" fill="var(--strategy-pair)"/></svg>
+          <figcaption><h3><span>C</span>Overlapping</h3><p>The modes retain distinct areas and share a third area. Decide what happens in the overlap.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-d"><title id="arr-d" data-description="D: separate rectangles related across an open gap.">D: separate rectangles related across an open gap. Pair: THINK + MAKE.</title><path d="M78 53L163 87" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 5"/><rect x="25" y="15" width="75" height="65" fill="var(--strategy-a)"/><rect x="145" y="65" width="75" height="60" fill="var(--strategy-b)"/></svg>
+          <figcaption><h3><span>D</span>Separated</h3><p>Two spaces or buildings relate across a gap through movement, outlook, landscape or a shared routine.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-e"><title id="arr-e" data-description="E: a continuous rectangle grading from one mode through the pair colour to the other mode.">E: a continuous rectangle grading from one mode through the pair colour to the other mode. Pair: THINK + MAKE.</title><defs><linearGradient id="mode-blend"><stop stop-color="var(--strategy-b)"/><stop offset=".5" stop-color="var(--strategy-pair)"/><stop offset="1" stop-color="var(--strategy-a)"/></linearGradient></defs><rect x="20" y="25" width="200" height="90" fill="url(#mode-blend)"/></svg>
+          <figcaption><h3><span>E</span>Blending</h3><p>A gradual change in spatial conditions supports a shift between modes, without a single dividing line.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-f"><title id="arr-f" data-description="F: interlocking rectangular zones distributed through one overall space.">F: interlocking rectangular zones distributed through one overall space. Pair: THINK + MAKE.</title><rect x="20" y="20" width="200" height="100" fill="var(--strategy-a)"/><path d="M55 20H95V60H175V90H95V120H55V85H20V65H55Z M175 20H220V45H175Z M150 95H220V120H150Z" fill="var(--strategy-b)"/></svg>
+          <figcaption><h3><span>F</span>Interlocking</h3><p>Interlocking zones distribute both modes through the building. Test their rhythm, shared edges and circulation.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-g"><title id="arr-g" data-description="G: two smaller rectangles and a circle penetrating a larger rectangular space, with the smaller spaces retaining their mode colour.">G: two smaller rectangles and a circle penetrating a larger rectangular space, with the smaller spaces retaining their mode colour. Pair: THINK + MAKE.</title><rect x="15" y="43" width="210" height="60" fill="var(--strategy-b)"/><g fill="var(--strategy-a)"><rect x="45" y="82" width="30" height="46"/><rect x="132" y="12" width="38" height="58"/><circle cx="192" cy="104" r="24"/></g></svg>
+          <figcaption><h3><span>G</span>Connected</h3><p>Smaller spaces penetrate a main space. Explore what happens at each connection and which mode needs continuity or enclosure.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-h"><title id="arr-h" data-description="H: one rectangle in the pair colour representing a full space supporting both modes.">H: one rectangle in the pair colour representing a full space supporting both modes. Pair: THINK + MAKE.</title><rect x="20" y="25" width="200" height="90" fill="var(--strategy-pair)"/></svg>
+          <figcaption><h3><span>H</span>Hybrid</h3><p>The whole space supports both modes. They may happen together or at different times, with adaptable settings.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-i"><title id="arr-i" data-description="I: two spaces side by side, linked by a smaller element spanning both spaces in the hybrid colour.">I: two spaces side by side, linked by a smaller element spanning both spaces in the hybrid colour. Pair: THINK + MAKE.</title><rect x="20" y="20" width="100" height="100" fill="var(--strategy-a)"/><rect x="120" y="20" width="100" height="100" fill="var(--strategy-b)"/><rect x="75" y="53" width="90" height="34" fill="var(--strategy-pair)"/></svg>
+          <figcaption><h3><span>I</span>Shared element</h3><p>Two spaces side by side are linked by a shared table or room, shown in the hybrid colour.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-j"><title id="arr-j" data-description="J: a solid rectangular mass with circular, rectangular and oval voids, some crossing its edges. Dashed coloured outlines identify the void mode.">J: a solid rectangular mass with circular, rectangular and oval voids, some crossing its edges. Dashed coloured outlines identify the void mode. Pair: THINK + MAKE.</title><defs><mask id="mass-void-cutouts" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="140"><rect width="240" height="140" fill="white"/><g fill="black"><circle cx="76" cy="32" r="26"/><rect x="34" y="72" width="68" height="35"/><ellipse cx="151" cy="97" rx="29" ry="39"/></g></mask></defs><rect class="mass-shape" x="20" y="25" width="200" height="90" fill="var(--strategy-b)" mask="url(#mass-void-cutouts)"/><g class="void-outlines" fill="none" stroke="var(--strategy-a)" stroke-width="2.5" stroke-dasharray="5 3"><circle cx="76" cy="32" r="26"/><rect x="34" y="72" width="68" height="35"/><ellipse cx="151" cy="97" rx="29" ry="39"/></g></svg>
+          <figcaption><h3><span>J</span>Mass and void</h3><p>One mode occupies the solid mass; the other occupies voids with dashed outlines. Test spaces within the mass and across its edges.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-k"><title id="arr-k" data-description="K: the same rectangular space shown in two phases, linked by an arrow.">K: the same rectangular space shown in two phases, linked by an arrow. Pair: THINK + MAKE.</title><rect x="15" y="30" width="85" height="80" fill="var(--strategy-a)"/><rect x="140" y="30" width="85" height="80" fill="var(--strategy-b)"/><path d="M108 70H132m-6-5 6 5-6 5" fill="none" stroke="var(--muted)" stroke-width="2"/></svg>
+          <figcaption><h3><span>K</span>Time sharing</h3><p>One space changes between modes over time. Test storage, changeover, access and how the environmental conditions can adapt.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-l"><title id="arr-l" data-description="L: a main building inside a dashed site boundary, with small follies outside the boundary linked through the landscape.">L: a main building inside a dashed site boundary, with small follies outside the boundary linked through the landscape. Pair: THINK + MAKE.</title><path d="M124 75L25 30M124 75L209 30M124 75L32 112M124 75L208 114" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="65" y="35" width="120" height="80" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/><rect x="85" y="55" width="78" height="40" fill="var(--strategy-b)"/><g fill="var(--strategy-a)"><rect x="14" y="20" width="22" height="20"/><rect x="197" y="20" width="24" height="20"/><rect x="20" y="102" width="25" height="20"/><circle cx="208" cy="114" r="11"/></g></svg>
+          <figcaption><h3><span>L</span>Decentralised</h3><p>A main building sits within a site boundary, with small follies beyond it in the landscape. Test routes, distance and access between these spaces.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-m"><title id="arr-m" data-description="M: spaces for both modes frame a shared open courtyard.">M: spaces for both modes frame a shared open courtyard. Pair: THINK + MAKE.</title><rect x="20" y="15" width="200" height="28" fill="var(--strategy-b)"/><rect x="20" y="97" width="200" height="28" fill="var(--strategy-b)"/><rect x="20" y="43" width="36" height="54" fill="var(--strategy-a)"/><rect x="184" y="43" width="36" height="54" fill="var(--strategy-a)"/></svg>
+          <figcaption><h3><span>M</span>Courtyard</h3><p>Both modes frame a shared open court. Test daylight, shelter, shared outlook and movement through the outdoor space.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-n"><title id="arr-n" data-description="N: both modes are broken into smaller separated rectangular fragments, related by routes through the gaps.">N: both modes are broken into smaller separated rectangular fragments, related by routes through the gaps. Pair: THINK + MAKE.</title><path d="M45 40L60 100L125 85L130 35L195 55L200 110" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/><g fill="var(--strategy-b)"><rect x="20" y="15" width="55" height="42"/><rect x="100" y="20" width="58" height="30"/><rect x="178" y="30" width="42" height="45"/></g><g fill="var(--strategy-a)"><rect x="35" y="82" width="50" height="43"/><rect x="105" y="68" width="55" height="37"/><rect x="180" y="96" width="40" height="30"/></g></svg>
+          <figcaption><h3><span>N</span>Fragmented</h3><p>Break the programme into smaller pieces. Test how routes and outdoor spaces relate the fragments and distribute the two modes.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-o"><title id="arr-o" data-description="O: a route moves through a space for one mode, a shared space in the pair colour and a space for the other mode.">O: a route moves through a space for one mode, a shared space in the pair colour and a space for the other mode. Pair: THINK + MAKE.</title><rect x="15" y="35" width="55" height="70" fill="var(--strategy-a)"/><rect x="95" y="35" width="50" height="70" fill="var(--strategy-pair)"/><rect x="170" y="35" width="55" height="70" fill="var(--strategy-b)"/><path d="M75 70H90m-5-5 5 5-5 5M150 70H165m-5-5 5 5-5 5" fill="none" stroke="var(--muted)" stroke-width="2"/></svg>
+          <figcaption><h3><span>O</span>Sequence</h3><p>Arrange the modes along a route, with a shared stage between them. Test the order, transitions and changes in spatial conditions.</p></figcaption>
+        </figure>
+        <figure class="arrangement">
+          <svg viewBox="0 0 240 140" role="img" aria-labelledby="arr-p"><title id="arr-p" data-description="P: small rooms for one mode are embedded within thick perimeter walls around a larger central room for the other mode.">P: small rooms for one mode are embedded within thick perimeter walls around a larger central room for the other mode. Pair: THINK + MAKE.</title><rect x="20" y="15" width="200" height="110" fill="var(--line)"/><rect x="65" y="45" width="110" height="50" fill="var(--strategy-b)"/><path d="M55 39H63V45H55ZM157 39H165V45H157ZM57 65H65V73H57ZM175 65H183V73H175ZM55 95H63V103H55ZM157 95H165V103H157Z" fill="var(--white)"/><g fill="var(--strategy-a)"><rect x="40" y="23" width="42" height="16"/><rect x="143" y="23" width="40" height="16"/><rect x="27" y="56" width="30" height="25"/><rect x="183" y="56" width="30" height="25"/><rect x="40" y="103" width="40" height="16"/><rect x="143" y="103" width="40" height="16"/></g></svg>
+          <figcaption><h3><span>P</span>Walls as rooms</h3><p>One mode inhabits rooms within thick walls around a larger space for the other. <a href="https://socks-studio.com/category/topics/walls-as-rooms/">Explore walls as rooms ↗</a></p></figcaption>
+        </figure>
+      </div>
+      <p class="section-intro" style="margin-top:22px">Use these spatial strategies as studies in plan, section or time. Compare different strategies for your pair of modes, combine them or propose another. Label the modes alongside the colours and test the spatial conditions each needs.</p>
+      <aside class="worked-example" aria-labelledby="paper-example-heading">
+        <span class="eyebrow muted">A worked example · The Paper House · THINK + MAKE</span>
+        <h3 id="paper-example-heading">Ideas become printed objects.</h3>
+        <p>Reading, research and writing inform printing and binding; the printed work prompts further thought. Test <strong>B: side by side</strong> with acoustic separation, <strong>D: separated</strong> across a courtyard, or <strong>H: hybrid</strong> in one room used for writing and clean bookbinding. The purpose stays the same while the spatial arrangement changes.</p>
+        <p><strong>Question:</strong> which arrangement supports concentration and material work, and what do noise, dust, light and access require?</p>
+      </aside>
+    </section>
+
     <section id="examples" class="section" aria-labelledby="examples-heading">
-      <div class="catalogue-intro"><div><div class="section-title"><span class="section-index">02 /</span><h2 id="examples-heading">15 ways to begin.</h2></div><p>Each example combines two familiar spaces with a shared purpose. The sketch prompts are possibilities to test. These are starting points, not prescribed buildings or room lists.</p></div><span class="count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 15 examples</span></div>
+      <div class="catalogue-intro"><div><div class="section-title"><span class="section-index">03 /</span><h2 id="examples-heading">18 examples of paired modes.</h2></div><p>Each example gives a pair of modes a particular purpose and group of users. The spatial references and sketch prompts suggest possibilities; test several strategies from A–P, or develop your own.</p></div><span class="count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 18 examples</span></div>
       <div class="filter-bar" role="group" aria-label="Filter examples by mode pair" hidden>
-        <button type="button" data-filter="all" aria-pressed="true">All 15</button>
+        <button type="button" data-filter="all" aria-pressed="true">All 18</button>
         <button type="button" data-filter="think-make" aria-pressed="false"><span class="think">THINK</span> + <span class="make">MAKE</span></button>
         <button type="button" data-filter="make-show" aria-pressed="false"><span class="make">MAKE</span> + <span class="show">SHOW</span></button>
         <button type="button" data-filter="think-show" aria-pressed="false"><span class="think">THINK</span> + <span class="show">SHOW</span></button>
@@ -244,37 +406,50 @@
           <article class="archetype" id="archetype-01">
             <div class="card-top"><span class="card-id">01</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Slow Commons</h4><p class="spaces"><span class="make">Café</span> <span class="plus">+</span> <span class="think">Study Room</span></p>
-            <p class="description">Food is prepared and shared while students, researchers and neighbours read, work and exchange ideas around a common table.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Place a shared eating-and-working table between food preparation and quieter study.</p></div>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Study">Study</span></li><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token make" aria-label="MAKE: Preparation">Preparation</span></li><li><span class="process-token make" aria-label="MAKE: Cooking">Cooking</span></li></ul>
+            <p class="description">Food preparation and study give students, researchers and neighbours a workspace where cooking, reading and concentration can coexist in different spatial arrangements.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, adjacent cooking and study zones, with E, a gradual change from sociable preparation to quiet concentration. Use the MAKE and THINK colours; mark sound, smell and daylight.</p></div>
             <p class="question">How can sociable cooking support quiet concentration?</p>
           </article>
           <article class="archetype" id="archetype-02">
             <div class="card-top"><span class="card-id">02</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Listening Forge</h4><p class="spaces"><span class="make">Instrument Workshop</span> <span class="plus">+</span> <span class="think">Contemplative Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Contemplation">Contemplation</span></li><li><span class="process-token think" aria-label="THINK: Reflection">Reflection</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li></ul>
             <p class="description">Makers craft and repair instruments, then listen closely to their sound; what they hear guides the next adjustment.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Connect a workbench to a listening room through an acoustic buffer.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare A, an enclosed listening room inside a workshop, with D, separate making and listening spaces. Mark acoustic separation and the movement of instruments.</p></div>
             <p class="question">How do you move from the noise of making to careful listening?</p>
           </article>
           <article class="archetype" id="archetype-06">
             <div class="card-top"><span class="card-id">06</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Paper House</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="make">Print Workshop</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Reading">Reading</span></li><li><span class="process-token make" aria-label="MAKE: Printing">Printing</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li></ul>
             <p class="description">Readers, writers and illustrators turn researched ideas into books, posters and small publications, then return to discuss them.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Draw a route from reading to editing, printing and binding, with a shared review table.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, adjacent reading and printing rooms, with H, one space for writing and clean bookbinding. Use the THINK + MAKE pair colour for the hybrid; mark noise, dust and material storage.</p></div>
             <p class="question">Where does a private idea become something tangible and shared?</p>
           </article>
           <article class="archetype" id="archetype-07">
             <div class="card-top"><span class="card-id">07</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Mending Library</h4><p class="spaces"><span class="think">Library</span> <span class="plus">+</span> <span class="make">Repair Workshop</span></p>
-            <p class="description">Neighbours learn how everyday objects work and use that knowledge to repair them together, rather than replace them.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Put a diagnostic table between reference shelves and a shared repair bench.</p></div>
-            <p class="question">How can learning and repairing happen side by side?</p>
+            <h4>The Design Workshop</h4><p class="spaces"><span class="think">Design Office</span> <span class="plus">+</span> <span class="make">Model Workshop</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token think" aria-label="THINK: Analysis">Analysis</span></li><li><span class="process-token make" aria-label="MAKE: Modelling">Modelling</span></li><li><span class="process-token make" aria-label="MAKE: Prototyping">Prototyping</span></li></ul>
+            <p class="description">Architects and product designers research a brief, develop ideas and build physical models to test them. The results inform the next drawings and design decisions.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a design office beside a model workshop, with I, both spaces linked by a shared model-review table. Mark dust control, storage, daylight and model movement.</p></div>
+            <p class="question">How can a design team move easily between focused desk work and testing physical models?</p>
           </article>
           <article class="archetype" id="archetype-08">
             <div class="card-top"><span class="card-id">08</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Clay Cloister</h4><p class="spaces"><span class="make">Ceramics Atelier</span> <span class="plus">+</span> <span class="think">Contemplative Courtyard</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Contemplation">Contemplation</span></li><li><span class="process-token think" aria-label="THINK: Inspiration">Inspiration</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Sculpting">Sculpting</span></li></ul>
             <p class="description">People shape clay, pause to observe light and texture in a quiet courtyard, then return to making with fresh ideas.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Arrange working edges and places to pause around a courtyard; test the threshold between them.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare F, alternating making and contemplative zones around a courtyard, with D, an atelier separated from a quiet garden. Mark kiln servicing, light and places to pause.</p></div>
             <p class="question">How can a pause in making become part of the creative process?</p>
+          </article>
+          <article class="archetype" id="archetype-16">
+            <div class="card-top"><span class="card-id">16</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>The Seed Studio</h4><p class="spaces"><span class="think">Seed Research Room</span> <span class="plus">+</span> <span class="make">Growing Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Inquiry">Inquiry</span></li><li><span class="process-token make" aria-label="MAKE: Growing">Growing</span></li><li><span class="process-token make" aria-label="MAKE: Cultivation">Cultivation</span></li></ul>
+            <p class="description">Growers and students investigate seeds and growing conditions, cultivate small batches and use the results to refine their next experiments.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare I, growing and research spaces linked by a shared sample table, with J, enclosed research rooms around an open growing space. Test daylight, water, sample storage and access.</p></div>
+            <p class="question">How can growing and inquiry share a workspace while keeping different environmental conditions?</p>
           </article>
         </div>
       </section>
@@ -285,37 +460,50 @@
           <article class="archetype" id="archetype-03">
             <div class="card-top"><span class="card-id">03</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Repair Salon</h4><p class="spaces"><span class="make">Garage</span> <span class="plus">+</span> <span class="show">Showroom</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li><li><span class="process-token make" aria-label="MAKE: Restoration">Restoration</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Storytelling">Storytelling</span></li></ul>
             <p class="description">Enthusiasts repair, restore or customise bicycles, vehicles or mechanical objects, then share the work and its story with visitors.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Give visitors a view into a repair bay and trace a separate route for moving objects.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare C, an overlap for demonstration, with B, adjacent repair and display spaces. Use the MAKE + SHOW pair colour for the overlap; trace visitor access and the separate movement of heavy objects.</p></div>
             <p class="question">How can repair become visible while work and visitor routes stay safe?</p>
           </article>
           <article class="archetype" id="archetype-04">
             <div class="card-top"><span class="card-id">04</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Growing Exchange</h4><p class="spaces"><span class="make">Greenhouse</span> <span class="plus">+</span> <span class="show">Marketplace</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Growing">Growing</span></li><li><span class="process-token make" aria-label="MAKE: Cultivation">Cultivation</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li><li><span class="process-token show" aria-label="SHOW: Sharing">Sharing</span></li></ul>
             <p class="description">Growers cultivate plants and food, then exchange produce, seeds and knowledge with neighbours who can see where it all begins.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Link growing beds to an exchange table, allowing space for harvesting and washing along the way.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, growing and exchange side by side, with F, repeated growing and demonstration zones. Use the MAKE + SHOW pair colour for shared zones; mark water, deliveries and public access.</p></div>
             <p class="question">How can a journey from growing to exchange make production understandable?</p>
           </article>
           <article class="archetype" id="archetype-09">
             <div class="card-top"><span class="card-id">09</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Stitch Exchange</h4><p class="spaces"><span class="make">Textile Workshop</span> <span class="plus">+</span> <span class="show">Market Arcade</span></p>
-            <p class="description">People make, alter and mend textiles, then display, exchange or sell them along a public edge where neighbours can join in.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Let a workshop open onto a sheltered arcade through a demonstration or mending table.</p></div>
-            <p class="question">Where can a passer-by become a participant?</p>
+            <h4>The Bakery</h4><p class="spaces"><span class="make">Bakehouse</span> <span class="plus">+</span> <span class="show">Shop and Display</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Preparation">Preparation</span></li><li><span class="process-token make" aria-label="MAKE: Cooking">Cooking</span></li><li><span class="process-token show" aria-label="SHOW: Display">Display</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
+            <p class="description">Bakers mix, shape and bake bread. Customers see the work and buy bread at a public counter; demonstrations share the skills behind the finished loaves.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a bakehouse beside a shop, with C, a shared demonstration area. Trace ingredients, hot trays and customers; test ventilation, cleaning and safe views of the work.</p></div>
+            <p class="question">How can customers encounter baking while preparation and deliveries run smoothly?</p>
           </article>
           <article class="archetype" id="archetype-10">
             <div class="card-top"><span class="card-id">10</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Play Foundry</h4><p class="spaces"><span class="make">Toy Workshop</span> <span class="plus">+</span> <span class="show">Playground</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Prototyping">Prototyping</span></li><li><span class="process-token make" aria-label="MAKE: Playing">Playing</span></li><li><span class="process-token show" aria-label="SHOW: Participation">Participation</span></li><li><span class="process-token show" aria-label="SHOW: Interaction">Interaction</span></li></ul>
             <p class="description">Makers build toys and games that others try through play; watching how they are used helps improve the next version.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Connect a protected making area to a supervised play space through a testing threshold.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare G, a main play space connected to protected making rooms, with C, an overlap for supervised testing. Mark tool safety, sightlines and how toys move through the building.</p></div>
             <p class="question">How can play become feedback for making?</p>
           </article>
           <article class="archetype" id="archetype-11">
             <div class="card-top"><span class="card-id">11</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Light Foundry</h4><p class="spaces"><span class="make">Fabrication Workshop</span> <span class="plus">+</span> <span class="show">Light Chamber</span></p>
-            <p class="description">People make lamps and light installations, then invite visitors to experience and discuss their effects on shadow and atmosphere.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Draw a transition from a well-lit workbench to a chamber with controlled light.</p></div>
-            <p class="question">How does the journey from making to darkness prepare someone to see?</p>
+            <h4>The Tailoring Workshop</h4><p class="spaces"><span class="make">Sewing Workshop</span> <span class="plus">+</span> <span class="show">Fitting and Display Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Sewing">Sewing</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token show" aria-label="SHOW: Display">Display</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
+            <p class="description">Tailors cut, sew and alter clothes, then present finished garments to clients. Fitting appointments allow clients to see the work, discuss details and request adjustments.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, sewing and fitting rooms side by side, with I, a shared fitting and review area linking them. Mark fabric storage, daylight, client access and privacy.</p></div>
+            <p class="question">How can clients see and discuss the work while sewing and private fittings have suitable space?</p>
+          </article>
+          <article class="archetype" id="archetype-17">
+            <div class="card-top"><span class="card-id">17</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Print Exchange</h4><p class="spaces"><span class="make">Print Workshop</span> <span class="plus">+</span> <span class="show">Publication Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Printing">Printing</span></li><li><span class="process-token make" aria-label="MAKE: Preparation">Preparation</span></li><li><span class="process-token show" aria-label="SHOW: Publication">Publication</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
+            <p class="description">Local printers prepare small editions and share their work through display, exchange and public demonstrations of printing techniques.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare F, interlocking making and display zones, with K, one room used for printing and public exchange at different times. Mark safe access, drying and storage.</p></div>
+            <p class="question">How can people encounter the work of printing while the workshop remains usable?</p>
           </article>
         </div>
       </section>
@@ -325,70 +513,117 @@
         <div class="card-grid">
           <article class="archetype" id="archetype-05">
             <div class="card-top"><span class="card-id">05</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Idea Assembly</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="show">Public Forum</span></p>
-            <p class="description">People research and develop ideas, then share and challenge them through informal talks and small public discussions.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Connect quiet reading places to a modest discussion space through a shared gathering edge.</p></div>
-            <p class="question">How can someone move between private reflection and public debate?</p>
+            <h4>The Planning Studio</h4><p class="spaces"><span class="think">Planning Office</span> <span class="plus">+</span> <span class="show">Public Consultation Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
+            <p class="description">Planners research a neighbourhood, develop proposals and discuss them with residents. Public meetings and consultations help the team revise its plans.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, offices beside a consultation room, with C, a shared area for reviewing proposals. Mark confidential work, public access and places to display drawings.</p></div>
+            <p class="question">How can residents discuss proposals while the planning team has space for focused work?</p>
           </article>
           <article class="archetype" id="archetype-12">
             <div class="card-top"><span class="card-id">12</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Atlas Room</h4><p class="spaces"><span class="think">Research Library</span> <span class="plus">+</span> <span class="show">Public Mapping Room</span></p>
-            <p class="description">Researchers and neighbours investigate the city, share their findings through maps and invite others to add local knowledge.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Extend a research table into a public mapping surface where visitors can contribute.</p></div>
-            <p class="question">How can private research become knowledge that others can question?</p>
+            <h4>The Training Centre</h4><p class="spaces"><span class="think">Study Room</span> <span class="plus">+</span> <span class="show">Teaching Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Study">Study</span></li><li><span class="process-token think" aria-label="THINK: Learning">Learning</span></li><li><span class="process-token show" aria-label="SHOW: Teaching">Teaching</span></li><li><span class="process-token show" aria-label="SHOW: Education">Education</span></li></ul>
+            <p class="description">Trainees study manuals and prepare for professional qualifications. Tutors explain the material in small classes, answer questions and review progress with the group.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a quiet study room beside a teaching room, with K, one room used for study and scheduled lessons. Mark acoustic separation, group sizes and accessible seating.</p></div>
+            <p class="question">How can individual study and organised teaching share a modest workspace?</p>
           </article>
           <article class="archetype" id="archetype-13">
             <div class="card-top"><span class="card-id">13</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Signal House</h4><p class="spaces"><span class="think">Research Studio</span> <span class="plus">+</span> <span class="show">Broadcasting Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Investigation">Investigation</span></li><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token show" aria-label="SHOW: Broadcast">Broadcast</span></li><li><span class="process-token show" aria-label="SHOW: Communication">Communication</span></li></ul>
             <p class="description">People investigate contemporary questions and share their findings through podcasts, radio conversations and small public broadcasts.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Link a research table to an acoustically protected broadcast room with a visible public edge.</p></div>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare A, an acoustically enclosed broadcast room within a research studio, with B, adjacent research and broadcast rooms. Use the THINK and SHOW colours; mark sound isolation and audience access.</p></div>
             <p class="question">How can a quiet recording space connect with an audience?</p>
           </article>
           <article class="archetype" id="archetype-14">
             <div class="card-top"><span class="card-id">14</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Climate Lantern</h4><p class="spaces"><span class="think">Observation Laboratory</span> <span class="plus">+</span> <span class="show">Public Display</span></p>
-            <p class="description">People study local weather, light and temperature, then make their observations visible so neighbours can understand changing conditions.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Link an observation point to a public wall or light display that responds to its findings.</p></div>
-            <p class="question">How can a building help people notice an environmental change?</p>
+            <h4>The Screening Studio</h4><p class="spaces"><span class="think">Film Programming Office</span> <span class="plus">+</span> <span class="show">Small Cinema</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Screening">Screening</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
+            <p class="description">Film programmers research and select films, plan a programme and introduce screenings for local audiences. Talks with filmmakers and audience discussions support the programme.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a programming office beside a small cinema, with K, a screening room used for private previews by day and public screenings in the evening. Test blackout, sound, equipment and audience access.</p></div>
+            <p class="question">How can a small cinema support the quiet work of selecting and preparing a film programme?</p>
           </article>
           <article class="archetype" id="archetype-15">
             <div class="card-top"><span class="card-id">15</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Night Observatory</h4><p class="spaces"><span class="think">Study Room</span> <span class="plus">+</span> <span class="show">Sky Terrace</span></p>
-            <p class="description">People study the sky and celestial movements, then gather on a shared terrace to observe, explain and discuss their discoveries.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Draw an accessible journey from a study table to an open sky view, with a dimly lit transition.</p></div>
-            <p class="question">How can a shared place reveal the night sky while limiting light spill?</p>
+            <h4>The Writing Room</h4><p class="spaces"><span class="think">Writers’ Study</span> <span class="plus">+</span> <span class="show">Public Reading Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Reflection">Reflection</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li><li><span class="process-token show" aria-label="SHOW: Critique">Critique</span></li></ul>
+            <p class="description">Writers research and develop articles, stories or poems, then present work through public readings and talks. Editorial feedback and audience responses help them revise their writing.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare D, a quiet writing room separated from a public reading space, with K, one room used for writing and scheduled readings. Mark sound, book storage and visitor access.</p></div>
+            <p class="question">How can writers protect time for concentrated work while sharing their writing with an audience?</p>
+          </article>
+          <article class="archetype" id="archetype-18">
+            <div class="card-top"><span class="card-id">18</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>The Archive Room</h4><p class="spaces"><span class="think">Archive Study</span> <span class="plus">+</span> <span class="show">Exhibition Room</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Investigation">Investigation</span></li><li><span class="process-token think" aria-label="THINK: Interpretation">Interpretation</span></li><li><span class="process-token show" aria-label="SHOW: Display">Display</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
+            <p class="description">Researchers and neighbours investigate local documents, interpret their meaning and share selected stories through small displays and conversations.</p>
+            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare A, protected archive study within a public room, with C, an overlap for interpretation and dialogue. Test daylight, document care, privacy and public access.</p></div>
+            <p class="question">How can careful investigation inform a public account of the past?</p>
           </article>
         </div>
       </section>
     </section>
 
     <section id="your-turn" class="start" aria-labelledby="start-heading">
-      <div class="section-title"><span class="section-index">03 /</span><h2 id="start-heading">Now make the idea yours.</h2></div>
+      <div class="section-title"><span class="section-index">04 /</span><h2 id="start-heading">Develop your own pair of modes.</h2></div>
       <div class="start-grid">
-        <div><p class="sentence">The <span class="blank">[name]</span> is a place where <span class="blank">[people]</span> come to <span class="blank">[activity A]</span> and <span class="blank">[activity B]</span>, connected through <span class="blank">[shared purpose]</span>.</p></div>
-        <div><h3>Bring three things to the table:</h3><ol class="checklist"><li><strong>One sentence</strong> explaining who it is for and why the activities belong together.</li><li><strong>One relationship diagram</strong> showing activities, connections and any conflict to resolve.</li><li><strong>One architectural question</strong> about light, sound, access, visibility, thresholds or atmosphere.</li></ol></div>
+        <div><p class="sentence">The <span class="blank">[workspace]</span> supports the modes <span class="blank">[mode A]</span> and <span class="blank">[mode B]</span> for <span class="blank">[people]</span>. Their work involves <span class="blank">[specific processes]</span>, arranged as <span class="blank">[spatial relationship]</span> to support <span class="blank">[purpose]</span>.</p></div>
+        <div><h3>Bring three things for discussion:</h3><ol class="checklist"><li><strong>One sentence</strong> naming your pair of modes, the users and the purpose of their work.</li><li><strong>Two or three spatial diagrams</strong> comparing arrangements. Use the mode colours, label each mode and identify conflicts to resolve.</li><li><strong>One architectural question</strong> about light, sound, access, structure, material or atmosphere, linked to your preferred arrangement.</li></ol></div>
       </div>
-      <div class="scale-note"><strong>500–750 m² GFA</strong><p>Work towards a modest building, usually one or two storeys: one substantial shared space, a complementary space and a few supporting functions. Test the scale, servicing and access of your chosen activities. Start with the relationship; develop the plan afterwards.</p></div>
+      <div class="scale-note"><strong>Approx. 750 m² GIA</strong><p>The brief gives an indicative gross internal area of approximately 750 m². Keep the programme credible for your users and pair of modes; justify significant departures. Test scale, servicing and access as you develop the spatial arrangement and its response to the site.</p></div>
     </section>
   </main>
-  <footer class="wrap"><p>THINK / MAKE / SHOW · Second-year architecture studio · University of Salford<br>Working ideas, open to adaptation. Original example numbers retained.</p><p><a href="think_make_show_archetypes_codex_handoff.md">Project reference ↗</a></p></footer>
+  <footer class="wrap"><p>THINK / MAKE / SHOW · Second-year architecture studio · University of Salford<br>Working ideas, open to adaptation. Original example numbers retained.</p><p><a href="../">All studio resources ↗</a></p></footer>
   <script>
     (() => {
       const bar = document.querySelector('.filter-bar');
       const buttons = [...bar.querySelectorAll('button')];
       const groups = [...document.querySelectorAll('.pair-group')];
       const count = document.querySelector('#result-count');
+      const totalExamples = document.querySelectorAll('.archetype').length;
       const printButton = document.querySelector('.print');
-      bar.hidden = false;
-      printButton.hidden = false;
       buttons.forEach(button => button.addEventListener('click', () => {
         const selected = button.dataset.filter;
         buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
         groups.forEach(group => { group.hidden = selected !== 'all' && group.dataset.pair !== selected; });
         const total = groups.filter(group => !group.hidden).reduce((sum, group) => sum + group.querySelectorAll('.archetype').length, 0);
-        count.textContent = selected === 'all' ? 'Showing all 15 examples' : `Showing ${total} of 15 examples · ${button.textContent.trim()}`;
+        const label = button.textContent.trim().replace(/\s+/g, ' ');
+        count.textContent = selected === 'all' ? `Showing all ${totalExamples} examples` : `Showing ${total} of ${totalExamples} examples · ${label}`;
       }));
+      bar.hidden = false;
       printButton.addEventListener('click', () => window.print());
+      printButton.hidden = false;
+
+      const strategies = document.querySelector('#arrangements');
+      const switcher = strategies.querySelector('.strategy-switcher');
+      const strategyButtons = [...switcher.querySelectorAll('button')];
+      const swapButton = strategies.querySelector('.strategy-swap');
+      const pairs = { 'think-make': ['THINK', 'MAKE'], 'make-show': ['MAKE', 'SHOW'], 'show-think': ['SHOW', 'THINK'] };
+      const renderStrategies = () => {
+        const pair = strategies.dataset.strategyPair;
+        const swapped = strategies.dataset.coloursSwapped === 'true';
+        const [first, second] = pairs[pair];
+        const label = `${first} + ${second}`;
+        strategyButtons.forEach(item => item.setAttribute('aria-pressed', String(item.dataset.strategy === pair)));
+        swapButton.setAttribute('aria-pressed', String(swapped));
+        strategies.querySelector('#strategy-mode-a').textContent = swapped ? second : first;
+        strategies.querySelector('#strategy-mode-b').textContent = swapped ? first : second;
+        strategies.querySelector('#strategy-pair-label').textContent = label;
+        strategies.querySelector('#strategy-status').textContent = `Showing ${label} spatial strategies.${swapped ? ' Colour positions swapped.' : ''}`;
+        strategies.querySelectorAll('svg title[data-description]').forEach(title => {
+          title.textContent = `${title.dataset.description} Pair: ${label}.${swapped ? ' Colour positions swapped.' : ''}`;
+        });
+      };
+      strategyButtons.forEach(button => button.addEventListener('click', () => {
+        strategies.dataset.strategyPair = button.dataset.strategy;
+        renderStrategies();
+      }));
+      swapButton.addEventListener('click', () => {
+        strategies.dataset.coloursSwapped = String(strategies.dataset.coloursSwapped !== 'true');
+        renderStrategies();
+      });
+      switcher.hidden = false;
+      swapButton.hidden = false;
+      strategies.querySelector('.strategy-help').hidden = false;
     })();
   </script>
 </body>
