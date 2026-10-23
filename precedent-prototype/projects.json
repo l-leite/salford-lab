@@ -1,0 +1,2246 @@
+[
+  {
+    "slug": "bruder-klaus",
+    "folder": "01 Bruder Klaus Field Chapel",
+    "name": "Bruder Klaus Field Chapel",
+    "architect": "Peter Zumthor",
+    "place": "Wachendorf, Germany",
+    "type": "Chapel",
+    "year": "2007",
+    "lead": "An enclosed chamber for contemplation, with a narrow entrance and an opening to the sky.",
+    "description": "A small field chapel in the landscape near Wachendorf, intended for silence, meditation and prayer.",
+    "lenses": [
+      "Atmosphere",
+      "Organisation",
+      "Material",
+      "Tectonics"
+    ],
+    "tokens": {
+      "think": [
+        "contemplation",
+        "meditation",
+        "introspection"
+      ]
+    },
+    "connections": {
+      "think": "The chapel provides a place for silence, prayer and inward attention."
+    },
+    "primary": [
+      "Bruder-Klaus-Feldkapelle: the chapel",
+      "https://www.feldkapelle.de/"
+    ],
+    "hero": "03",
+    "insight": "Rammed concrete was built up in layers around tent-shaped wooden formwork. Once it had hardened, a slow fire charred and shrank the tree trunks so they could be removed. Their impressions and the soot-blackened surfaces give the chamber its rough, cave-like character, intensified by light from the opening above.",
+    "references": [
+      [
+        "Construction and atmosphere: research with Atelier Zumthor",
+        "https://acsforum.org/the-spiritual-dimension-of-architectural-atmospheres-the-sogn-benedetg-and-bruder-klaus-chapels/"
+      ]
+    ]
+  },
+  {
+    "folder": "02 Salk Institute",
+    "slug": "salk-institute",
+    "name": "Salk Institute",
+    "architect": "Louis Kahn",
+    "place": "La Jolla, California, USA",
+    "type": "Research institute",
+    "year": "1965",
+    "lead": "Laboratories and individual studies face a shared courtyard, giving scientific experimentation and quiet thought distinct settings within one research institute.",
+    "description": "Scientists move between adaptable laboratories for experiments and individual studies for concentrated thought. The central courtyard and open-air circulation connect these different working environments and create opportunities for informal exchange.",
+    "insight": "Full-height service floors sit between the laboratories, carrying pipes and equipment through deep concrete trusses. This separates changing technical infrastructure from the occupied rooms, allowing laboratory layouts and services to be adapted with less disruption to research.",
+    "lenses": [
+      "Structure",
+      "Programme",
+      "Organisation",
+      "Tectonics",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "research",
+        "concentration",
+        "contemplation"
+      ],
+      "make": [
+        "experimentation",
+        "testing"
+      ]
+    },
+    "connections": {
+      "think": "Individual studies support scientific thought away from the laboratory benches.",
+      "make": "Laboratories accommodate practical experiments and testing."
+    },
+    "primary": [
+      "Salk Institute: virtual architecture tour",
+      "https://www.salk.edu/about/visiting-salk/virtual-architecture-tour/"
+    ],
+    "references": [
+      [
+        "ArchDaily: project and image gallery",
+        "https://www.archdaily.com/61288/ad-classics-salk-institute-louis-kahn"
+      ]
+    ],
+    "hero": "01"
+  },
+  {
+    "folder": "03 BIT Center",
+    "slug": "bit-center",
+    "name": "BIT Center",
+    "architect": "Alberto Campo Baeza",
+    "place": "Inca, Mallorca, Spain",
+    "type": "Offices and lecture space",
+    "year": "1998",
+    "lead": "Technology offices sit within an enclosed garden, with glazed workspaces around the edges and an open-air lecture space at the centre.",
+    "description": "Glazed offices provide places for concentrated work within a sheltered garden. A sunken amphitheatre in the courtyard introduces a collective setting for lectures and presentations alongside the everyday workspace.",
+    "insight": "A triangular stone enclosure contains an orthogonal grid of columns and lemon trees. The contrast between a heavy travertine podium and light roofs gives the project its order, while services run below the floor to keep the workspaces clear.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Tectonics",
+      "Organisation",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "concentration",
+        "planning"
+      ],
+      "show": [
+        "presentation",
+        "teaching"
+      ]
+    },
+    "connections": {
+      "think": "Offices provide a protected setting for desk work.",
+      "show": "The courtyard amphitheatre accommodates lectures and presentations."
+    },
+    "primary": [
+      "Alberto Campo Baeza: BIT Center",
+      "https://www.campobaeza.com/centre-bit/"
+    ],
+    "references": [],
+    "hero": "01"
+  },
+  {
+    "slug": "yardhouse",
+    "folder": "04 Yardhouse",
+    "name": "Yardhouse",
+    "architect": "Assemble",
+    "place": "London, UK",
+    "type": "Workspace",
+    "year": "2014",
+    "lead": "Individual studios open onto a double-height communal space.",
+    "description": "An affordable creative workspace with adaptable studio units arranged around a shared central bay.",
+    "lenses": [
+      "Philosophy",
+      "Programme",
+      "Organisation",
+      "Structure",
+      "Tectonics"
+    ],
+    "tokens": {
+      "think": [
+        "ideation",
+        "discussion"
+      ],
+      "make": [
+        "craft",
+        "production"
+      ]
+    },
+    "connections": {
+      "think": "The studios and shared space accommodate independent creative work and discussion.",
+      "make": "Studio units provide places for tenants’ creative and craft production."
+    },
+    "primary": [
+      "Project account — Assemble",
+      "https://assemblestudio.co.uk/projects/yardhouse"
+    ],
+    "hero": "02",
+    "insight": "A simple timber frame and prefabricated insulated panels allowed generous studio volumes with an economical construction. Handmade concrete tiles gave the public facade a distinct character, while tenants could adapt their own units.",
+    "references": []
+  },
+  {
+    "slug": "ricola",
+    "folder": "05 Ricola Krauterzentrum",
+    "name": "Ricola Kräuterzentrum",
+    "architect": "Herzog & de Meuron",
+    "place": "Laufen, Switzerland",
+    "type": "Production building",
+    "year": "2014",
+    "lead": "A herb-processing building with an earth enclosure and a visitor centre.",
+    "description": "A production building for drying, cutting, blending and storing herbs, with a visitor centre overlooking the processing areas.",
+    "lenses": [
+      "Programme",
+      "Material",
+      "Sustainability strategy",
+      "Structure",
+      "Tectonics"
+    ],
+    "tokens": {
+      "make": [
+        "processing",
+        "production"
+      ],
+      "show": [
+        "demonstration",
+        "education"
+      ]
+    },
+    "connections": {
+      "make": "The building accommodates the industrial processing of herbs, from drying and cutting to blending and storage.",
+      "show": "The visitor centre allows people to observe and learn about herb processing."
+    },
+    "primary": [
+      "Project account — Herzog & de Meuron",
+      "https://www.herzogdemeuron.com/projects/369-ricola-krauterzentrum/"
+    ],
+    "hero": "02",
+    "insight": "The facade uses prefabricated elements of locally sourced rammed earth, which helps regulate humidity. It is distinct from the internal concrete loadbearing structure: material character and environmental performance are considered alongside the demands of production.",
+    "references": []
+  },
+  {
+    "slug": "sesc-pompeia",
+    "folder": "06 SESC Pompeia",
+    "name": "SESC Pompeia",
+    "architect": "Lina Bo Bardi",
+    "place": "São Paulo, Brazil",
+    "type": "Culture and leisure centre",
+    "year": "1982–86",
+    "lead": "A former factory accommodates workshops, reading, exhibitions, performance and leisure.",
+    "description": "A culture and leisure centre combining retained factory sheds with new sports facilities and spaces for communal use.",
+    "lenses": [
+      "Philosophy",
+      "Programme",
+      "Organisation",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "think": [
+        "reading",
+        "learning",
+        "discussion"
+      ],
+      "make": [
+        "craft",
+        "playing"
+      ],
+      "show": [
+        "performance",
+        "exhibition",
+        "participation"
+      ]
+    },
+    "connections": {
+      "think": "Reading and learning take place alongside informal discussion and communal activities.",
+      "make": "Workshops and spaces for play support creative activity.",
+      "show": "Theatres, exhibition areas and shared spaces accommodate performance and public participation."
+    },
+    "primary": [
+      "Project history — Sesc São Paulo",
+      "https://www.sescsp.org.br/editorial/voce-conhece-a-origem-do-sesc-pompeia/"
+    ],
+    "hero": "02",
+    "insight": "Lina Bo Bardi retained the factory sheds and added new sports buildings. The project brings new communal uses into an industrial setting while preserving its material character, making reuse part of its social and architectural position.",
+    "references": [],
+    "imageNotes": {
+      "06 Section - conceptual sketch.webp": "Lina Bo Bardi’s conceptual section sketch; not a measured as-built drawing."
+    }
+  },
+  {
+    "slug": "teshima",
+    "folder": "07 Teshima Art Museum",
+    "name": "Teshima Art Museum",
+    "architect": "Ryue Nishizawa · artist Rei Naito",
+    "place": "Teshima, Japan",
+    "type": "Art museum",
+    "year": "2010",
+    "lead": "A low concrete shell houses Rei Naito’s water-based artwork.",
+    "description": "An art museum where openings in a column-free shell admit light, air and sound around Rei Naito’s installation.",
+    "lenses": [
+      "Form",
+      "Structure",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "contemplation",
+        "reflection"
+      ],
+      "show": [
+        "exhibition"
+      ]
+    },
+    "connections": {
+      "think": "The interior offers a setting for quiet observation and contemplation.",
+      "show": "The museum houses an artwork whose experience is closely connected to its architectural setting."
+    },
+    "primary": [
+      "Museum account — Benesse Art Site Naoshima",
+      "https://benesse-artsite.jp/en/art/teshima-artmuseum.html"
+    ],
+    "hero": "03",
+    "insight": "The low concrete shell spans without internal columns. Two oval openings admit light, wind and sound, so the experience of the artwork changes with the weather and the time of day.",
+    "references": []
+  },
+  {
+    "slug": "kait-workshop",
+    "folder": "08 KAIT Workshop",
+    "name": "KAIT Workshop",
+    "architect": "Junya Ishigami",
+    "place": "Atsugi, Japan",
+    "type": "Student workshop",
+    "year": "2008",
+    "lead": "An open student workshop with work areas set among slender columns.",
+    "description": "A university facility for students’ independent creative activities, with tools, equipment and specialist support in one shared interior.",
+    "lenses": [
+      "Organisation",
+      "Structure",
+      "Programme"
+    ],
+    "tokens": {
+      "think": [
+        "ideation",
+        "problem-solving"
+      ],
+      "make": [
+        "prototyping",
+        "experimentation",
+        "modelling"
+      ]
+    },
+    "connections": {
+      "think": "Students develop ideas and resolve problems as part of their creative projects.",
+      "make": "The workshop provides equipment and space for material experiments, models and prototypes."
+    },
+    "primary": [
+      "Facility account — Kanagawa Institute of Technology",
+      "https://www.kait.jp/about/equipment/kaitkoubou/"
+    ],
+    "hero": "02",
+    "insight": "Slender columns, furniture and equipment define different places within a room without internal dividing walls. The result is an open field of work areas, with a sense of distinction between activities despite their visual continuity.",
+    "references": []
+  },
+  {
+    "folder": "09 House and Restaurant",
+    "slug": "house-and-restaurant",
+    "name": "House and Restaurant",
+    "architect": "Junya Ishigami",
+    "place": "Ube, Japan",
+    "type": "House and restaurant",
+    "year": "2022",
+    "lead": "A chef's home and restaurant share a cave-like concrete landscape, separated by courtyards but connected through domestic hospitality and everyday use.",
+    "description": "The restaurant occupies the north side and the family home the south, with three courtyards between them. Cooking, dining and receiving guests sit close to domestic life; the restaurant hall also becomes family space when closed.",
+    "insight": "Concrete was poured into excavated holes and then uncovered. Soil clinging to the resulting surfaces was retained rather than washed away, giving the new building the roughness of a cave. Furniture and glazing were adjusted to the irregular structure actually produced on site.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Programme",
+      "Philosophy",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "make": [
+        "cooking",
+        "preparation"
+      ],
+      "show": [
+        "exchange",
+        "interaction"
+      ]
+    },
+    "connections": {
+      "make": "Food preparation and cooking are the restaurant's productive activities.",
+      "show": "Shared meals and receiving guests connect the restaurant with the life of the house."
+    },
+    "primary": [
+      "Junya Ishigami: architect's account published by ArchDaily",
+      "https://www.archdaily.com/987227/house-and-restaurant-junya-ishigami-plus-associates"
+    ],
+    "references": [],
+    "hero": "02"
+  },
+  {
+    "folder": "10 Serpentine Gallery Pavilion 2009",
+    "slug": "serpentine-pavilion-2009",
+    "name": "Serpentine Gallery Pavilion 2009",
+    "architect": "SANAA",
+    "place": "London, UK",
+    "type": "Temporary public pavilion",
+    "year": "2009",
+    "lead": "A thin reflective roof extends through the park, sheltering gathering and public activities without making a closed room or a single entrance.",
+    "description": "The pavilion provides a shared outdoor setting for gathering and public events. Access from every side and movable seating allow different arrangements beneath one continuous canopy, while views remain open across the park.",
+    "insight": "Mirror-finished aluminium reflects the trees, sky and people beneath the roof, making its appearance change with the surroundings. The apparently thin surface is a sandwich of aluminium and plywood, supported by slender columns and shaped around existing trees.",
+    "lenses": [
+      "Form",
+      "Structure",
+      "Material",
+      "Tectonics",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "show": [
+        "interaction",
+        "participation",
+        "exchange"
+      ]
+    },
+    "connections": {
+      "show": "The open canopy accommodates public gathering and shared events."
+    },
+    "primary": [
+      "Serpentine: SANAA pavilion 2009",
+      "https://www.serpentinegalleries.org/whats-on/serpentine-gallery-pavilion-2009-kazuyo-sejima-ryue-nishizawa-sanaa-0/"
+    ],
+    "references": [
+      [
+        "SANAA: project account and drawings in Area",
+        "https://www.area-arch.it/en/serpentine-gallery-2/"
+      ],
+      [
+        "Institution of Structural Engineers: roof construction",
+        "https://www.istructe.org/structural-awards/projects/2010/serpentine-gallery-pavilion-2009/"
+      ]
+    ],
+    "hero": "01"
+  },
+  {
+    "slug": "the-truffle",
+    "folder": "11 The Truffle",
+    "name": "The Truffle",
+    "architect": "Ensamble Studio",
+    "place": "Costa da Morte, Spain",
+    "type": "Small retreat",
+    "year": "2010",
+    "lead": "A small retreat enclosed by a rough concrete mass, with a view towards the sea.",
+    "description": "A small retreat on the Costa da Morte, with a compact interior and a strong sense of enclosure.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Philosophy",
+      "Tectonics",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "introspection",
+        "reflection"
+      ]
+    },
+    "connections": {
+      "think": "The enclosed retreat offers a setting for introspection and reflection."
+    },
+    "primary": [
+      "Project account — Ensamble Studio",
+      "https://www.ensamble.info/thetruffle"
+    ],
+    "hero": "03",
+    "insight": "Concrete was poured around a volume of hay bales held within an earth mould. Removing the earth and the hay revealed the enclosing mass and its interior void, allowing the construction process to determine the room’s form and surface.",
+    "references": []
+  },
+  {
+    "folder": "12 Second Home Hollywood Office",
+    "slug": "second-home-hollywood",
+    "name": "Second Home Hollywood Office",
+    "architect": "Selgascano",
+    "place": "Los Angeles, California, USA",
+    "type": "Shared offices",
+    "year": "2019",
+    "lead": "Small offices and meeting rooms are dispersed through a planted garden, combining individual working environments with shared facilities and places to meet.",
+    "description": "Separate office pods provide places for desk work and meetings, while a retained building contains shared workspaces, a café and an events hall. Garden paths connect quieter workplaces with the campus's collective activities.",
+    "insight": "The architects reversed the familiar idea of bringing plants into an office by placing offices within a garden. Curved transparent walls give views of planting at desk height; soil above the existing parking structure creates a landscape between the separate rooms.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Sustainability strategy",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "concentration",
+        "discussion"
+      ],
+      "show": [
+        "networking",
+        "exchange"
+      ]
+    },
+    "connections": {
+      "think": "Individual offices and meeting rooms support focused work and discussion.",
+      "show": "Shared facilities and the events hall bring different workers together."
+    },
+    "primary": [
+      "Selgascano: architect's account published by ArchDaily",
+      "https://www.archdaily.com/928819/second-home-hollywood-office-selgascano"
+    ],
+    "references": [
+      [
+        "Dake Landscape Architects: landscape design",
+        "https://www.dakelandscape.com/work/second-home-hollywood"
+      ]
+    ],
+    "hero": "02"
+  },
+  {
+    "folder": "13 Architecture Office",
+    "slug": "selgascano-architecture-office",
+    "name": "Architecture Office",
+    "architect": "Selgascano",
+    "place": "Madrid, Spain",
+    "type": "Architecture studio",
+    "year": "2007",
+    "lead": "A small architecture studio is partly buried beneath the trees, placing desks at ground level beside a long transparent edge.",
+    "description": "A single elongated workspace brings the architectural team together under the trees. The transparent north side maintains a close view of the landscape, while the more enclosed south side protects the desk area from direct sunlight.",
+    "insight": "The curved enclosure treats its two sides differently: clear acrylic towards the north and insulated translucent fibreglass and polyester towards the south. Half-burying the studio sets horizontal views near ground level, making the surrounding woodland part of the daily working environment.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Tectonics",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "planning",
+        "concentration",
+        "discussion"
+      ]
+    },
+    "connections": {
+      "think": "The studio provides a shared setting for architectural planning and concentrated desk work."
+    },
+    "primary": [
+      "Selgascano: architect's account and original drawings on Archilovers",
+      "https://www.archilovers.com/projects/58439/selgascano-office.html"
+    ],
+    "references": [
+      [
+        "ArchDaily: project photographs",
+        "https://www.archdaily.com/21049/selgas-cano-architecture-office-by-iwan-baan"
+      ]
+    ],
+    "hero": "02"
+  },
+  {
+    "folder": "14 Atelier Bardill",
+    "slug": "atelier-bardill",
+    "name": "Atelier Bardill",
+    "architect": "Valerio Olgiati",
+    "place": "Scharans, Switzerland",
+    "type": "Musician's studio",
+    "year": "2007",
+    "lead": "A working room for musician and writer Linard Bardill opens onto a large courtyard, enclosed within the volume of a former barn.",
+    "description": "The atelier provides one room for Linard Bardill's creative work beside an open courtyard. A modest amount of enclosed working space is paired with a much larger outdoor room for light, outlook and pause.",
+    "insight": "Planning permission required the replacement to keep the old barn's volume, although the client needed less than a third of it. Olgiati turned the remainder into a courtyard with a large circular opening to the sky, giving an apparently solid building an unexpectedly open centre.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Programme",
+      "Organisation",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "concentration",
+        "inspiration"
+      ],
+      "make": [
+        "composing"
+      ]
+    },
+    "connections": {
+      "think": "The secluded working room supports the writer's concentrated creative work.",
+      "make": "The musician's atelier is a setting for composing."
+    },
+    "primary": [
+      "Valerio Olgiati: project account on Divisare",
+      "https://divisare.com/projects/17013-valerio-olgiati-atelier-bardill"
+    ],
+    "references": [
+      [
+        "AND: Atelier Bardill, project and client details",
+        "https://www.and-architettura.it/index.php/and/article/download/522/483/"
+      ]
+    ],
+    "hero": "04"
+  },
+  {
+    "folder": "15 Abby Kortrijk",
+    "slug": "abby-kortrijk",
+    "name": "Abby Kortrijk",
+    "architect": "Barozzi Veiga and TAB Architects",
+    "place": "Kortrijk, Belgium",
+    "type": "Museum and public cultural spaces",
+    "year": "2025",
+    "lead": "An abbey becomes a museum and public meeting place, bringing exhibitions, artistic experiments and conversation into a sequence of old and new rooms.",
+    "description": "Exhibitions occupy historic rooms and new underground galleries. A public living room, workshop spaces and café add everyday uses, allowing the museum to host artistic work, presentations and informal encounters as well as the display of art.",
+    "insight": "Much of the new exhibition accommodation is underground, allowing the historic chapel, dormitories and courtyard to remain legible above. A new brick pavilion echoes the surrounding pitched roofs while giving the café a distinct identity facing the park.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Programme",
+      "Philosophy",
+      "Organisation"
+    ],
+    "tokens": {
+      "make": [
+        "experimentation",
+        "creation"
+      ],
+      "show": [
+        "exhibition",
+        "dialogue",
+        "presentation"
+      ]
+    },
+    "connections": {
+      "make": "The Studio hosts creative sessions and artistic experiments.",
+      "show": "Galleries, presentations and the public living room connect art with a wider audience."
+    },
+    "primary": [
+      "Abby: the architecture and use of the museum",
+      "https://www.abbykortrijk.be/en/about-us/architecture-abby"
+    ],
+    "references": [
+      [
+        "City of Kortrijk: opening in March 2025",
+        "https://www.kortrijk.be/sites/kortrijk/files/2025-01/2501-wazzup.pdf"
+      ],
+      [
+        "Divisare: photographs and drawings",
+        "https://divisare.com/projects/528669-barozzi-veiga-tab-architects-simone-marcolin-abby-kortrijk"
+      ]
+    ],
+    "hero": "01"
+  },
+  {
+    "folder": "16 Depot Boijmans Van Beuningen",
+    "slug": "depot-boijmans-van-beuningen",
+    "name": "Depot Boijmans Van Beuningen",
+    "architect": "MVRDV",
+    "place": "Rotterdam, Netherlands",
+    "type": "Public art depot",
+    "year": "2020",
+    "lead": "An art storage building opens its collection and working processes to visitors, combining conservation, public circulation and display around a tall atrium.",
+    "description": "Art storage, conservation and restoration share a building with public routes and displays. Visitors can see both the collection and the work required to care for it, following an atrium route towards the rooftop garden.",
+    "insight": "The widening bowl shape reduces the footprint in the park while enlarging the roof. Inside, artworks are grouped by their climatic requirements rather than period or artistic movement, so the practical demands of preservation become a principal organising system.",
+    "lenses": [
+      "Form",
+      "Programme",
+      "Organisation",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "make": [
+        "restoration"
+      ],
+      "show": [
+        "display",
+        "exposure",
+        "education"
+      ]
+    },
+    "connections": {
+      "make": "Conservators carry out restoration and care for the collection.",
+      "show": "Public routes reveal stored art and normally hidden museum work."
+    },
+    "primary": [
+      "MVRDV: Depot Boijmans Van Beuningen",
+      "https://www.mvrdv.com/projects/10/depot-boijmans-van-beuningen"
+    ],
+    "references": [],
+    "hero": "01",
+    "imageNotes": {
+      "06 Section - perspective.jpg": "Perspective section by MVRDV; this is not an orthographic measured section."
+    }
+  },
+  {
+    "folder": "17 Edisons Black Maria",
+    "slug": "edisons-black-maria",
+    "name": "Edison's Black Maria",
+    "architect": "W. K. L. Dickson / Edison laboratory",
+    "place": "West Orange, New Jersey, USA",
+    "type": "Motion-picture studio",
+    "year": "1893",
+    "lead": "An early film studio turns the whole building towards the sun, making a compact working stage dependent on controlled daylight.",
+    "description": "Performers and camera operators worked within a compact studio to record short films and experiment with moving images. The building brought the stage, camera and available sunlight into a controlled relationship for film production.",
+    "insight": "The timber studio was covered in black tar paper and mounted on a circular track. Its roof opened and the building rotated to follow the sun, turning the architecture itself into a piece of filming equipment when early cameras needed strong natural light.",
+    "lenses": [
+      "Form",
+      "Programme",
+      "Tectonics",
+      "Organisation"
+    ],
+    "tokens": {
+      "make": [
+        "production",
+        "experimentation"
+      ],
+      "show": [
+        "performance",
+        "storytelling"
+      ]
+    },
+    "connections": {
+      "make": "The studio was a workplace for recording and experimenting with films.",
+      "show": "Performances were staged for the camera to become moving-image stories."
+    },
+    "primary": [
+      "Thomas Edison Foundation: Black Maria virtual museum",
+      "https://www.thomasedison.org/blackmariavirtualmuseum"
+    ],
+    "references": [
+      [
+        "National Park Service: historic site study",
+        "https://npshistory.com/publications/edis/black_maria.pdf"
+      ],
+      [
+        "Thomas Edison Foundation: filming and daylight",
+        "https://www.thomasedison.org/post/these-thomas-edison-movie-studios-were-the-first-in-the-world"
+      ]
+    ],
+    "hero": "02",
+    "imageNotes": {
+      "01 Photo 01 - original studio winter 1893-94.png": "Original studio, probably winter 1893–94; archival photograph, not the 1954 replica.",
+      "02 Photo 02 - original studio roof open.jpeg": "Original studio with roof open, c. 1894; archival photograph, not the 1954 replica.",
+      "03 Photo 03 - original studio summer 1903.jpg": "Original studio in summer 1903; archival photograph, not the 1954 replica.",
+      "04 Photo 04 - interior stage.jpg": "Original interior stage, c. 1893, with performers from Blacksmithing Scene.",
+      "05 Drawing - historic interior illustration 1894.png": "Richard F. Outcault's 1894 interior illustration; not a measured architectural drawing.",
+      "06 Drawing - site location reconstruction 1964.png": "N. R. Speiden / NPS reconstruction of the original studio's location, 1964; not an original building plan."
+    }
+  },
+  {
+    "folder": "18 Drop City",
+    "slug": "drop-city",
+    "name": "Drop City",
+    "architect": "Drop City collective",
+    "place": "Near Trinidad, Colorado, USA",
+    "type": "Artists' community",
+    "year": "1965",
+    "lead": "An artists' community combined living and creative work in experimental domes, making shared daily life part of its approach to art.",
+    "description": "Artists, writers and inventors established a settlement for communal living and creative work. Building experiments, artworks and shared activities developed together, making the community an ongoing practical investigation rather than a conventional collection of separate studios.",
+    "insight": "Residents adapted geodesic and crystalline geometries using salvaged timber, bottle caps and cut-out car roofs. Limited money and little building experience encouraged improvisation, connecting a rejection of consumer culture with experiments in lightweight enclosure and reused materials.",
+    "lenses": [
+      "Structure",
+      "Material",
+      "Programme",
+      "Philosophy",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "make": [
+        "experimentation",
+        "creation",
+        "recycling"
+      ],
+      "show": [
+        "participation",
+        "expression"
+      ]
+    },
+    "connections": {
+      "make": "Art-making and experimental building were continuing activities of the resident community.",
+      "show": "Shared creative activity linked artistic expression with communal life."
+    },
+    "primary": [
+      "Drop City documentary: history and archive photographs",
+      "https://www.dropcitydoc.com/about"
+    ],
+    "references": [
+      [
+        "MAAT: founders' accounts of Drop City",
+        "https://ext.maat.pt/longforms/rule-no-rules"
+      ],
+      [
+        "Domebook 2: archival photograph, PDF page 96",
+        "https://dahp.wa.gov/sites/default/files/Domebook_2_1971smaller.pdf#page=96"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "04 Photo 04 - dome through doorway.png": "Archival photograph from the Drop City page in Domebook 2 (1971), PDF page 96. No verified measured plan or section is included in this collection."
+    }
+  },
+  {
+    "folder": "19 Knut Hamsun Center",
+    "slug": "knut-hamsun-center",
+    "name": "Knut Hamsun Center",
+    "architect": "Steven Holl Architects + LY Arkitekter",
+    "place": "Hamarøy, Norway",
+    "type": "Literary museum and cultural centre",
+    "year": "2009",
+    "lead": "A literary centre brings exhibitions, a library and an auditorium into a compact tower whose unusual spaces draw on the writer's work.",
+    "description": "Exhibition spaces present Hamsun's life and writing, while a library and reading room support study. An auditorium adds a setting for museum and community events, joining private engagement with literature to collective cultural activity.",
+    "insight": "Holl conceived the building as a body shaped by hidden impulses, translating literary ideas into irregular openings and changing light. Black timber recalls Norwegian stave churches, while angled sunlight enters a board-formed concrete interior with unexpected shifts of perspective.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Programme",
+      "Philosophy",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "reading",
+        "study",
+        "interpretation"
+      ],
+      "show": [
+        "exhibition",
+        "presentation"
+      ]
+    },
+    "connections": {
+      "think": "The library and reading room offer places for literary study.",
+      "show": "Exhibitions and an auditorium communicate literature through displays and events."
+    },
+    "primary": [
+      "Steven Holl Architects: Knut Hamsun Center",
+      "https://www.stevenholl.com/project/knut-hamsun-center/"
+    ],
+    "references": [
+      [
+        "ArchDaily: project photographs and drawings",
+        "https://www.archdaily.com/31221/knut-hamsun-center-steven-holl-architects"
+      ]
+    ],
+    "hero": "01"
+  },
+  {
+    "folder": "20 Gambit Office",
+    "slug": "gambit-office",
+    "name": "Gambit Office",
+    "architect": "Robert Konieczny / KWK Promes; Robert Konieczny and Michał Lisiński",
+    "type": "Office and warehouse",
+    "year": "2024",
+    "lead": "Offices and a warehouse share a compact building whose repeated curved profile gives a pipe distributor a recognisable headquarters.",
+    "description": "The headquarters combines office work with storage and distribution. Its relevance to THINK is the accommodation of administrative work within a building that also has a larger logistical programme.",
+    "insight": "The architects used inexpensive raw aluminium sheets to evoke stacked pipes, connecting the building's appearance to the company's trade. Its continuous street frontage breaks into smaller volumes towards neighbouring houses, reconciling the office and warehouse with a more domestic context.",
+    "lenses": [
+      "Form",
+      "Programme",
+      "Organisation",
+      "Material"
+    ],
+    "tokens": {
+      "think": [
+        "planning",
+        "concentration"
+      ]
+    },
+    "connections": {
+      "think": "Office spaces accommodate the administrative and planning work of a distribution company."
+    },
+    "primary": [
+      "KWK Promes — Gambit Office",
+      "https://www.kwkpromes.pl/en/gambit-office/17621/"
+    ],
+    "references": [
+      [
+        "Gooood — Gambit Office",
+        "https://www.gooood.cn/en/gambit-office-by-kwk-promes.htm"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "21 Historical Oberamteistrasse Museum",
+    "slug": "historical-oberamteistrasse-museum",
+    "name": "Historical Oberamteistraße Museum",
+    "architect": "wulf architekten",
+    "place": "Reutlingen, Germany",
+    "type": "Museum extension",
+    "year": "2025",
+    "lead": "A glass-clad timber extension supports a historic row of houses while adding accessible circulation and space for small public events.",
+    "description": "The new corner building forms part of a museum in which the old houses are themselves exhibits. It provides access to the historic fabric and room for small events, connecting architectural history with public display.",
+    "insight": "The timber frame physically braces the neighbouring historic houses and recalls the volume of a demolished predecessor. Cast-glass tiles cover both walls and roof, making the structure alternately visible and blurred. Screw connections allow the new construction to be dismantled.",
+    "lenses": [
+      "Structure",
+      "Material",
+      "Tectonics",
+      "Philosophy",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "show": [
+        "display",
+        "storytelling",
+        "education"
+      ]
+    },
+    "connections": {
+      "show": "The museum presents the history of building and living through its historic houses and public events."
+    },
+    "primary": [
+      "Wulf architekten — project press sheet",
+      "https://www.wulfarchitekten.com/fileadmin/user_upload/260310_Historical_Oberamteistrasse_Museum_press_sheet_wulf_architekten.pdf"
+    ],
+    "references": [
+      [
+        "ArchDaily — architect's project account",
+        "https://www.archdaily.com/1039966/historical-oberamteistrasse-museum-wulf-architekten"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "07 Physical model - street elevation.jpg": "Architect's model of the ensemble; the new building was completed in 2025, while restoration of the historic buildings is a later phase."
+    }
+  },
+  {
+    "folder": "22 Anselm Kiefer Pavilion",
+    "slug": "anselm-kiefer-pavilion",
+    "name": "Anselm Kiefer Pavilion",
+    "architect": "David Chipperfield Architects Berlin",
+    "place": "Künzelsau, Germany",
+    "type": "Art pavilion",
+    "year": "2026",
+    "lead": "A single exhibition room gives one monumental painting its own setting, with proportions and daylight developed in collaboration with the artist.",
+    "description": "The pavilion houses Anselm Kiefer's Schwarze Flocken, a painting too large to have previously been exhibited. A sheltered entrance leads from the sculpture garden into a room organised around seeing this single work.",
+    "insight": "Kiefer helped determine the room's proportions, openings and colours. Concrete, brick and clay-plaster wall layers moderate the interior without active climate control, while rooflights between exposed timber beams admit changing daylight rather than maintaining uniform gallery illumination.",
+    "lenses": [
+      "Programme",
+      "Form",
+      "Atmosphere",
+      "Material",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "show": [
+        "exhibition",
+        "display"
+      ]
+    },
+    "connections": {
+      "show": "The entire pavilion is an architectural setting for the public presentation of one painting."
+    },
+    "primary": [
+      "David Chipperfield Architects — Anselm Kiefer pavilion",
+      "https://davidchipperfield.com/projects/anselm-kiefer-pavilion"
+    ],
+    "references": [
+      [
+        "Dezeen — pavilion and drawings",
+        "https://www.dezeen.com/2026/10/20/anselm-kiefer-pavilion-david-chipperfield-architects-germany/"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "23 Wooden Chapel",
+    "slug": "wooden-chapel",
+    "name": "Wooden Chapel",
+    "architect": "John Pawson",
+    "place": "Unterliezheim, Germany",
+    "type": "Chapel",
+    "year": "2018",
+    "lead": "A narrow entrance opens into a tall timber interior, creating a small place for contemplation at the edge of woodland.",
+    "description": "The chapel offers an enclosed place for quiet contemplation beside a woodland path. The close entrance and elongated interior shift the visitor's experience from moving through trees to pausing within a single room.",
+    "insight": "Its stacked timber mass can read as logs drying in the landscape or as a carefully placed sculpture. Pawson keeps the entrance deliberately narrow before releasing the visitor into an interior more than seven metres high, giving a simple volume a strong bodily sequence.",
+    "lenses": [
+      "Material",
+      "Form",
+      "Atmosphere",
+      "Organisation"
+    ],
+    "tokens": {
+      "think": [
+        "contemplation",
+        "reflection"
+      ]
+    },
+    "connections": {
+      "think": "A chapel for quiet reflection and contemplation."
+    },
+    "primary": [
+      "John Pawson — Wooden Chapel",
+      "https://johnpawson.com/works/wooden-chapel"
+    ],
+    "references": [
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/424948-john-pawson-felix-friedmann-wooden-chapel"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "24 Capela do Monte",
+    "slug": "capela-do-monte",
+    "name": "Capela do Monte",
+    "architect": "Álvaro Siza Vieira",
+    "place": "Barão de São João, Portugal",
+    "type": "Chapel",
+    "year": "2018",
+    "lead": "A small hillside chapel reached on foot combines a sheltered courtyard and prayer room within a restrained, pale exterior.",
+    "description": "This non-denominational Christian chapel is a place for prayer and contemplation. The walk uphill and the entrance courtyard establish a gradual approach to an intimate room, away from the surrounding settlement.",
+    "insight": "The chapel operates without electricity, heating or running water. Its insulated brick construction, natural ventilation and restrained openings support comfort through the building fabric. Siza also designed the furniture and drawings translated into hand-painted tiles, extending the architecture to its smallest elements.",
+    "lenses": [
+      "Atmosphere",
+      "Organisation",
+      "Material",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "think": [
+        "contemplation",
+        "spiritual"
+      ]
+    },
+    "connections": {
+      "think": "The chapel and its approach provide places for prayer and contemplation."
+    },
+    "primary": [
+      "Capela do Monte — chapel and design principles",
+      "https://capeladomonte.org/about/"
+    ],
+    "references": [
+      [
+        "Project press information",
+        "https://cdn.archilovers.com/projects/f51361db-6c9a-4d9f-b7f2-5d810bea76d3.pdf"
+      ],
+      [
+        "Divisare — project photographs",
+        "https://divisare.com/projects/399067-alvaro-siza-vieira-alexander-bogorodskiy-architectural-photography-capela-do-monte"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "25 Chapel in Saya Park",
+    "slug": "chapel-in-saya-park",
+    "name": "Chapel in Saya Park",
+    "architect": "Álvaro Siza Vieira and Carlos Castanheira",
+    "place": "Gyeongsangbuk-do, South Korea",
+    "type": "Chapel",
+    "year": "2018",
+    "lead": "A concrete chapel tucked into a hillside uses a small opening above to give its compact interior a focused quality of light.",
+    "description": "Intended for Christian worship, the chapel adds an inward place for meditation to a park of outdoor artworks and symbolic spaces. Its single interior supports a concentrated encounter with space and light.",
+    "insight": "The building nestles against the hill and opens towards the east. Castanheira describes the intention as creating an interior counterpart to the park's outdoor beauty: a small upper aperture produces a much larger impression of light within the simple concrete volume.",
+    "lenses": [
+      "Form",
+      "Atmosphere",
+      "Philosophy"
+    ],
+    "tokens": {
+      "think": [
+        "meditation",
+        "spiritual",
+        "introspection"
+      ]
+    },
+    "connections": {
+      "think": "A compact setting for worship, meditation and inward reflection."
+    },
+    "primary": [
+      "Carlos Castanheira — project account on Divisare",
+      "https://divisare.com/projects/399193-carlos-castanheira-alvaro-siza-vieira-fernando-guerra-fg-sg-a-chapel-in-saya-park"
+    ],
+    "references": [],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "26 Seashore Library",
+    "slug": "seashore-library",
+    "name": "Seashore Library",
+    "architect": "Vector Architects / Dong Gong",
+    "place": "Qinhuangdao, China",
+    "type": "Library",
+    "year": "2015",
+    "lead": "Reading terraces face the sea, while a separate meditation room offers a more enclosed experience of light, sound and solitude.",
+    "description": "The library brings together reading, meditation, rest and a separate activity room. Its clearest connection is THINK: different rooms offer public reading with broad views or quieter, more private reflection beside the sea.",
+    "insight": "The design began in section. Raised seating preserves views over other readers, while a lower, darker meditation space frames narrow shafts of light. Timber formwork leaves grain in the concrete, giving the heavy shell a tactile surface associated with the marks found in sand.",
+    "lenses": [
+      "Organisation",
+      "Atmosphere",
+      "Material",
+      "Form"
+    ],
+    "tokens": {
+      "think": [
+        "reading",
+        "meditation",
+        "concentration"
+      ]
+    },
+    "connections": {
+      "think": "Reading and meditation have distinct spatial conditions, from open sea-facing terraces to an enclosed quiet room."
+    },
+    "primary": [
+      "Vector Architects — project account on ArchDaily",
+      "https://www.archdaily.com/638390/seashore-library-vector-architects"
+    ],
+    "references": [
+      [
+        "Divisare — James Florio photographs",
+        "https://divisare.com/projects/423791-vector-architects-james-florio-photography-seashore-library"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "slug": "oceano",
+    "folder": "27 Oceano",
+    "name": "Océano",
+    "architect": "Studio Animal · Javier J. Iniesta",
+    "place": "Barcelona, Spain",
+    "type": "Exhibition installation",
+    "year": "2024",
+    "lead": "An exhibition installation organises display within an existing hall.",
+    "description": "An exhibition at DHub in Barcelona, with suspended fabric defining spaces for displays and visitor movement.",
+    "lenses": [
+      "Organisation",
+      "Material",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "show": [
+        "exhibition",
+        "storytelling",
+        "display"
+      ]
+    },
+    "connections": {
+      "show": "The installation provides a setting for exhibits and the communication of the exhibition’s content."
+    },
+    "primary": [
+      "Project record — Studio Animal",
+      "https://studioanimal.es/projects/oceano/"
+    ],
+    "hero": "03",
+    "insight": "Deep blue covers the floor, suspended fabric and display elements, drawing them into one continuous visual field. This saturation creates an enveloping, almost underwater atmosphere. Folds in the fabric and strips of light give depth and direction within the hall.",
+    "references": [
+      [
+        "Exhibition photographs: Studio Animal and Jose Hevia",
+        "https://divisare.com/projects/527233-studio-animal-jose-hevia-oceano"
+      ]
+    ]
+  },
+  {
+    "folder": "28 House of Knowledge",
+    "slug": "house-of-knowledge",
+    "name": "House of Knowledge",
+    "architect": "Christoph Hesse Architects",
+    "place": "Xinyang, China",
+    "type": "Library and community buildings",
+    "year": "2025",
+    "lead": "A library, exhibition hall and tea house form a community setting around lakes, paths and gardens in an urban park.",
+    "description": "The project combines reading and learning with exhibitions, workshops and community activities. A separate tea house adds informal meeting space, linking focused study with public exchange across a shared park landscape.",
+    "insight": "The architects connect social and ecological life through two buildings and their landscape rather than one enclosed institution. Multiple paths, generous openings, shading and cross ventilation extend use into the park, where ponds and planned community gardens become part of the learning environment.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Philosophy",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "think": [
+        "reading",
+        "learning"
+      ],
+      "show": [
+        "exhibition",
+        "exchange"
+      ]
+    },
+    "connections": {
+      "think": "The community library supports reading and shared learning.",
+      "show": "Exhibitions and community activities provide public ways to share knowledge."
+    },
+    "primary": [
+      "Christoph Hesse Architects — project account on ArchDaily",
+      "https://www.archdaily.com/1037981/house-of-knowledge-christoph-hesse-architects"
+    ],
+    "references": [
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/547104-christoph-hesse-gabriel-dong-house-of-knowledge"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "29 Microlibraries",
+    "slug": "microlibraries",
+    "name": "Microlibraries",
+    "architect": "SHAU / Daliana Suryawinata and Florian Heinzelmann",
+    "place": "Indonesia",
+    "type": "Community library series",
+    "year": "",
+    "lead": "Small neighbourhood libraries combine reading with shared activities; this collection shows Warak Kayu, Kiaracondong and Bima, each responding to its own setting.",
+    "description": "The series pairs accessible reading rooms with other community uses. At Warak Kayu, the elevated library leaves a sheltered ground level for workshops, presentations and film screenings, allowing a small footprint to accommodate different activities.",
+    "insight": "The programme treats each library as a local community building rather than a standard repeated object. At Bima, reused ice-cream buckets form the facade; at Warak Kayu, a raised timber structure separates reading above from shared activity below while maintaining visual connections.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Material",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "think": [
+        "reading",
+        "learning"
+      ],
+      "show": [
+        "presentation",
+        "screening",
+        "sharing"
+      ]
+    },
+    "connections": {
+      "think": "Small local reading rooms bring books and learning into neighbourhood settings.",
+      "show": "Warak Kayu's sheltered ground level accommodates presentations, screenings and community activities."
+    },
+    "primary": [
+      "Microlibrary Foundation / SHAU — the programme",
+      "https://www.miclib.com/about"
+    ],
+    "references": [
+      [
+        "SHAU — Bima",
+        "https://www.miclib.com/microlibrarybima"
+      ],
+      [
+        "ArchDaily — Warak Kayu",
+        "https://www.archdaily.com/936421/microlibrary-warak-kayu-shau-indonesia"
+      ],
+      [
+        "Divisare — Microlibraries series",
+        "https://divisare.com/projects/533195-shau-microlibraries"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "01 Photo 01 - Warak Kayu exterior.jpg": "Warak Kayu, Semarang: one building in the Microlibraries series.",
+      "02 Photo 02 - Warak Kayu interior.jpg": "Warak Kayu reading room.",
+      "03 Photo 03 - Kiaracondong exterior.jpg": "Kiaracondong: a different building in the Microlibraries series.",
+      "04 Photo 04 - Bima exterior.jpg": "Bima, Bandung: the series' first completed pilot, opened in 2016.",
+      "05 Diagram - Bima exploded axonometric.jpg": "Bima construction diagram; this drawing does not depict Warak Kayu.",
+      "06 Plan - Warak Kayu ground floor.jpg": "Warak Kayu ground floor.",
+      "07 Plan - Warak Kayu library floor.jpg": "Warak Kayu upper reading room.",
+      "08 Section - Warak Kayu.jpg": "Warak Kayu section."
+    }
+  },
+  {
+    "folder": "30 Maya Somaiya Library",
+    "slug": "maya-somaiya-library",
+    "name": "Maya Somaiya Library",
+    "architect": "sP+a / Sameep Padora and Associates",
+    "place": "Kopergaon, Maharashtra, India",
+    "type": "School library",
+    "year": "2018",
+    "lead": "A low vaulted library sits between school buildings and a boundary, with several entrances and varied places for individual or shared study.",
+    "description": "Designed for children, the library brings reading into everyday movement around the school. Multiple access points and different seating arrangements support individual concentration and collaborative study without relying on a single formal reading-room layout.",
+    "insight": "The vaulted roof uses Catalan tile construction for material efficiency. The architects deliberately combine knowledge from different places and periods, including Eladio Dieste's work, treating construction traditions as resources that can be adapted to a particular local brief.",
+    "lenses": [
+      "Structure",
+      "Form",
+      "Philosophy",
+      "Organisation",
+      "Material"
+    ],
+    "tokens": {
+      "think": [
+        "reading",
+        "study",
+        "learning"
+      ]
+    },
+    "connections": {
+      "think": "The library provides individual and shared places for children to read and study."
+    },
+    "primary": [
+      "Sameep Padora and Associates — Maya Somaiya Library",
+      "https://sp-arc.net/maya-somaiya-library/"
+    ],
+    "references": [
+      [
+        "Divisare — photographs, drawings and models",
+        "https://divisare.com/projects/398129-sp-a-edmund-sumner-maya-somaiya-library"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "31 Bahrain Pavilion",
+    "slug": "bahrain-pavilion",
+    "name": "Bahrain Pavilion",
+    "architect": "Studio Anne Holtrop; landscape architect Anouk Vogel",
+    "place": "Milan, Italy; later rebuilt in Muharraq, Bahrain",
+    "type": "Exhibition pavilion",
+    "year": "2015",
+    "lead": "Fruit gardens and enclosed exhibition rooms form a continuous visitor route presenting Bahrain's agricultural history, culture and relationship with water.",
+    "description": "Created for Expo Milano, the pavilion presents agricultural heritage through living gardens, archaeological objects and film. Exhibition rooms, reception and a café frame the planting, making the landscape itself part of the display.",
+    "insight": "Ten fruit gardens were arranged to change during the exhibition season, linking the visitor experience to growth and time. White prefabricated concrete panels allowed the pavilion to be dismantled; it was subsequently rebuilt in Muharraq in 2018.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Philosophy",
+      "Material",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "show": [
+        "exhibition",
+        "display",
+        "storytelling"
+      ]
+    },
+    "connections": {
+      "show": "Gardens, artefacts and film communicate Bahrain's agrarian heritage to visitors."
+    },
+    "primary": [
+      "METALOCUS — pavilion concept and project description",
+      "https://www.metalocus.es/en/news/white-concrete-kingdom-bahrains-pavilion"
+    ],
+    "references": [
+      [
+        "Muller Van Severen — project collaborator and relocation record",
+        "https://www.mullervanseveren.be/project/bahrein-pavilion-muller-van-severen/"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "32 Exeter Road Pavilion",
+    "slug": "exeter-road-pavilion",
+    "name": "Exeter Road Pavilion",
+    "architect": "Neiheiser Argyros",
+    "place": "London, United Kingdom",
+    "type": "Garden pavilion and collection storage",
+    "year": "2025",
+    "lead": "A continuous cabinet extends from an adapted garden outbuilding beneath a canopy, combining art, records and books with social space.",
+    "description": "Designed for an art collector and amateur DJ, the pavilion accommodates collection storage and display alongside garden gatherings. A DJ booth and sheltered outdoor space connect the private collection to music and social use.",
+    "insight": "Storage and shelter are treated as one architectural problem. A perforated steel cabinet runs from inside to outside, while a marble counterweight, exposed tension rod and steel beam balance the canopy, turning the relationships between parts into visible structural expression.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Structure",
+      "Tectonics",
+      "Material"
+    ],
+    "tokens": {
+      "show": [
+        "display",
+        "performance",
+        "sharing"
+      ]
+    },
+    "connections": {
+      "show": "The art collection, DJ booth and garden gathering space bring display and social performance together."
+    },
+    "primary": [
+      "Neiheiser Argyros — project account on ArchDaily",
+      "https://www.archdaily.com/1038498/exeter-road-pavilion-neiheiser-argyros"
+    ],
+    "references": [
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/552683-neiheiser-argyros-lorenzo-zandri-exeter-road-pavili"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "33 Atelier Workshop",
+    "slug": "atelier-workshop",
+    "name": "Atelier Workshop",
+    "architect": "Agustín Berzero",
+    "place": "Rafaela, Argentina",
+    "type": "Artist's workspace",
+    "year": "2020",
+    "lead": "A compact garden workspace combines a heavy concrete exterior with a timber interior, supporting thinking, painting and daily work.",
+    "description": "The atelier is explicitly conceived as a place to think, paint and work. Services are separated from the main room, leaving an open workspace with a direct relationship to the surrounding garden.",
+    "insight": "The section expands upwards to bring natural light into the workroom. Outside, hammered concrete gives the enclosure the character of an artificial stone; inside, timber creates a contrasting atmosphere. The form reinterprets a neighbouring sloping-roof house and the scale of nearby vegetation.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Atmosphere",
+      "Organisation"
+    ],
+    "tokens": {
+      "think": [
+        "concentration",
+        "reflection"
+      ],
+      "make": [
+        "creation"
+      ]
+    },
+    "connections": {
+      "think": "A quiet workspace supports thinking alongside artistic work.",
+      "make": "Painting and artistic production take place in the open main room."
+    },
+    "primary": [
+      "Agustín Berzero — project account on ArchDaily",
+      "https://www.archdaily.com/1010963/atelier-workshop-agustin-berzero"
+    ],
+    "references": [
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/489475-agustin-berzero-federico-cairoli-atelier-workshopon"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "34 Terra Cotta Workshop",
+    "slug": "terra-cotta-workshop",
+    "name": "Terra Cotta Workshop",
+    "architect": "Tropical Space",
+    "place": "Điện Phương, Quảng Nam, Vietnam",
+    "type": "Ceramics workshop and visitor space",
+    "year": "2023",
+    "lead": "A working ceramics complex places an existing kiln between craftsmen's workspaces and a visitor route where making can be seen and tried.",
+    "description": "Artisans make terracotta beside the river, while visitors can handle clay, see finished pieces and learn about firing. Distinct routes and working areas bring craft production and public encounter into the same complex.",
+    "insight": "The design grew from observing artisans' movements, working positions, light and wind. Two long brick walls organise the site around the retained kiln; perforations provide shade and airflow, while broken fired pieces become courtyard surfacing, extending the material cycle underfoot.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Material",
+      "Sustainability strategy",
+      "Tectonics"
+    ],
+    "tokens": {
+      "make": [
+        "craft",
+        "sculpting",
+        "production"
+      ],
+      "show": [
+        "demonstration",
+        "display",
+        "storytelling"
+      ]
+    },
+    "connections": {
+      "make": "Craftspeople shape and fire clay, and visitors have a separate area to try working with it.",
+      "show": "The route exposes stages of production and displays work while artisans share their knowledge."
+    },
+    "primary": [
+      "Tropical Space — Terra Cotta Workshop",
+      "https://tropicalspaceil.com/du-an/xuong-dat-nung/412.html"
+    ],
+    "references": [
+      [
+        "RIBA — Terra Cotta Workshop",
+        "https://www.riba.org/explore/awards/international-awards/international-awards-for-excellence/2026/terra-cotta-workshop/"
+      ],
+      [
+        "Dezeen — project photographs",
+        "https://www.dezeen.com/2024/07/11/tropical-space-terra-cotta-workshop-vietnam/"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "35 Fair Trade Zone",
+    "slug": "fair-trade-zone",
+    "name": "Fair Trade Zone",
+    "architect": "TAELON7",
+    "place": "Akuse, Ghana",
+    "type": "Production campus",
+    "year": "2022 (first phase)",
+    "lead": "A production campus for Global Mamas connects textile, skincare and papermaking spaces with gardens, shaded circulation and shared courtyards.",
+    "description": "The campus provides workspaces for a women-led cooperative producing textiles, skincare and paper products. Different production processes occupy modular wings, with gardens and shared outdoor spaces integrated into everyday working life.",
+    "insight": "Artisans helped shape layouts through collaborative workshops. Curving buildings follow the terrain; compressed-earth bricks and bamboo screens provide filtered light and natural cooling. The wider plan connects production to productive gardens, rainwater collection and wastewater treatment rather than treating the factory as an isolated shed.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Philosophy",
+      "Material",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "make": [
+        "sewing",
+        "production",
+        "processing"
+      ]
+    },
+    "connections": {
+      "make": "Textile, papermaking and skincare work are the core activities of the cooperative's production campus."
+    },
+    "primary": [
+      "TAELON7 — Fair Trade Zone",
+      "https://www.taelon7.com/projects/fair-trade-zone"
+    ],
+    "references": [
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/477668-taelon7-chrili-car-fair-trade-zone"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "36 Natural Disaster Simulation Training Centre",
+    "slug": "natural-disaster-simulation-training-centre",
+    "name": "Natural Disaster Simulation Training Centre",
+    "architect": "Cangemi Architekten",
+    "place": "Andelfingen, Switzerland",
+    "type": "Flood simulation and training facility",
+    "year": "2024",
+    "lead": "A water-storage tower feeds controlled flood scenarios, turning rooms, ramps and roads into a practical environment for emergency training.",
+    "description": "The centre recreates flooding so trainees can learn about water hazards in realistic conditions. Indoor rooms support static flooding, while an external ramp and road allow moving-water scenarios and demonstrations.",
+    "insight": "The tower's concave concrete walls behave as a series of small dams, restrained by six concrete belts. Stored water provides the flow for training, then collects in a retention tank and is pumped back to the tower, allowing repeated exercises with the same water.",
+    "lenses": [
+      "Programme",
+      "Structure",
+      "Form",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "think": [
+        "learning",
+        "problem-solving"
+      ],
+      "show": [
+        "demonstration",
+        "education"
+      ]
+    },
+    "connections": {
+      "think": "Trainees develop an understanding of flood hazards through realistic scenarios.",
+      "show": "Controlled flooding makes water behaviour and emergency situations demonstrable at full scale."
+    },
+    "primary": [
+      "Cangemi Architekten — Naturgefahrenlabor Andelfingen",
+      "https://www.cangemi.ch/2021-p-neubau-naturgefahrenlabor-andelfingen-zh"
+    ],
+    "references": [
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/543812-cangemi-architekten-ralph-feiner-new-training-centre-for-natural-disaster-simulation"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "37 INES Innovation Center",
+    "slug": "ines-innovation-center",
+    "name": "INES Innovation Center",
+    "architect": "Pezo von Ellrichshausen",
+    "place": "Concepción, Chile",
+    "type": "University innovation centre",
+    "year": "2021",
+    "lead": "A university innovation centre combining collective research, individual work and exhibitions around a sequence of connected circular voids.",
+    "description": "Researchers, students and entrepreneurs share open halls while quieter corner rooms support individual work. Meeting and exhibition rooms allow ideas to be discussed and made public.",
+    "insight": "The central circular void becomes smaller on successive floors while the enclosed corner rooms grow. Curved walls simultaneously shape the interior, separate different working conditions and control views and sound, giving a regular external volume an unexpectedly varied section.",
+    "lenses": [
+      "Form",
+      "Programme",
+      "Organisation",
+      "Philosophy"
+    ],
+    "tokens": {
+      "think": [
+        "research",
+        "concentration",
+        "discussion"
+      ],
+      "show": [
+        "exhibition",
+        "exchange"
+      ]
+    },
+    "connections": {
+      "think": "Open halls and enclosed corner rooms support collective research and concentrated individual work.",
+      "show": "Dedicated exhibition and meeting rooms let the university community share ideas."
+    },
+    "primary": [
+      "Architects' project account — Divisare",
+      "https://divisare.com/projects/438836-pezo-von-ellrichshausen-ines-innovation-center"
+    ],
+    "references": [],
+    "hero": "01",
+    "imageNotes": {
+      "07 Sketch 01 - painted interior study.jpg": "Painted architectural perspective by Pezo von Ellrichshausen.",
+      "08 Sketch 02 - painted spatial study.jpg": "Painted architectural perspective by Pezo von Ellrichshausen."
+    }
+  },
+  {
+    "folder": "38 Cloud Laboratory",
+    "slug": "cloud-laboratory",
+    "name": "Cloud Laboratory",
+    "architect": "Schulz und Schulz",
+    "place": "Leipzig, Germany",
+    "type": "Atmospheric research laboratory",
+    "year": "2005",
+    "lead": "A laboratory organised around a tall cloud simulator, with adjoining offices and specialised rooms for studying atmospheric processes.",
+    "description": "Scientists investigate cloud formation and human influences on the atmosphere using a controlled simulator. Offices for analysis surround specialist laboratories where physical experiments take place.",
+    "insight": "The cylindrical tower houses a vertical flow tube that requires stable environmental conditions. Its height and windowless enclosure come directly from the experiment inside; the lower ring of laboratories and offices makes the scientific apparatus legible as the building's organising centre.",
+    "lenses": [
+      "Form",
+      "Programme",
+      "Organisation",
+      "Structure"
+    ],
+    "tokens": {
+      "think": [
+        "research",
+        "analysis"
+      ],
+      "make": [
+        "experimentation",
+        "testing"
+      ]
+    },
+    "connections": {
+      "think": "Scientists analyse atmospheric processes and interpret experimental results.",
+      "make": "Specialist laboratories support controlled physical experiments in cloud formation."
+    },
+    "primary": [
+      "Schulz und Schulz — Cloud Laboratory",
+      "https://schulz-und-schulz.com/en/projekte/wolkenlabor/"
+    ],
+    "references": [
+      [
+        "Bauwelt — project and drawings",
+        "https://www.bauwelt.de/dl/796923/10807183_7a75021aef.pdf"
+      ],
+      [
+        "Aedes — Cloud Laboratory exhibition",
+        "https://www.aedes-arc.de/cms/aedes/de/programm?id=19037504"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "05 Plan - ground floor.png": "Published drawing excerpt; scale applies only at the original printed size.",
+      "06 Plan - basement.png": "Published drawing excerpt; scale applies only at the original printed size.",
+      "07 Section - tower and laboratories.png": "Published drawing excerpt; scale applies only at the original printed size.",
+      "09 Physical model - Aedes exhibition.jpg": "Architectural model exhibited at Aedes, Berlin, 2005."
+    }
+  },
+  {
+    "folder": "39 IUAV Materials Testing Laboratory",
+    "slug": "iuav-materials-testing-laboratory",
+    "name": "IUAV Materials Testing Laboratory",
+    "architect": "Francesco Venezia",
+    "place": "Mestre, Italy",
+    "type": "University materials and structures laboratory",
+    "year": "2003",
+    "lead": "A university laboratory where material and structural testing is housed within a stone-clad shell illuminated from above and below.",
+    "description": "University researchers combine structural investigation with physical tests on materials and building components. Laboratories, teaching rooms and offices share a building centred on heavy testing equipment.",
+    "insight": "The building is conceived as a protective shell over a testing core, including reinforced concrete walls extending below ground and an overhead crane. A glazed slit around the base and a large rooflight bring daylight into an interior with an otherwise industrial programme.",
+    "lenses": [
+      "Structure",
+      "Material",
+      "Organisation",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "research",
+        "analysis"
+      ],
+      "make": [
+        "testing",
+        "experimentation"
+      ]
+    },
+    "connections": {
+      "think": "Research and teaching interpret the behaviour of materials and structures.",
+      "make": "Laboratory equipment enables physical testing of materials and structural components."
+    },
+    "primary": [
+      "Università Iuav di Venezia — Mestre Campus",
+      "https://www.iuav.it/en/node/119"
+    ],
+    "references": [
+      [
+        "Iuav — Materials and Structures Laboratory",
+        "https://www.iuav.it/it/laboratori/materiali-e-strutture-labmes"
+      ],
+      [
+        "Divisare — photographs and drawings",
+        "https://divisare.com/projects/321841-francesco-venezia-orsenigo_chemollo-iuav-materials-testing-laboratory-1995"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "40 Halley VI Research Station",
+    "slug": "halley-vi-research-station",
+    "name": "Halley VI Research Station",
+    "architect": "Hugh Broughton Architects with AECOM",
+    "place": "Brunt Ice Shelf, Antarctica",
+    "type": "Polar research station",
+    "year": "2013",
+    "lead": "A relocatable Antarctic research station combining scientific work, accommodation and shared social spaces in raised modules on hydraulic legs.",
+    "description": "Scientists collect and analyse environmental data while living alongside their research facilities. Individual modules separate operational and residential needs, with a larger central module for dining and recreation.",
+    "insight": "Hydraulic legs lift the station above accumulating snow, and large skis allow modules to be towed inland as the ice shelf moves. Prefabricated steel frames and insulated panels reduced work during short Antarctic construction seasons; the red social module also addresses life in prolonged isolation.",
+    "lenses": [
+      "Structure",
+      "Programme",
+      "Organisation",
+      "Tectonics",
+      "Sustainability strategy"
+    ],
+    "tokens": {
+      "think": [
+        "research",
+        "investigation",
+        "analysis"
+      ]
+    },
+    "connections": {
+      "think": "The station supports environmental research, data collection and scientific analysis in an extreme setting."
+    },
+    "primary": [
+      "Hugh Broughton Architects — Halley VI",
+      "https://hbarchitects.co.uk/projects/halley-vi-british-antarctic-research-station"
+    ],
+    "references": [
+      [
+        "British Antarctic Survey — Halley VI Research Station",
+        "https://www.bas.ac.uk/polar-operations/sites-and-facilities/facility/halley/"
+      ],
+      [
+        "Billings Design — design sketches",
+        "https://www.billingsdesign.ie/halley-vi-research-station-images"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "41 MPavilion",
+    "slug": "mpavilion",
+    "name": "MPavilion",
+    "architect": "OMA / Rem Koolhaas and David Gianotten",
+    "place": "Melbourne, Australia",
+    "type": "Public events pavilion",
+    "year": "2017",
+    "lead": "A public pavilion with two opposing grandstands, one of which rotates to change relationships between performers and audience.",
+    "description": "The pavilion accommodates performances, talks and public events at an intimate scale. Its movable seating changes the arrangement of gatherings and allows audience and stage to exchange positions.",
+    "insight": "One grandstand is embedded in a planted mound while the other rotates beneath the roof. Rather than treating flexibility as an empty floor, the design gives a specific architectural element movement, allowing the same small venue to produce contrasting social and performance arrangements.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Structure",
+      "Philosophy"
+    ],
+    "tokens": {
+      "show": [
+        "performance",
+        "presentation",
+        "participation"
+      ]
+    },
+    "connections": {
+      "show": "A public programme of performances, talks and events brings audiences and presenters together."
+    },
+    "primary": [
+      "OMA — MPavilion",
+      "https://www.oma.com/projects/mpavilion"
+    ],
+    "references": [
+      [
+        "Divisare — MPavilion photographs",
+        "https://divisare.com/projects/369175-oma-timothy-burgess-john-gollings-mpavilion"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "09 Plan - movable grandstand construction.png": "Construction plan of the movable grandstand, rather than the whole pavilion.",
+      "10 Section - movable grandstand construction.png": "Construction section of the movable grandstand, rather than the whole pavilion."
+    }
+  },
+  {
+    "folder": "42 Furnas Monitoring and Investigation Centre",
+    "slug": "furnas-monitoring-and-investigation-centre",
+    "name": "Furnas Monitoring and Investigation Centre",
+    "architect": "Aires Mateus",
+    "place": "São Miguel, Azores, Portugal",
+    "type": "Environmental interpretation centre",
+    "year": "2010",
+    "lead": "A basalt-clad centre beside Furnas Lake, using exhibition and education to connect visitors with the surrounding volcanic landscape.",
+    "description": "Exhibition rooms explain the lake's geology, ecology and environmental recovery. A multipurpose room supports lectures and environmental education, while the courtyard and grounds provide places to pause beside the landscape.",
+    "insight": "The architects describe the centre as a compact block cut open to admit light and views. A courtyard is subtracted from the roof and side of the volume, while local basalt links its sharply defined geometry to the material landscape of the Azores.",
+    "lenses": [
+      "Form",
+      "Material",
+      "Organisation",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "learning",
+        "interpretation"
+      ],
+      "show": [
+        "exhibition",
+        "education",
+        "presentation"
+      ]
+    },
+    "connections": {
+      "think": "Visitors learn about the lake's ecology and interpret its volcanic landscape.",
+      "show": "Interactive exhibitions, lectures and education activities communicate environmental knowledge."
+    },
+    "primary": [
+      "Azores Natural Parks — Furnas Environmental Interpretation Centre",
+      "https://parquesnaturais.azores.gov.pt/en/parques/9/centro/22"
+    ],
+    "references": [
+      [
+        "Architects' project description — ArchDaily",
+        "https://www.archdaily.com/119676/building-in-lagoa-das-furnas-aires-mateus"
+      ],
+      [
+        "Divisare — Furnas Monitoring and Investigation Centre",
+        "https://divisare.com/projects/146101-manuel-aires-mateus-fernando-guerra-fg-sg-the-furnas-monitoring-and-investigation-centre"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "43 Origen Theatre Tower",
+    "slug": "origen-theatre-tower",
+    "name": "Origen Theatre Tower",
+    "architect": "Giovanni Netzer; structural design Walter Bieler; construction Uffer / QUADRIN",
+    "place": "Julier Pass, Switzerland",
+    "type": "Temporary mountain theatre",
+    "year": "2017",
+    "lead": "A temporary timber theatre tower on the Julier Pass, bringing performance and audiences into direct contact with a mountain landscape.",
+    "description": "The tower provides an enclosed venue for Origen's theatrical performances in a high mountain pass. Audiences gather around a vertically organised interior rather than a conventional horizontal auditorium.",
+    "insight": "The striking red tower was assembled from around 900 timber components at an altitude of 2,284 metres. Conceived as a temporary theatre, it treats the mountain pass and changing seasons as part of its cultural setting rather than a backdrop to be excluded.",
+    "lenses": [
+      "Form",
+      "Structure",
+      "Programme",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "show": [
+        "performance",
+        "expression"
+      ]
+    },
+    "connections": {
+      "show": "The tower is a purpose-built venue for theatrical performance and its audience."
+    },
+    "primary": [
+      "QUADRIN — Origen Theatre Tower",
+      "https://en.quadrin.swiss/referenz/origen-theaterturm-julierpass-gr"
+    ],
+    "references": [
+      [
+        "Hochparterre — early theatre tower proposal",
+        "https://www.hochparterre.ch/magazin/kultur/theaterturm-auf-dem-julierpass"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "05 Physical model - presentation by Giovanni Netzer.webp": "Early design model presented in August 2016; its tapering form differs from the completed tower.",
+      "06 Plan - theatre floor.png": "Drawing excerpt from the Triple Wood publication; scale applies only at the original printed size.",
+      "07 Section - tower.png": "Drawing excerpt from the Triple Wood publication; scale applies only at the original printed size."
+    }
+  },
+  {
+    "folder": "44 Bunker B-S10",
+    "slug": "bunker-b-s10",
+    "name": "Bunker B-S10",
+    "architect": "TOITO architekti with Konduktor / Martin Kleibl",
+    "place": "Bratislava, Slovakia",
+    "type": "Bunker converted to accommodation",
+    "year": "2024",
+    "lead": "A former defensive bunker adapted for overnight stays, retaining its heavy concrete shell and introducing a small sheltered outdoor court.",
+    "description": "Visitors inhabit a compact former military interior fitted with sleeping platforms and a kitchen. The project extends everyday domestic use into a courtyard with a terrace and fire pit.",
+    "insight": "Instead of recreating a military interior, the architects cleaned the existing concrete and inserted simple steel-and-timber furniture. Excavation revealed a blocked firing opening and enabled a courtyard; old concrete ammunition containers were repurposed to collect greywater from the kitchen and shower.",
+    "lenses": [
+      "Programme",
+      "Material",
+      "Organisation",
+      "Sustainability strategy"
+    ],
+    "tokens": {},
+    "connections": {},
+    "primary": [
+      "TOITO architekti — B-S 10",
+      "https://www.toito.sk/projekty/2024/6/5/b-s-10"
+    ],
+    "modeNote": "Included as an architectural reference for adaptive reuse; no mode of work is assigned.",
+    "references": [
+      [
+        "Divisare — Bunker B-S10",
+        "https://divisare.com/projects/573262-toito-architekti-alex-shoots-buildings-bunker-b-s10"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "45 Sao Jose da Boavista Church and Parish Centre",
+    "slug": "sao-jose-da-boavista-church",
+    "name": "São José da Boavista Church and Parish Centre",
+    "architect": "Matos Gameiro Arquitectos / Pedro Matos Gameiro and Atelier Bugio / João Favila Menezes",
+    "place": "Lisbon, Portugal",
+    "type": "Church and parish centre",
+    "year": "2025",
+    "lead": "A church and parish centre arranged around a public square, with an elevated worship space sheltering a covered place for gathering.",
+    "description": "The church supports collective worship and quieter individual reflection. Parish rooms and the covered square extend its role into neighbourhood life, offering places for people to meet and stay.",
+    "insight": "Lifting the church creates a sheltered square below it. A continuous wall-building negotiates the sloping site through stairs and ramps, while the worship interior combines a directional nave with an assembly gathered around the altar and a more secluded side space.",
+    "lenses": [
+      "Programme",
+      "Organisation",
+      "Form",
+      "Philosophy"
+    ],
+    "tokens": {
+      "think": [
+        "spiritual",
+        "reflection"
+      ],
+      "show": [
+        "celebration",
+        "interaction"
+      ]
+    },
+    "connections": {
+      "think": "The worship interior and more secluded side space support prayer and reflection.",
+      "show": "Collective worship and the covered public square support communal gathering."
+    },
+    "primary": [
+      "Architects' project account — Divisare",
+      "https://divisare.com/projects/550563-pedro-matos-gameiro-atelier-bugio-joao-favila-menezes-alexander-bogorodskiy-architectural-photography-igreja-e-centro-paroquial-do-bairro-de-sao-jose-da-boavista"
+    ],
+    "references": [],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "46 Dar el Farina",
+    "slug": "dar-el-farina",
+    "modeNote": "Included as an architectural reference for domestic space, material and environmental design; no mode of work is assigned.",
+    "name": "Dar el Farina",
+    "architect": "Leopold Banchini Architects",
+    "place": "Al Haouz, Morocco",
+    "type": "Rural house",
+    "year": "2024",
+    "lead": "A narrow rural house arranged as rooms, patios and water basins between parallel earth walls, following historic irrigation lines.",
+    "description": "A sequence of domestic rooms and open patios provides places to live, rest and gather. Large pivoting doors connect or separate spaces, while shaded interiors offer shelter from the desert sun.",
+    "insight": "The house follows two existing irrigation lines: a surface mesref and an underground khetara. Rammed-earth walls, controlled openings, vegetation and water shape its microclimate. Colourful locally made zellige tiles line roof openings, tinting daylight before it meets the water below.",
+    "lenses": [
+      "Organisation",
+      "Material",
+      "Sustainability strategy",
+      "Atmosphere"
+    ],
+    "tokens": {},
+    "connections": {},
+    "primary": [
+      "Architects' project account — Divisare",
+      "https://divisare.com/projects/516210-leopold-banchini-architects-rory-gardiner-dar-el-farina"
+    ],
+    "references": [
+      [
+        "Firenze Architettura — Dar El Farina",
+        "https://oajournals.fupress.net/index.php/fa/article/view/16820"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "47 Ca n Terra",
+    "slug": "ca-n-terra",
+    "modeNote": "Included as an architectural reference for adaptive reuse and domestic space; no mode of work is assigned.",
+    "name": "Ca'n Terra",
+    "architect": "Ensamble Studio / Antón García-Abril and Débora Mesa",
+    "place": "Menorca, Spain",
+    "type": "House in a former quarry",
+    "year": "2020",
+    "lead": "An abandoned stone quarry adapted into a house, using existing excavated chambers as the starting point for domestic space.",
+    "description": "Living, sleeping and cooking occupy the quarry's existing spaces. Curtains introduce privacy without subdividing the stone chambers, and new openings bring daylight and fresh air into the deeper interior.",
+    "insight": "The architects surveyed the abandoned quarry digitally before making selective cuts for three rooflights. New slabs accommodate services and follow the cave's topography; solar panels, a cistern and a septic tank support off-grid occupation. The project begins with found space rather than a newly drawn envelope.",
+    "lenses": [
+      "Philosophy",
+      "Material",
+      "Organisation",
+      "Sustainability strategy",
+      "Atmosphere"
+    ],
+    "tokens": {},
+    "connections": {},
+    "primary": [
+      "Architects' project account — ArchDaily",
+      "https://www.archdaily.com/956546/can-terra-ensamble-studio"
+    ],
+    "references": [
+      [
+        "Divisare — Ca'n Terra",
+        "https://divisare.com/projects/436297-ensamble-studio-ca-n-terra"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "05 Plan - point-cloud survey.png": "Plan derived from a digital point-cloud survey of the quarry.",
+      "06 Section - point-cloud survey.jpg": "Section derived from a digital point-cloud survey of the quarry.",
+      "07 Section - interior survey.jpg": "Survey section of the existing quarry interior.",
+      "08 Digital model - point-cloud survey.jpg": "Digital point-cloud survey, rather than a physical scale model."
+    }
+  },
+  {
+    "folder": "48 Suelchen Church Burial Vault",
+    "slug": "suelchen-church-burial-vault",
+    "name": "Sülchen Church Burial Vault",
+    "architect": "Cukrowicz Nachbaur Architekten; rammed earth by Martin Rauch / Lehm Ton Erde",
+    "place": "Rottenburg am Neckar, Germany",
+    "type": "Burial vault and archaeological display",
+    "year": "2017",
+    "lead": "A burial vault beneath an existing church, combining a quiet devotional chamber with access to archaeological remains uncovered during restoration.",
+    "description": "Visitors descend towards a chamber for prayer and remembrance beside the bishops' burial places. An intermediate landing gives access to archaeological remains and small displays of excavated objects.",
+    "insight": "Soil excavated from the historic cemetery was returned to the site as layered rammed-earth walls. The material links the burial space to the ground it occupies, while a carefully staged descent prepares visitors for the high central chamber of devotion.",
+    "lenses": [
+      "Material",
+      "Atmosphere",
+      "Organisation",
+      "Philosophy"
+    ],
+    "tokens": {
+      "think": [
+        "contemplation",
+        "spiritual"
+      ],
+      "show": [
+        "display",
+        "education"
+      ]
+    },
+    "connections": {
+      "think": "The burial chamber supports prayer, remembrance and quiet contemplation.",
+      "show": "Archaeological remains and small objects are presented along a separate route."
+    },
+    "primary": [
+      "Cukrowicz Nachbaur — Sülchen Church Burial Vault",
+      "https://www.cn-architekten.at/projekt/bischofsgrablege-suelchenkirche-rottenburg-am-neckar"
+    ],
+    "references": [
+      [
+        "Divisare — photographs",
+        "https://divisare.com/projects/475826-cukrowicz-nachbaur-architekten-martin-rauch-adolf-bereuter-suelchen-curch-bishop-s-burial-vault"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "05 Plan - burial chamber.png": "Drawing excerpt from the official award publication."
+    }
+  },
+  {
+    "folder": "49 Nordic Pavilion",
+    "slug": "nordic-pavilion",
+    "name": "Nordic Pavilion",
+    "architect": "Sverre Fehn",
+    "place": "Venice, Italy",
+    "type": "Biennale exhibition pavilion",
+    "year": "1962",
+    "lead": "An exhibition pavilion where a layered concrete roof filters daylight over an open gallery shared by Finland, Norway and Sweden.",
+    "description": "The pavilion hosts art and architecture exhibitions within a largely open room. Its restrained interior and filtered daylight provide a distinctive setting for presenting work and moving between exhibits.",
+    "insight": "Two perpendicular layers of slender concrete beams filter daylight while spanning the exhibition room. Openings in the roof accommodate tree trunks. The structure therefore defines both the lighting conditions for artworks and the experience of the room, making roof and atmosphere inseparable.",
+    "lenses": [
+      "Structure",
+      "Tectonics",
+      "Atmosphere",
+      "Programme"
+    ],
+    "tokens": {
+      "show": [
+        "exhibition",
+        "display"
+      ]
+    },
+    "connections": {
+      "show": "The pavilion is a purpose-built venue for art and architecture exhibitions."
+    },
+    "primary": [
+      "Sverre Fehn — original project publication, Arkitektur N",
+      "https://old.arkitektur-n.no/temaer/sverre-fehn"
+    ],
+    "references": [
+      [
+        "Drawing Matter — archival review and drawings",
+        "https://drawingmatter.org/review-excerpt-68%C2%BD-degrees-sverre-fehn-and-the-nordic-pavilion/"
+      ],
+      [
+        "ETH Zürich — student study models",
+        "https://mad.ethz.ch/nordic-pavillion/"
+      ],
+      [
+        "Divisare — Nordic Pavilion photographs",
+        "https://divisare.com/projects/310739-sverre-fehn-ake-e-son-lindman-nordic-pavilion-at-the-venice-biennale"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "05 Plan - competition floor plan.jpg": "Competition-stage floor plan; details may differ from the completed building.",
+      "06 Section - competition drawing.jpg": "Competition-stage section; details may differ from the completed building.",
+      "09 Physical model 01 - ETH student study.webp": "Student study model by Anna Weckström, ETH Zürich, 2025, at 1:20; not an original Sverre Fehn office model.",
+      "10 Physical model 02 - ETH student detail.webp": "Student study model by Anna Weckström, ETH Zürich, 2025, at 1:20; not an original Sverre Fehn office model."
+    }
+  },
+  {
+    "folder": "50 theATRE SHANJUCHAJING Concept Store",
+    "slug": "theatre-shanjuchajing",
+    "name": "théATRE SHANJUCHAJING Concept Store",
+    "architect": "kooo architects / Shinya Kojima and Ayaka Kojima",
+    "place": "Beijing, China",
+    "type": "Tea shop and tasting rooms",
+    "year": "",
+    "lead": "A tea shop combining product display, a communal tasting bar and a secluded tea room within a compact urban interior.",
+    "description": "Customers browse tea displays, learn about tea varieties and sit opposite servers at a low tasting bar. More private rooms provide a quieter setting for tea and conversation.",
+    "insight": "The walls use specially developed tea-earth bricks, combining tea leaves with compressed soil. Their changing colour and visible leaf particles connect the material interior to the product. Circulation moves from an open display area through a lounge to a concealed, daylit tea room.",
+    "lenses": [
+      "Material",
+      "Programme",
+      "Organisation",
+      "Atmosphere"
+    ],
+    "tokens": {
+      "think": [
+        "learning",
+        "contemplation"
+      ],
+      "make": [
+        "preparation"
+      ],
+      "show": [
+        "display",
+        "exchange"
+      ]
+    },
+    "connections": {
+      "think": "Tea-study drawers and quieter tasting rooms encourage learning and attentive appreciation.",
+      "make": "The tea bar and preparation room support the practical preparation and serving of tea.",
+      "show": "Product displays and face-to-face tasting make tea culture visible and social."
+    },
+    "primary": [
+      "kooo architects — SHANJUCHAJING Concept Store",
+      "https://ko-oo.jp/works/2214/"
+    ],
+    "references": [
+      [
+        "gooood — project and material studies",
+        "https://www.gooood.cn/theatre-shanjuchajing-concept-store-by-kooo-architects.htm"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {
+      "05 Material study - tea-earth brick samples.jpg": "Tea-earth brick material samples, rather than an architectural scale model.",
+      "06 Digital model - spatial organisation.jpg": "Digital model explaining the organisation of the store."
+    }
+  },
+  {
+    "folder": "51 Rooftop Educational Farm",
+    "slug": "rooftop-educational-farm",
+    "name": "Rooftop Educational Farm",
+    "architect": "rerum architectes",
+    "place": "Paris, France",
+    "type": "School rooftop farm and teaching pavilion",
+    "year": "2025",
+    "lead": "A school rooftop farm pairing a productive greenhouse with a teaching pavilion, bringing cultivation and environmental learning into everyday education.",
+    "description": "The Veni Verdi association grows fruit, vegetables and flowers alongside the school's educational programme. A greenhouse supports crop production while an adjacent pavilion provides three areas for teaching and learning.",
+    "insight": "The new steel structure spans between existing walls to limit intervention in the roof waterproofing. Different polycarbonate skins tune the greenhouse and classroom climates, while visible rainwater collection makes the irrigation cycle part of the educational experience.",
+    "lenses": [
+      "Programme",
+      "Structure",
+      "Sustainability strategy",
+      "Tectonics"
+    ],
+    "tokens": {
+      "think": [
+        "learning",
+        "study"
+      ],
+      "make": [
+        "growing",
+        "cultivation"
+      ],
+      "show": [
+        "education",
+        "teaching"
+      ]
+    },
+    "connections": {
+      "think": "Students learn about plants, food production and environmental systems.",
+      "make": "The greenhouse and planting beds support growing and cultivating crops.",
+      "show": "A dedicated pavilion accommodates teaching and educational demonstrations."
+    },
+    "primary": [
+      "Architects' project account — Divisare",
+      "https://divisare.com/projects/546378-rerum-architectes-mary-gaudin-rooftop-educational-farm"
+    ],
+    "references": [
+      [
+        "Architects' description — ArchDaily",
+        "https://www.archdaily.com/1036704/an-educational-farm-on-the-roof-rerum-architectes"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  },
+  {
+    "folder": "52 Sikbang Maru",
+    "slug": "sikbang-maru",
+    "name": "Sikbang Maru",
+    "architect": "one-aftr",
+    "place": "Seoul, South Korea",
+    "type": "Public pavilion",
+    "year": "2023",
+    "lead": "A public pavilion adapting greenhouse bays into distinct settings for gathering, resting and meditation through changes in fabric, light and airflow.",
+    "description": "A hall with a small stage supports informal performance and gathering, while a burgundy meditation room provides retreat. A planted bay and translucent lobby offer other ways to pause within the city.",
+    "insight": "Six adjoining greenhouse bays receive four different fabric coverings. White shade mesh, translucent film, blackout tarp and insulating fabric alter light, airflow and privacy within the same structural system, showing how an economical repeated frame can support markedly different atmospheres.",
+    "lenses": [
+      "Atmosphere",
+      "Material",
+      "Programme",
+      "Organisation"
+    ],
+    "tokens": {
+      "think": [
+        "meditation",
+        "contemplation"
+      ],
+      "show": [
+        "performance",
+        "interaction"
+      ]
+    },
+    "connections": {
+      "think": "An enclosed meditation room offers a calm setting away from the busy street.",
+      "show": "The open hall and stage support public gathering and informal performance."
+    },
+    "primary": [
+      "Architects' project description — ArchDaily",
+      "https://www.archdaily.com/1008947/sikbang-maru-pavilion-one-aftr"
+    ],
+    "references": [
+      [
+        "Divisare — Sikbang Maru",
+        "https://divisare.com/projects/488975-one-aftr-jang-mi-sikbang-maru"
+      ],
+      [
+        "Designwhos — project plan",
+        "https://www.designwhos.com/projects/1229"
+      ]
+    ],
+    "hero": "01",
+    "imageNotes": {}
+  }
+]
