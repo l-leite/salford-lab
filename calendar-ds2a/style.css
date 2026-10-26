@@ -1,0 +1,93 @@
+ :root { color-scheme:light; --paper:#fafaf8; --ink:#242722; --muted:#62665f; --line:#d9dcd4; --green:#245c3b; --tint:#edf4e9; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:1.5rem; }
+body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+a { color:var(--green); text-underline-offset:.2em; }
+a:hover { text-decoration-thickness:2px; }
+:focus-visible { outline:3px solid var(--green); outline-offset:5px; }
+[hidden] { display:none !important; }
+.skip { position:absolute; top:-100px; left:1rem; padding:.75rem; background:white; z-index:2; }
+.skip:focus { top:1rem; }
+.masthead { max-width:1180px; margin:auto; padding:1.2rem 24px; display:flex; justify-content:space-between; gap:1rem; border-bottom:1px solid var(--line); font-size:.85rem; }
+.masthead a { color:inherit; font-weight:700; text-decoration:none; }
+.masthead span { color:var(--muted); }
+main { max-width:1180px; margin:auto; padding:0 24px; }
+.hero { padding:3.5rem 0 2.5rem; }
+.eyebrow { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin:0 0 .6rem; }
+h1,h2,h3,h4,p { margin-top:0; }
+h1 { font-size:clamp(2.5rem,6vw,4.8rem); line-height:1.08; letter-spacing:-.055em; font-weight:650; margin-bottom:1rem; }
+.title-dot { color:var(--green); }
+.intro { color:var(--muted); max-width:38rem; font-size:1.1rem; margin-bottom:1.5rem; }
+.today { color:var(--green); font-size:.9rem; font-weight:650; margin:0; }
+h2 { font-size:1.35rem; line-height:1.3; letter-spacing:-.025em; }
+h3 { font-size:1.1rem; line-height:1.4; margin-bottom:.6rem; }
+.deadlines { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+.deadline { padding:1.5rem; background:#fff; }
+.deadline + .deadline { border-left:1px solid var(--line); }
+.deadline.final { background:var(--tint); }
+.deadline p:last-child { margin-bottom:0; }
+.deadline-date { font-size:.85rem; font-weight:600; }
+.countdown { font-size:1.9rem; font-weight:650; letter-spacing:-.04em; line-height:1.2; margin:1.3rem 0 .8rem; color:var(--green); font-variant-numeric:tabular-nums; }
+.deadline.is-past { background:#f0f0ed; color:#5e625c; }
+.deadline.is-past .countdown { color:#5e625c; }
+.small { font-size:.8rem; color:var(--muted); }
+.weeks-section { margin-top:3.5rem; }
+.section-heading { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.section-heading h2 { margin-bottom:1rem; }
+.button { display:inline-flex; align-items:center; min-height:44px; padding:.5rem 1rem; border:1px solid var(--green); border-radius:4px; text-decoration:none; font-size:.85rem; font-weight:600; text-align:center; }
+.button:hover { background:var(--tint); }
+.toolbar { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; column-gap:1.5rem; padding:.5rem 0; border-top:1px solid var(--line); }
+.toolbar label { display:flex; gap:.6rem; align-items:center; min-height:44px; cursor:pointer; font-size:.9rem; }
+input { width:1.15rem; height:1.15rem; accent-color:var(--green); margin:0; }
+.calendar-note { margin:.5rem 0 1.3rem; }
+.weeks { list-style:none; padding:0; margin:0; border-top:1px solid var(--line); }
+.week { display:grid; grid-template-columns:160px minmax(0,1fr) minmax(160px,.5fr); gap:2rem; padding:1.75rem 1.25rem; border-bottom:1px solid var(--line); }
+.week-date { display:flex; flex-direction:column; align-items:flex-start; font-size:.85rem; gap:.3rem; font-variant-numeric:tabular-nums; }
+.week-number { font-weight:750; font-size:1rem; }
+.week-status { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; margin-top:.3rem; }
+.week-status:empty { display:none; }
+.session-date { color:var(--muted); font-size:.8rem; margin-bottom:.75rem; }
+.week-focus p:last-child { margin-bottom:0; }
+.commentary { border-left:1px solid var(--line); padding-left:1.25rem; font-size:.9rem; overflow-wrap:anywhere; }
+.commentary h4 { font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin-bottom:.75rem; }
+.commentary p:last-child { margin-bottom:0; }
+.placeholder { color:var(--muted); font-style:italic; }
+.week.is-past { background:#efefec; color:#62655f; }
+.week.is-past a { color:#535b51; }
+.week.is-current { background:var(--tint); box-shadow:inset 4px 0 0 var(--green); }
+.is-current .week-status { background:var(--green); color:white; padding:.2rem .5rem; border-radius:2px; }
+.week-event { margin-top:1rem; font-size:.85rem; font-weight:650; }
+.term-status { padding:1rem; background:var(--tint); }
+footer { margin-top:3rem; padding:1.5rem 0 2.5rem; color:var(--muted); font-size:.8rem; border-top:1px solid var(--line); }
+footer p { margin-bottom:.5rem; }
+footer a { display:inline-block; padding:.5rem 0; }
+@media (max-width:900px) {
+  .week { grid-template-columns:130px minmax(0,1fr); gap:1rem 1.5rem; }
+  .commentary { grid-column:2; padding-left:0; padding-top:.75rem; border-left:0; border-top:1px dashed var(--line); }
+  .deadline { padding:1rem; }
+}
+@media (max-width:620px) {
+  main { padding:0 18px; }
+  .masthead { padding:1rem 18px; }
+  .hero { padding:2.5rem 0 2rem; }
+  .deadlines { grid-template-columns:1fr; }
+  .deadline { padding:1.25rem; }
+  .deadline + .deadline { border-left:0; border-top:1px solid var(--line); }
+  .deadline .countdown { margin:.75rem 0; }
+  .weeks-section { margin-top:2.5rem; }
+  .section-heading { align-items:flex-start; flex-wrap:wrap; margin-bottom:1rem; }
+  .section-heading h2 { margin:0; }
+  .week { grid-template-columns:minmax(0,1fr); padding:1.4rem 1rem; gap:1rem; }
+  .week-date { flex-direction:row; flex-wrap:wrap; align-items:center; gap:.5rem 1rem; }
+  .week-status { margin:0; }
+  .commentary { grid-column:auto; }
+}
+@media print {
+  body { font-size:10pt; }
+  .skip,.toolbar,.button { display:none !important; }
+  .week[hidden] { display:grid !important; }
+  main { max-width:none; padding:0; }
+  .hero { padding:1rem 0; }
+  .week,.deadline { break-inside:avoid; }
+  .weeks-section { margin-top:1rem; }
+}
