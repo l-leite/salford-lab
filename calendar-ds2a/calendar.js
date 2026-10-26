@@ -30,6 +30,35 @@
   let previousToday = '';
   let previousDeadlineState = '';
 
+  // Keep the editable HTML simple; add disclosure controls as an enhancement.
+  weeks.forEach(week => {
+    const focus = week.querySelector('.week-focus');
+    const heading = focus.querySelector('h3');
+    const notes = week.querySelector('.commentary');
+    const details = document.createElement('div');
+    details.id = `${week.id}-details`;
+    details.className = 'week-details';
+    [...focus.children].filter(child => child !== heading).forEach(child => details.append(child));
+    notes.id = `${week.id}-notes`;
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'week-toggle';
+    toggle.hidden = true;
+    toggle.setAttribute('aria-controls', `${details.id} ${notes.id}`);
+    toggle.setAttribute('aria-label', `Details for ${week.querySelector('.week-number').textContent}: ${heading.textContent}`);
+    focus.append(toggle, details);
+    toggle.addEventListener('click', () => setExpanded(week, toggle.getAttribute('aria-expanded') !== 'true'));
+  });
+
+  function setExpanded(week, expanded) {
+    const toggle = week.querySelector('.week-toggle');
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.textContent = expanded ? '− details' : '+ details';
+    week.classList.toggle('is-collapsed', !expanded);
+    week.querySelector('.week-details').hidden = !expanded;
+    week.querySelector('.commentary').hidden = !expanded;
+  }
+
   function applyFilter() {
     weeks.forEach(week => { week.hidden = hidePast.checked && week.classList.contains('is-past'); });
   }
@@ -42,8 +71,12 @@
       weeks.forEach(week => {
         const past = today >= week.dataset.end;
         const active = today >= week.dataset.start && today < week.dataset.end;
+        const wasPast = week.classList.contains('is-past');
         week.classList.toggle('is-past', past);
         week.classList.toggle('is-current', active);
+        week.querySelector('.week-toggle').hidden = !past;
+        if (!past) setExpanded(week, true);
+        else if (!wasPast) setExpanded(week, false);
         week.querySelector('.week-status').textContent = active ? 'This week' : past ? 'Past week' : '';
         if (active) { week.setAttribute('aria-current', 'date'); current = week; }
         else week.removeAttribute('aria-current');

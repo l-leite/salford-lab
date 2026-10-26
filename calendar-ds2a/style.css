@@ -1,4 +1,4 @@
- :root { color-scheme:light; --paper:#fafaf8; --ink:#242722; --muted:#62665f; --line:#d9dcd4; --green:#245c3b; --tint:#edf4e9; }
+:root { color-scheme:light; --paper:#fafaf8; --ink:#242722; --muted:#62665f; --line:#d9dcd4; --green:#245c3b; --tint:#edf4e9; --red:#b3261e; }
 * { box-sizing:border-box; }
 html { scroll-padding-top:1.5rem; }
 body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
@@ -18,6 +18,7 @@ h1,h2,h3,h4,p { margin-top:0; }
 h1 { font-size:clamp(2.5rem,6vw,4.8rem); line-height:1.08; letter-spacing:-.055em; font-weight:650; margin-bottom:1rem; }
 .title-dot { color:var(--green); }
 .intro { color:var(--muted); max-width:38rem; font-size:1.1rem; margin-bottom:1.5rem; }
+.planning-note { max-width:48rem; padding:.8rem 1rem; border-left:3px solid var(--green); background:var(--tint); font-size:.9rem; margin-bottom:1.5rem; }
 .today { color:var(--green); font-size:.9rem; font-weight:650; margin:0; }
 h2 { font-size:1.35rem; line-height:1.3; letter-spacing:-.025em; }
 h3 { font-size:1.1rem; line-height:1.4; margin-bottom:.6rem; }
@@ -26,7 +27,7 @@ h3 { font-size:1.1rem; line-height:1.4; margin-bottom:.6rem; }
 .deadline + .deadline { border-left:1px solid var(--line); }
 .deadline.final { background:var(--tint); }
 .deadline p:last-child { margin-bottom:0; }
-.deadline-date { font-size:.85rem; font-weight:600; }
+.deadline-date { font-size:.85rem; font-weight:600; color:var(--red); }
 .countdown { font-size:1.9rem; font-weight:650; letter-spacing:-.04em; line-height:1.2; margin:1.3rem 0 .8rem; color:var(--green); font-variant-numeric:tabular-nums; }
 .deadline.is-past { background:#f0f0ed; color:#5e625c; }
 .deadline.is-past .countdown { color:#5e625c; }
@@ -54,19 +55,34 @@ input { width:1.15rem; height:1.15rem; accent-color:var(--green); margin:0; }
 .placeholder { color:var(--muted); font-style:italic; }
 .week.is-past { background:#efefec; color:#62655f; }
 .week.is-past a { color:#535b51; }
+.week.is-past { padding-top:.65rem; padding-bottom:.65rem; }
+.week.is-past .week-status { display:none; }
+.week.is-collapsed { grid-template-columns:160px minmax(0,1fr); gap:.5rem 2rem; align-items:center; }
+.is-collapsed .week-date { gap:.1rem; }
+.is-collapsed .week-focus { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.is-collapsed h3 { font-size:.95rem; margin:0; }
+.week-toggle { min-height:44px; flex-shrink:0; padding:.4rem .6rem; border:0; border-radius:3px; background:transparent; color:inherit; font:600 .8rem/1.4 system-ui,sans-serif; cursor:pointer; }
+.week-toggle:hover { background:#e1e3dc; }
+.week-focus > .week-toggle { margin-bottom:.5rem; }
+.is-collapsed .week-toggle { margin-bottom:0; }
 .week.is-current { background:var(--tint); box-shadow:inset 4px 0 0 var(--green); }
 .is-current .week-status { background:var(--green); color:white; padding:.2rem .5rem; border-radius:2px; }
 .week-event { margin-top:1rem; font-size:.85rem; font-weight:650; }
+.week .week-event a { color:var(--red); }
+.week#week-13 .session-date { color:var(--red); }
 .term-status { padding:1rem; background:var(--tint); }
 footer { margin-top:3rem; padding:1.5rem 0 2.5rem; color:var(--muted); font-size:.8rem; border-top:1px solid var(--line); }
 footer p { margin-bottom:.5rem; }
 footer a { display:inline-block; padding:.5rem 0; }
 @media (max-width:900px) {
+  .week.is-collapsed { grid-template-columns:130px minmax(0,1fr); gap:.5rem 1.5rem; }
   .week { grid-template-columns:130px minmax(0,1fr); gap:1rem 1.5rem; }
   .commentary { grid-column:2; padding-left:0; padding-top:.75rem; border-left:0; border-top:1px dashed var(--line); }
   .deadline { padding:1rem; }
 }
 @media (max-width:620px) {
+  .week.is-collapsed { grid-template-columns:minmax(0,1fr); gap:.2rem; }
+  .is-collapsed .week-date { gap:.5rem 1rem; }
   main { padding:0 18px; }
   .masthead { padding:1rem 18px; }
   .hero { padding:2.5rem 0 2rem; }
@@ -83,6 +99,9 @@ footer a { display:inline-block; padding:.5rem 0; }
   .commentary { grid-column:auto; }
 }
 @media print {
+  .week-toggle { display:none !important; }
+  .week .week-details[hidden],.week .commentary[hidden] { display:block !important; }
+  .week.is-collapsed .week-focus { display:block; }
   body { font-size:10pt; }
   .skip,.toolbar,.button { display:none !important; }
   .week[hidden] { display:grid !important; }
