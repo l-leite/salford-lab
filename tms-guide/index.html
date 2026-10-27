@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Think, Make, Show: a guide to modes of work, sixteen spatial strategies and twenty-four examples for Design Studio 2A.">
+  <meta name="description" content="Think, Make, Show: a guide to modes of work, sixteen spatial strategies and twenty examples for Design Studio 2A.">
   <meta name="theme-color" content="#f8f7f3">
   <title>Think, Make, Show — Modes of work</title>
   <style>
@@ -108,10 +108,6 @@
     .arrangement h3 { font-size: 17px; margin: 0 0 9px; font-weight: 600; letter-spacing: -.025em; }
     .arrangement h3 span { color: var(--muted); font-family: Consolas, monospace; font-size: 13px; margin-right: 7px; }
     .arrangement p { font-size: 13px; line-height: 1.65; margin: 0; color: var(--muted); }
-    .worked-example { margin-top: 24px; padding: 26px; background: #eeede6; }
-    .worked-example h3 { font-size: 21px; font-weight: 600; margin: 10px 0; }
-    .worked-example p { margin: 0; font-size: 14px; line-height: 1.75; max-width: 950px; }
-    .worked-example p + p { margin-top: 12px; }
     .catalogue-intro { display: flex; justify-content: space-between; gap: 34px; align-items: end; margin-bottom: 23px; }
     .catalogue-intro .section-title { margin-bottom: 13px; }
     .catalogue-intro p { color: var(--muted); font-size: 14px; line-height: 1.7; max-width: 650px; margin: 0; }
@@ -121,7 +117,9 @@
     .theme-filters { border-left: 1px solid var(--line); padding-left: 12px; }
     .filter-bar .theme-token { border-radius: 999px; padding: 8px 11px; }
     .empty-results { color: var(--muted); font-size: 14px; line-height: 1.6; }
-    .padlet-note { margin: 24px 0 0; font-size: 14px; line-height: 1.6; }
+    .padlet-note { margin: 28px 0 0; font-size: 18px; line-height: 1.5; }
+    .padlet-note a { display: inline-block; padding: 16px 21px; border: 1px solid var(--think-ink); border-radius: 6px; background: var(--think-ink); color: white; font-weight: 650; text-decoration: none; }
+    .padlet-note a:hover { background: #263c62; }
     .filter-bar button { display: flex; gap: 6px; align-items: center; border: 1px solid var(--line); border-radius: 5px; padding: 10px 14px; background: transparent; color: var(--ink); font-size: 12px; }
     .filter-bar button:hover { background: #eeede6; }
     .filter-bar button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: white; }
@@ -154,9 +152,9 @@
     .start h3 { font-size: 15px; margin: 0 0 13px; font-weight: 650; }
     .checklist { padding-left: 20px; margin: 0; font-size: 14px; line-height: 1.7; }
     .checklist li + li { margin-top: 8px; }
-    .scale-note { margin-top: 27px; padding-top: 23px; border-top: 1px solid #d0cec3; display: flex; gap: 24px; align-items: baseline; }
-    .scale-note strong { font-size: 23px; letter-spacing: -.025em; white-space: nowrap; font-weight: 600; }
-    .scale-note p { font-size: 13px; line-height: 1.65; color: var(--muted); margin: 0; max-width: 690px; }
+    .scale-note { margin-top: 30px; padding: 28px; border: 1px solid var(--think); background: var(--think-tint); display: grid; gap: 15px; }
+    .scale-note strong { font-size: clamp(25px, 3vw, 34px); line-height: 1.2; letter-spacing: -.025em; font-weight: 600; }
+    .scale-note p { font-size: 17px; line-height: 1.7; margin: 0; max-width: 850px; }
     footer { display: flex; justify-content: space-between; gap: 24px; font-size: 11px; line-height: 1.7; color: var(--muted); padding-block: 26px 35px; }
     footer p { margin: 0; }
     @media (max-width: 1050px) {
@@ -178,14 +176,14 @@
       .arrangement-key { gap: 8px; }
       .strategy-toolbar { gap: 12px; } .strategy-switcher button, .strategy-swap { padding-inline: 8px; }
       .strategy-status { order: 3; flex-basis: 100%; }
-      .worked-example { padding: 21px; } .hero-sketch svg { max-height: 240px; }
+      .hero-sketch svg { max-height: 240px; }
       .catalogue-intro { display: block; } .count { display: block; margin-top: 12px; }
       .theme-filters { border-left: 0; padding-left: 0; }
       .filter-bar { gap: 12px; } .filter-bar button { padding: 10px; font-size: 11px; }
       .group-heading { align-items: start; flex-direction: column; gap: 5px; }
       .card-grid { grid-template-columns: 1fr; gap: 16px; } .archetype { padding: 23px; }
       .start { margin-top: 40px; padding: 24px; } .start-grid { grid-template-columns: 1fr; gap: 30px; }
-      .sentence { font-size: 21px; } .scale-note { flex-direction: column; gap: 10px; } footer { flex-direction: column; gap: 10px; }
+      .sentence { font-size: 21px; } .scale-note { padding: 20px; gap: 13px; } footer { flex-direction: column; gap: 10px; }
     }
     @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
     @page { size: A4; margin: 14mm; }
@@ -204,8 +202,6 @@
       .arrangement svg { height: 48px; margin-bottom: 4px; } .section-intro, .mode-definition { font-size: 11px; }
       .section-intro { margin-bottom: 16px; } .arrangement-key { margin-bottom: 14px; }
       .strategy-toolbar { margin-bottom: 10px; } .strategy-status { font-size: 10px; } .strategy-help { display: none; }
-      .worked-example { margin-top: 12px; padding: 12px; break-inside: avoid; } .worked-example p { font-size: 10px; }
-      .worked-example h3 { font-size: 17px; margin-block: 8px; }
       .mode-key { grid-template-columns: repeat(3, minmax(0, 1fr)); } .colour-key { font-size: 9px; }
       .processes { gap: 4px; margin-top: 10px; } .process-token { padding: 3px 7px; font-size: 9px; break-inside: avoid; }
       .colour-diagram summary, .strategy-switcher, .strategy-swap { display: none; }
@@ -222,7 +218,8 @@
       .description { line-height: 1.55; } .questions { padding-top: 10px; }
       .question { font-size: 10px; line-height: 1.5; } .start { padding: 22px; margin-top: 30px; break-inside: avoid; }
       .start-grid { gap: 24px; } .sentence { font-size: 18px; } .checklist { font-size: 11px; }
-      .scale-note p { font-size: 10px; } footer { font-size: 9px; }
+      .scale-note { margin-top: 18px; padding: 16px; gap: 8px; } .scale-note strong { font-size: 22px; } .scale-note p { font-size: 11px; }
+      .padlet-note { margin-top: 16px; font-size: 12px; } .padlet-note a { padding: 10px 14px; } footer { font-size: 9px; }
     }
   </style>
 </head>
@@ -241,7 +238,7 @@
         <span class="eyebrow muted">DS2A · University of Salford · Studio guide</span>
         <h1>Think, Make,<br>Show</h1>
         <p class="hero-intro">The brief asks you to design <strong>a space for work.</strong> A <strong>mode of work</strong> describes a way of working: THINK, MAKE or SHOW. Choose two modes to guide your proposal.</p>
-        <p class="hero-note">Sixteen spatial strategies. Twenty-four examples. A starting point for your own proposal.</p>
+        <p class="hero-note">Sixteen spatial strategies. Twenty examples. A starting point for your own proposal.</p>
       </div>
       <figure class="hero-sketch" style="margin:0">
         <span class="eyebrow muted">The TMS colour key</span>
@@ -388,19 +385,13 @@
         </figure>
       </div>
       <p class="section-intro" style="margin-top:22px">Use these spatial strategies as studies in plan, section or time. Compare different strategies for your pair of modes, combine them or propose another. Label the modes alongside the colours and test the spatial conditions each needs.</p>
-      <aside class="worked-example" aria-labelledby="paper-example-heading">
-        <span class="eyebrow muted">A worked example · The Paper House · THINK + MAKE</span>
-        <h3 id="paper-example-heading">Ideas become printed objects.</h3>
-        <p>Reading, research and writing inform printing and binding; the printed work prompts further thought. Test <strong>B: side by side</strong> with acoustic separation, <strong>D: separated</strong> across a courtyard, or <strong>H: hybrid</strong> in one room used for writing and clean bookbinding. The purpose stays the same while the spatial arrangement changes.</p>
-        <p><strong>Question:</strong> which arrangement supports concentration and material work, and what do noise, dust, light and access require?</p>
-      </aside>
     </section>
 
     <section id="examples" class="section" aria-labelledby="examples-heading">
-      <div class="catalogue-intro"><div><div class="section-title"><span class="section-index">03 /</span><h2 id="examples-heading">24 examples of paired modes.</h2></div><p>Each example gives a pair of modes a particular purpose and group of users. Many explore shared resources and community-led work: ask who runs the space, makes decisions, maintains equipment and can afford to participate. Test several strategies from A–P, or develop your own.</p></div><span class="count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 24 examples</span></div>
+      <div class="catalogue-intro"><div><div class="section-title"><span class="section-index">03 /</span><h2 id="examples-heading">20 examples of paired modes.</h2></div><p>Each example gives a pair of modes a particular purpose and group of users. Many explore shared resources and community-led work: ask who runs the space, makes decisions, maintains equipment and can afford to participate. Test several strategies from A–P, or develop your own.</p></div><span class="count" id="result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 20 examples</span></div>
       <div class="filter-bar" role="group" aria-label="Filter examples" hidden>
         <div class="mode-filters" role="group" aria-label="Mode pair">
-        <button type="button" data-filter="all" aria-pressed="true">All 24</button>
+        <button type="button" data-filter="all" aria-pressed="true">All 20</button>
         <button type="button" data-filter="think-make" aria-pressed="false"><span class="think">THINK</span> + <span class="make">MAKE</span></button>
         <button type="button" data-filter="make-show" aria-pressed="false"><span class="make">MAKE</span> + <span class="show">SHOW</span></button>
         <button type="button" data-filter="think-show" aria-pressed="false"><span class="think">THINK</span> + <span class="show">SHOW</span></button>
@@ -415,155 +406,139 @@
           <button class="theme-token" type="button" data-theme="community" aria-pressed="false">Community exchange</button>
         </div>
       </div>
-      <p class="empty-results" hidden>No examples match these filters. Choose another theme or select All 24.</p>
+      <p class="empty-results" hidden>No examples match these filters. Choose another theme or select All 20.</p>
 
       <section class="pair-group" data-pair="think-make" aria-labelledby="think-make-heading">
         <div class="group-heading"><h3 id="think-make-heading"><span class="think">THINK</span> + <span class="make">MAKE</span></h3><p>Thought informs making. Making gives you something to think about.</p></div>
         <div class="card-grid">
-          <article class="archetype" id="archetype-02" data-themes="craft music">
-            <div class="card-top"><span class="card-id">02</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Listening Forge</h4><p class="spaces"><span class="think">Listening Room</span> <span class="plus">+</span> <span class="make">Instrument Workshop</span></p>
+          <article class="archetype" id="archetype-01" data-themes="craft music">
+            <div class="card-top"><span class="card-id">01</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>Listening Forge</h4><p class="spaces"><span class="think">Dedicated Acoustic Space</span> <span class="plus">+</span> <span class="make">Instrument Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Contemplation">Contemplation</span></li><li><span class="process-token think" aria-label="THINK: Analysis">Analysis</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li></ul>
-            <p class="description">Instrument makers share tools to craft and repair instruments, then test their sound in a separate listening room.</p>
+            <p class="description">Instrument makers share tools to craft and repair instruments, then test their sounds in a separate, dedicated acoustic space.</p>
             <div class="questions">
               <p class="question">How can the workshop and listening room stay connected but acoustically separate?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-06" data-themes="craft study music">
-            <div class="card-top"><span class="card-id">06</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Paper House</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="make">Print Workshop</span></p>
+          <article class="archetype" id="archetype-02" data-themes="craft study music">
+            <div class="card-top"><span class="card-id">02</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>Paper House</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="make">Print Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Reading">Reading</span></li><li><span class="process-token make" aria-label="MAKE: Printing">Printing</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li></ul>
-            <p class="description">Writers and illustrators research ideas, then use shared printing and bookbinding equipment to produce books and posters.</p>
+            <p class="description">A reading and research space for writers and illustrators, with shared facilities to print and bind their own books, zines and magazines.</p>
             <div class="questions">
               <p class="question">How can reading and printing share daylight while keeping noise and dust apart?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-07" data-themes="craft community">
-            <div class="card-top"><span class="card-id">07</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Community Design Workshop</h4><p class="spaces"><span class="think">Design Studio</span> <span class="plus">+</span> <span class="make">Prototype Workshop</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token make" aria-label="MAKE: Modelling">Modelling</span></li><li><span class="process-token make" aria-label="MAKE: Prototyping">Prototyping</span></li></ul>
-            <p class="description">Neighbours, designers and students test furniture and useful objects through drawings and prototypes, then decide what to make.</p>
+          <article class="archetype" id="archetype-03" data-themes="craft study">
+            <div class="card-top"><span class="card-id">03</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>Artistic Atelier</h4><p class="spaces"><span class="think">Ideas and Reference Room</span> <span class="plus">+</span> <span class="make">Painting and Creative Arts Studio</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Imagination">Imagination</span></li><li><span class="process-token think" aria-label="THINK: Inspiration">Inspiration</span></li><li><span class="process-token make" aria-label="MAKE: Drawing">Drawing</span></li><li><span class="process-token make" aria-label="MAKE: Creation">Creation</span></li></ul>
+            <p class="description">Artists develop ideas through painting, drawing and other creative arts. Shared studios and reference spaces support individual practice and discussion.</p>
             <div class="questions">
-              <p class="question">How can shared worktables connect design work with making prototypes?</p>
+              <p class="question">How can daylight and shared studios support painting and other creative arts?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-08" data-themes="craft reflection">
-            <div class="card-top"><span class="card-id">08</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Clay Cloister</h4><p class="spaces"><span class="think">Contemplative Courtyard</span> <span class="plus">+</span> <span class="make">Ceramics Atelier</span></p>
+          <article class="archetype" id="archetype-04" data-themes="craft reflection">
+            <div class="card-top"><span class="card-id">04</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>Clay Cloister</h4><p class="spaces"><span class="think">Contemplative Courtyard</span> <span class="plus">+</span> <span class="make">Ceramics Atelier</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Contemplation">Contemplation</span></li><li><span class="process-token think" aria-label="THINK: Inspiration">Inspiration</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Sculpting">Sculpting</span></li></ul>
             <p class="description">People shape clay, pause in a quiet courtyard and return to making. Shared workrooms and a sheltered outdoor space support sustained craft, observation and contemplation.</p>
             <div class="questions">
               <p class="question">How can a quiet courtyard offer a pause beside an active ceramics workshop?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-16" data-themes="food study">
-            <div class="card-top"><span class="card-id">16</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Hydroponics Lab</h4><p class="spaces"><span class="think">Growing Research Room</span> <span class="plus">+</span> <span class="make">Hydroponic Growing Room</span></p>
+          <article class="archetype" id="archetype-05" data-themes="food study">
+            <div class="card-top"><span class="card-id">05</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>Hydroponics Lab</h4><p class="spaces"><span class="think">Growing Research Room</span> <span class="plus">+</span> <span class="make">Hydroponic Growing Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Inquiry">Inquiry</span></li><li><span class="process-token make" aria-label="MAKE: Growing">Growing</span></li><li><span class="process-token make" aria-label="MAKE: Experimentation">Experimentation</span></li></ul>
             <p class="description">Community growers test growing conditions, cultivate crops without soil and record results. Shared equipment supports experiments across successive growing cycles.</p>
             <div class="questions">
               <p class="question">How can research and growing rooms share resources while controlling light and humidity?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-19" data-themes="digital craft">
-            <div class="card-top"><span class="card-id">19</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Open Computer and Electronics Lab</h4><p class="spaces"><span class="think">Computer Lab</span> <span class="plus">+</span> <span class="make">Electronics Workshop</span></p>
+          <article class="archetype" id="archetype-06" data-themes="digital craft">
+            <div class="card-top"><span class="card-id">06</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>Open Computer and Electronics Lab</h4><p class="spaces"><span class="think">Computer Lab</span> <span class="plus">+</span> <span class="make">Electronics Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Learning">Learning</span></li><li><span class="process-token think" aria-label="THINK: Problem-solving">Problem-solving</span></li><li><span class="process-token make" aria-label="MAKE: Programming">Programming</span></li><li><span class="process-token make" aria-label="MAKE: Assembly">Assembly</span></li></ul>
-            <p class="description">Neighbours develop open-source software, build electronics and repair hardware. Shared computers, benches and hackathons support learning and group projects.</p>
+            <p class="description">Users develop open-source software, build electronics and repair hardware. Shared computers, benches and hackathons support learning and group projects.</p>
             <div class="questions">
               <p class="question">How can quiet computer work and electronics benches accommodate a group hackathon?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-20" data-themes="study reflection">
-            <div class="card-top"><span class="card-id">20</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The House of Concentration</h4><p class="spaces"><span class="think">Quiet Study Cells</span> <span class="plus">+</span> <span class="make">Analogue Workroom</span></p>
+          <article class="archetype" id="archetype-07" data-themes="study reflection">
+            <div class="card-top"><span class="card-id">07</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
+            <h4>House of Concentration</h4><p class="spaces"><span class="think">Quiet Study Cells</span> <span class="plus">+</span> <span class="make">Analogue Workroom</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Reading">Reading</span></li><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token make" aria-label="MAKE: Drawing">Drawing</span></li><li><span class="process-token make" aria-label="MAKE: Creation">Creation</span></li></ul>
             <p class="description">Writers and students leave connected devices at the entrance to a day retreat. Reading, drawing and handwriting alternate between individual cells, shared tables and a quiet courtyard.</p>
             <div class="questions">
               <p class="question">How can study cells and shared workrooms support concentration without digital distractions?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-21" data-themes="reflection craft">
-            <div class="card-top"><span class="card-id">21</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
-            <h4>The Individuation Atelier</h4><p class="spaces"><span class="think">Reflection Rooms</span> <span class="plus">+</span> <span class="make">Drawing and Clay Studio</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Introspection">Introspection</span></li><li><span class="process-token think" aria-label="THINK: Individuation">Individuation</span></li><li><span class="process-token make" aria-label="MAKE: Drawing">Drawing</span></li><li><span class="process-token make" aria-label="MAKE: Sculpting">Sculpting</span></li></ul>
-            <p class="description">Participants explore dreams and symbols through journaling, drawing and clay work. Private reflection rooms and shared studios offer solitude or company, with individuation as an interpretive theme.</p>
-            <div class="questions">
-              <p class="question">How can private reflection rooms connect to shared studios without forcing encounters?</p>
-            </div>
-          </article>
+
         </div>
       </section>
 
       <section class="pair-group" data-pair="make-show" aria-labelledby="make-show-heading">
         <div class="group-heading"><h3 id="make-show-heading"><span class="make">MAKE</span> + <span class="show">SHOW</span></h3><p>Let people encounter the process as well as its results.</p></div>
         <div class="card-grid">
-          <article class="archetype" id="archetype-03" data-themes="craft community">
-            <div class="card-top"><span class="card-id">03</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Reclaimed Materials Exchange</h4><p class="spaces"><span class="make">Reclamation Workshop</span> <span class="plus">+</span> <span class="show">Materials Warehouse and Exchange</span></p>
+          <article class="archetype" id="archetype-08" data-themes="craft community">
+            <div class="card-top"><span class="card-id">08</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Reclaimed Materials Exchange</h4><p class="spaces"><span class="make">Reclamation Workshop</span> <span class="plus">+</span> <span class="show">Materials Warehouse and Exchange</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li><li><span class="process-token make" aria-label="MAKE: Transformation">Transformation</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
             <p class="description">A neighbourhood cooperative sorts, stores and repairs salvaged building components. Makers adapt materials, demonstrate reuse and exchange components with residents and trades. Choose materials that fit the available space.</p>
             <div class="questions">
               <p class="question">How can deliveries, repair work and public browsing share the building safely?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-04" data-themes="food community">
-            <div class="card-top"><span class="card-id">04</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Community Growing Exchange</h4><p class="spaces"><span class="make">Greenhouse</span> <span class="plus">+</span> <span class="show">Produce and Seed Exchange</span></p>
+          <article class="archetype" id="archetype-09" data-themes="food community">
+            <div class="card-top"><span class="card-id">09</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Community Growing Exchange</h4><p class="spaces"><span class="make">Greenhouse</span> <span class="plus">+</span> <span class="show">Produce and Seed Exchange</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Growing">Growing</span></li><li><span class="process-token make" aria-label="MAKE: Cultivation">Cultivation</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li><li><span class="process-token show" aria-label="SHOW: Sharing">Sharing</span></li></ul>
             <p class="description">Residents grow food together and exchange produce, seeds and knowledge. Members choose crops, share the harvest and invite neighbours to join seasonal activities.</p>
             <div class="questions">
               <p class="question">How can growing spaces connect to a welcoming public exchange?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-09" data-themes="food community">
-            <div class="card-top"><span class="card-id">09</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Community Kitchen</h4><p class="spaces"><span class="make">Shared Kitchen</span> <span class="plus">+</span> <span class="show">Dining and Demonstration Room</span></p>
+          <article class="archetype" id="archetype-10" data-themes="food community">
+            <div class="card-top"><span class="card-id">10</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Community Kitchen</h4><p class="spaces"><span class="make">Shared Kitchen</span> <span class="plus">+</span> <span class="show">Public Canteen and Demonstration Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Preparation">Preparation</span></li><li><span class="process-token make" aria-label="MAKE: Cooking">Cooking</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Sharing">Sharing</span></li></ul>
-            <p class="description">Neighbours cook together, share recipes and teach skills through demonstrations and collective meals.</p>
+            <p class="description">Neighbours cook together, share recipes and teach skills through demonstrations and collective meals. A public canteen can serve food to visitors.</p>
             <div class="questions">
               <p class="question">How can a shared kitchen serve meals and demonstrations without crowding preparation?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-10" data-themes="craft community">
-            <div class="card-top"><span class="card-id">10</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Play Foundry</h4><p class="spaces"><span class="make">Toy and Game Workshop</span> <span class="plus">+</span> <span class="show">Play and Testing Space</span></p>
+          <article class="archetype" id="archetype-11" data-themes="craft community">
+            <div class="card-top"><span class="card-id">11</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Play Foundry</h4><p class="spaces"><span class="make">Toy and Game Workshop</span> <span class="plus">+</span> <span class="show">Children’s Play Area</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Prototyping">Prototyping</span></li><li><span class="process-token make" aria-label="MAKE: Playing">Playing</span></li><li><span class="process-token show" aria-label="SHOW: Participation">Participation</span></li><li><span class="process-token show" aria-label="SHOW: Interaction">Interaction</span></li></ul>
-            <p class="description">Makers and families develop toys and games, then test them through play. Participants use what they observe to improve designs and decide what to make next.</p>
+            <p class="description">Makers, children and families create toys and games. A play area gives children space to explore and play alongside the workshop.</p>
             <div class="questions">
               <p class="question">How can children test toys beside a workshop with protected tools?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-11" data-themes="craft community">
-            <div class="card-top"><span class="card-id">11</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Textile Repair Cooperative</h4><p class="spaces"><span class="make">Shared Sewing Workshop</span> <span class="plus">+</span> <span class="show">Mending and Demonstration Room</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Sewing">Sewing</span></li><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
-            <p class="description">Members share sewing machines and materials to repair and make clothes. Open mending sessions exchange skills, while separate fitting spaces protect privacy.</p>
+          <article class="archetype" id="archetype-12" data-themes="craft community">
+            <div class="card-top"><span class="card-id">12</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Fashion Atelier</h4><p class="spaces"><span class="make">Clothing Workshop</span> <span class="plus">+</span> <span class="show">Fashion Show and Runway Space</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Sewing">Sewing</span></li><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li><li><span class="process-token show" aria-label="SHOW: Performance">Performance</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
+            <p class="description">Designers make and repair clothes in a shared fashion atelier. A runway and show space present their work to audiences.</p>
             <div class="questions">
-              <p class="question">How can shared sewing areas and public demonstrations leave room for private fittings?</p>
+              <p class="question">How can a clothing workshop connect to a runway and show space?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-17" data-themes="craft music">
-            <div class="card-top"><span class="card-id">17</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Record Workshop and Listening Lounge</h4><p class="spaces"><span class="make">Record and Sleeve Workshop</span> <span class="plus">+</span> <span class="show">Listening Lounge</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Production">Production</span></li><li><span class="process-token make" aria-label="MAKE: Printing">Printing</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
-            <p class="description">Musicians and designers make small record editions and sleeves, then share them through listening sessions. Shared equipment supports a small-scale production process suited to the building.</p>
-            <div class="questions">
-              <p class="question">How can record making and shared listening stay connected without unwanted noise?</p>
-            </div>
-          </article>
-          <article class="archetype" id="archetype-22" data-themes="music community">
-            <div class="card-top"><span class="card-id">22</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Community Music Studio</h4><p class="spaces"><span class="make">Rehearsal and Recording Rooms</span> <span class="plus">+</span> <span class="show">Live Session Room</span></p>
+
+          <article class="archetype" id="archetype-13" data-themes="music community">
+            <div class="card-top"><span class="card-id">13</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Community Recording Studios</h4><p class="spaces"><span class="make">Shared Recording and Rehearsal Rooms</span> <span class="plus">+</span> <span class="show">Small Performance Space</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Composing">Composing</span></li><li><span class="process-token make" aria-label="MAKE: Production">Production</span></li><li><span class="process-token show" aria-label="SHOW: Performance">Performance</span></li><li><span class="process-token show" aria-label="SHOW: Broadcast">Broadcast</span></li></ul>
-            <p class="description">Local musicians share rehearsal and recording facilities. They develop new music together, organise bookings and share releases or live sessions.</p>
+            <p class="description">Musicians share rehearsal rooms, recording studios and production technology. They can perform to small audiences indoors or give live performances in the park.</p>
             <div class="questions">
-              <p class="question">How can rehearsal, recording and live sessions share space without sound interference?</p>
+              <p class="question">How can shared studios support recording and small performances indoors or in the park?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-23" data-themes="craft community">
-            <div class="card-top"><span class="card-id">23</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Trades and Guild House</h4><p class="spaces"><span class="make">Shared Trade Workshops</span> <span class="plus">+</span> <span class="show">Demonstration and Teaching Hall</span></p>
+          <article class="archetype" id="archetype-14" data-themes="craft community">
+            <div class="card-top"><span class="card-id">14</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Trades and Guild House</h4><p class="spaces"><span class="make">Shared Trade Workshops</span> <span class="plus">+</span> <span class="show">Demonstration and Teaching Hall</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Construction">Construction</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Education">Education</span></li></ul>
             <p class="description">Local trades share workshops, tools and stores. Experienced practitioners and apprentices work together, demonstrate techniques and agree how to divide benches, equipment and teaching time.</p>
             <div class="questions">
@@ -576,72 +551,56 @@
       <section class="pair-group" data-pair="think-show" aria-labelledby="think-show-heading">
         <div class="group-heading"><h3 id="think-show-heading"><span class="think">THINK</span> + <span class="show">SHOW</span></h3><p>Turn individual enquiry into shared understanding.</p></div>
         <div class="card-grid">
-          <article class="archetype" id="archetype-01" data-themes="digital study community">
-            <div class="card-top"><span class="card-id">01</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Co-working Commons</h4><p class="spaces"><span class="think">Laptop Workspace and Meeting Rooms</span> <span class="plus">+</span> <span class="show">Event and Exchange Space</span></p>
+          <article class="archetype" id="archetype-15" data-themes="digital study community">
+            <div class="card-top"><span class="card-id">15</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Co-working Commons</h4><p class="spaces"><span class="think">Laptop Workspace and Meeting Rooms</span> <span class="plus">+</span> <span class="show">Event and Exchange Space</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Networking">Networking</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
             <p class="description">Freelancers, remote workers and small teams bring laptops to shared desks, quiet work areas and bookable meeting rooms. A communal kitchen, talks and networking events connect independent work with exchange. Define how people book and access the space.</p>
             <div class="questions">
               <p class="question">How can quiet desks, meeting rooms and events share one building?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-05" data-themes="community study">
-            <div class="card-top"><span class="card-id">05</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Neighbourhood Assembly</h4><p class="spaces"><span class="think">Community Research Studio</span> <span class="plus">+</span> <span class="show">Assembly and Consultation Room</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Debate">Debate</span></li><li><span class="process-token show" aria-label="SHOW: Participation">Participation</span></li></ul>
-            <p class="description">Residents research local issues and discuss proposals with planners. They set agendas and move between focused preparation and collective decisions.</p>
-            <div class="questions">
-              <p class="question">How can quiet research rooms connect to an open public assembly?</p>
-            </div>
-          </article>
-          <article class="archetype" id="archetype-12" data-themes="study community">
-            <div class="card-top"><span class="card-id">12</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Night Study Commons</h4><p class="spaces"><span class="think">Quiet Evening Study Room</span> <span class="plus">+</span> <span class="show">Peer Teaching and Discussion Room</span></p>
+
+          <article class="archetype" id="archetype-16" data-themes="study community">
+            <div class="card-top"><span class="card-id">16</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Night Study Commons</h4><p class="spaces"><span class="think">Quiet Evening Study Room</span> <span class="plus">+</span> <span class="show">Peer Teaching and Discussion Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Study">Study</span></li><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token show" aria-label="SHOW: Teaching">Teaching</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
             <p class="description">Students, shift workers and neighbours use an evening workspace for study and peer teaching. Shared resources support focused work and discussion outside normal working hours.</p>
             <div class="questions">
               <p class="question">How can evening study rooms offer quiet work and easy access after dark?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-13" data-themes="music community">
-            <div class="card-top"><span class="card-id">13</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Community Radio House</h4><p class="spaces"><span class="think">Research and Interview Studio</span> <span class="plus">+</span> <span class="show">Recording and Broadcasting Room</span></p>
+          <article class="archetype" id="archetype-17" data-themes="music community">
+            <div class="card-top"><span class="card-id">17</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Signal House</h4><p class="spaces"><span class="think">Research and Discussion Studio</span> <span class="plus">+</span> <span class="show">Podcast and Broadcasting Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Investigation">Investigation</span></li><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token show" aria-label="SHOW: Broadcast">Broadcast</span></li><li><span class="process-token show" aria-label="SHOW: Communication">Communication</span></li></ul>
-            <p class="description">Residents research local questions and share interviews and oral histories through podcasts and radio. Contributors shape the programme and use shared recording facilities.</p>
+            <p class="description">People research and discuss ideas, record podcasts and broadcast conversations. Shared studios connect focused preparation with discussion and the exchange of ideas.</p>
             <div class="questions">
-              <p class="question">How can research and interview spaces connect to a sound-isolated broadcast room?</p>
+              <p class="question">How can discussion spaces connect to quiet podcast and broadcasting rooms?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-14" data-themes="music community">
-            <div class="card-top"><span class="card-id">14</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Community Cinema</h4><p class="spaces"><span class="think">Film Research and Programming Room</span> <span class="plus">+</span> <span class="show">Small Cinema</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Screening">Screening</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
-            <p class="description">Members research films and organise screenings for local audiences. Introductions and discussions connect programming with public exchange.</p>
-            <div class="questions">
-              <p class="question">How can a small cinema support both film research and public screenings?</p>
-            </div>
-          </article>
-          <article class="archetype" id="archetype-15" data-themes="study music">
-            <div class="card-top"><span class="card-id">15</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Writers’ Commons</h4><p class="spaces"><span class="think">Quiet Writing Rooms</span> <span class="plus">+</span> <span class="show">Editorial and Reading Room</span></p>
+
+          <article class="archetype" id="archetype-18" data-themes="study music">
+            <div class="card-top"><span class="card-id">18</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Writers’ Commons</h4><p class="spaces"><span class="think">Quiet Writing Rooms</span> <span class="plus">+</span> <span class="show">Editorial and Reading Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Reflection">Reflection</span></li><li><span class="process-token show" aria-label="SHOW: Critique">Critique</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
-            <p class="description">Writers share affordable space for research and individual writing. Editorial circles and optional readings offer feedback while writers choose when to share their work.</p>
+            <p class="description">Writers share affordable space for research and individual writing. Editorial circles and public readings bring feedback, discussion and audiences into the building.</p>
             <div class="questions">
               <p class="question">How can quiet writing rooms connect to a shared reading and discussion space?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-18" data-themes="study community">
-            <div class="card-top"><span class="card-id">18</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Living Community Archive</h4><p class="spaces"><span class="think">Archive Study</span> <span class="plus">+</span> <span class="show">Exhibition and Conversation Room</span></p>
-            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Investigation">Investigation</span></li><li><span class="process-token think" aria-label="THINK: Interpretation">Interpretation</span></li><li><span class="process-token show" aria-label="SHOW: Display">Display</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
-            <p class="description">Residents research neighbourhood documents and oral histories, then select stories for exhibitions. Protected storage keeps sensitive material private.</p>
+          <article class="archetype" id="archetype-19" data-themes="study community">
+            <div class="card-top"><span class="card-id">19</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Think Tank</h4><p class="spaces"><span class="think">Research and Discussion Studio</span> <span class="plus">+</span> <span class="show">Talks and Events Hall</span></p>
+            <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Analysis">Analysis</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li><li><span class="process-token show" aria-label="SHOW: Debate">Debate</span></li></ul>
+            <p class="description">Researchers develop and debate ideas in a shared think tank. A public hall hosts short talks, presentations and events.</p>
             <div class="questions">
-              <p class="question">How can public exhibitions sit beside protected archive storage and study rooms?</p>
+              <p class="question">How can focused research rooms connect to a public talks and events hall?</p>
             </div>
           </article>
-          <article class="archetype" id="archetype-24" data-themes="reflection community">
-            <div class="card-top"><span class="card-id">24</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
-            <h4>The Community Therapy House</h4><p class="spaces"><span class="think">Private Reflection Rooms</span> <span class="plus">+</span> <span class="show">Counselling and Small Group Rooms</span></p>
+          <article class="archetype" id="archetype-20" data-themes="reflection community">
+            <div class="card-top"><span class="card-id">20</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
+            <h4>Community Therapy House</h4><p class="spaces"><span class="think">Private Reflection Rooms</span> <span class="plus">+</span> <span class="show">Counselling and Small Group Rooms</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Reflection">Reflection</span></li><li><span class="process-token think" aria-label="THINK: Introspection">Introspection</span></li><li><span class="process-token show" aria-label="SHOW: Expression">Expression</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
             <p class="description">Private rooms support counselling, reflection and small support groups. SHOW means voluntary expression and dialogue; participants choose what to share and when to join others.</p>
             <div class="questions">
@@ -659,10 +618,10 @@
         <div><h3>Bring three things for discussion:</h3><ol class="checklist"><li><strong>One sentence</strong> naming your pair of modes, the users and the purpose of their work.</li><li><strong>Two or three spatial diagrams</strong> comparing arrangements. Use the mode colours, label each mode and identify conflicts to resolve.</li><li><strong>One architectural question</strong> about light, sound, access, structure, material or atmosphere, linked to your preferred arrangement.</li></ol></div>
       </div>
       <p class="padlet-note"><a href="https://padlet.com/university_of_salford/modes_of_work">Add your own example on Padlet ↗</a></p>
-      <div class="scale-note"><strong>Approx. 500–750 m² GEA</strong><p>This indicative gross external area allows generous space for large halls and repeated rooms. Develop the area around your programme, including external walls across all floors.</p></div>
+      <div class="scale-note"><strong>Approx. 500–750 m² GEA</strong><p>GEA means gross external area: the total built area across all levels, including internal and external walls. Add together the area of every floor, measured to the outside of the external walls.</p><p>This is an indicative range. It allows generous space for large halls and repeated rooms; develop the area around your programme.</p></div>
     </section>
   </main>
-  <footer class="wrap"><p>THINK / MAKE / SHOW · Second-year architecture studio · University of Salford<br>Working ideas, open to adaptation. Eight examples per pair; original numbers retained.</p><p><a href="../">All studio resources ↗</a></p></footer>
+  <footer class="wrap"><p>THINK / MAKE / SHOW · Second-year architecture studio · University of Salford<br>Twenty examples. Working ideas, open to adaptation.</p><p><a href="../">All studio resources ↗</a></p></footer>
   <script>
     (() => {
       const bar = document.querySelector('.filter-bar');
