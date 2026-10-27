@@ -139,10 +139,9 @@
     .spaces { font-size: 13px; line-height: 1.65; font-weight: 600; margin: 0 0 15px; }
     .spaces .plus { font-weight: 400; color: var(--muted); margin-inline: 3px; }
     .description { font-size: 14px; line-height: 1.65; margin: 0 0 19px; }
-    .sketch-prompt { border-top: 1px solid var(--line); padding-top: 14px; margin-top: auto; }
-    .sketch-prompt strong { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; font-weight: 650; }
-    .sketch-prompt p { font-size: 13px; line-height: 1.65; margin: 6px 0 0; color: var(--muted); }
-    .question { font-size: 13px; line-height: 1.6; margin: 13px 0 0; font-style: italic; }
+    .questions { border-top: 1px solid var(--line); padding-top: 14px; margin-top: auto; }
+    .question { font-size: 13px; line-height: 1.6; margin: 0; font-style: italic; }
+    .question + .question { margin-top: 10px; }
     .start { margin-top: 62px; padding: 37px; border: 1px solid var(--line); background: #eeede6; }
     .start-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 60px; }
     .start .section-title { margin-bottom: 22px; }
@@ -213,9 +212,9 @@
       .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
       .archetype { break-inside: avoid; padding: 10px; } .archetype h4 { font-size: 17px; margin-bottom: 10px; }
       .card-top { margin-bottom: 8px; } .spaces, .description { font-size: 11px; margin-bottom: 8px; }
-      .description { line-height: 1.55; } .sketch-prompt { padding-top: 10px; }
-      .sketch-prompt p, .question { font-size: 10px; line-height: 1.5; } .start { padding: 22px; margin-top: 30px; break-inside: avoid; }
-      .sketch-prompt p { margin-top: 4px; } .question { margin-top: 10px; }
+      .description { line-height: 1.55; } .questions { padding-top: 10px; }
+      .question { font-size: 10px; line-height: 1.5; } .start { padding: 22px; margin-top: 30px; break-inside: avoid; }
+      .question + .question { margin-top: 8px; }
       .start-grid { gap: 24px; } .sentence { font-size: 18px; } .checklist { font-size: 11px; }
       .scale-note p { font-size: 10px; } footer { font-size: 9px; }
     }
@@ -408,64 +407,80 @@
             <h4>The Listening Forge</h4><p class="spaces"><span class="think">Listening Room</span> <span class="plus">+</span> <span class="make">Instrument Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Contemplation">Contemplation</span></li><li><span class="process-token think" aria-label="THINK: Analysis">Analysis</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li></ul>
             <p class="description">A cooperative of instrument makers and repairers crafts, adjusts and restores instruments. Careful listening in a separate room informs the next adjustment; members share tools, benches and knowledge.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare A, an enclosed listening room within a workshop, with D, separate making and listening spaces. Trace instrument movement and test acoustic isolation, dust control and shared tool storage.</p></div>
-            <p class="question">How do you move from the noise of making to careful listening?</p>
+            <div class="questions">
+              <p class="question">How do you move from the noise of making to careful listening?</p>
+              <p class="question">What forms and materials allow a listener to judge an instrument’s sound without interference from the workshop?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-06">
             <div class="card-top"><span class="card-id">06</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Paper House</h4><p class="spaces"><span class="think">Reading Room</span> <span class="plus">+</span> <span class="make">Print Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Reading">Reading</span></li><li><span class="process-token make" aria-label="MAKE: Printing">Printing</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li></ul>
             <p class="description">Readers, writers and illustrators turn researched ideas into books, posters and small publications, then return to discuss them. Shared printing and bookbinding equipment supports independent community publishing.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, adjacent reading and printing rooms, with H, one space for writing and clean bookbinding. Mark noise, dust, paper storage and the movement of unfinished work.</p></div>
-            <p class="question">Where does a private idea become something tangible and shared?</p>
+            <div class="questions">
+              <p class="question">Where does a private idea become something tangible and shared?</p>
+              <p class="question">How can daylight and shared work surfaces support the movement from reading and writing to printing and binding?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-07">
             <div class="card-top"><span class="card-id">07</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Community Design Workshop</h4><p class="spaces"><span class="think">Design Studio</span> <span class="plus">+</span> <span class="make">Prototype Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token make" aria-label="MAKE: Modelling">Modelling</span></li><li><span class="process-token make" aria-label="MAKE: Prototyping">Prototyping</span></li></ul>
             <p class="description">Neighbours, designers and students identify local needs and develop furniture, useful objects or small interventions together. Drawings and physical prototypes help participants test ideas and decide what to develop.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, adjacent design and making rooms, with I, both linked by a shared model-review table. Trace public arrival, model movement, dust control and storage for work in progress.</p></div>
-            <p class="question">How can people with different skills investigate a need and develop something together?</p>
+            <div class="questions">
+              <p class="question">How can people with different skills investigate a need and develop something together?</p>
+              <p class="question">Where can unfinished prototypes remain available for collective review without obstructing ongoing work?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-08">
             <div class="card-top"><span class="card-id">08</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Clay Cloister</h4><p class="spaces"><span class="think">Contemplative Courtyard</span> <span class="plus">+</span> <span class="make">Ceramics Atelier</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Contemplation">Contemplation</span></li><li><span class="process-token think" aria-label="THINK: Inspiration">Inspiration</span></li><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Sculpting">Sculpting</span></li></ul>
             <p class="description">People shape clay, pause to observe light and texture in a quiet courtyard, then return to making. An analogue working rhythm gives sustained craft and contemplation their own places within a shared atelier.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare M, making rooms around a contemplative courtyard, with D, an atelier separated from a quiet garden. Mark clay storage, kiln servicing, daylight and thresholds between activity and stillness.</p></div>
-            <p class="question">How can a pause in making become part of the creative process?</p>
+            <div class="questions">
+              <p class="question">How can a pause in making become part of the creative process?</p>
+              <p class="question">What qualities of light, enclosure and material distinguish the courtyard from the active atelier?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-16">
             <div class="card-top"><span class="card-id">16</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Hydroponics Lab</h4><p class="spaces"><span class="think">Growing Research Room</span> <span class="plus">+</span> <span class="make">Hydroponic Growing Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Inquiry">Inquiry</span></li><li><span class="process-token make" aria-label="MAKE: Growing">Growing</span></li><li><span class="process-token make" aria-label="MAKE: Experimentation">Experimentation</span></li></ul>
             <p class="description">Community growers and students investigate growing conditions, cultivate crops without soil, record results and refine their next experiments. Shared equipment and records allow participants to learn from successive growing cycles.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare I, research and growing rooms linked by a sample table, with B, adjacent rooms with different environmental conditions. Trace water, equipment access, crop movement, lighting and moisture control.</p></div>
-            <p class="question">How can observation and experimentation shape a productive growing environment?</p>
+            <div class="questions">
+              <p class="question">How can observation and experimentation shape a productive growing environment?</p>
+              <p class="question">How can light, water and humidity be managed so growing and research spaces support their different tasks?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-19">
             <div class="card-top"><span class="card-id">19</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Open Computer and Electronics Lab</h4><p class="spaces"><span class="think">Computer Lab</span> <span class="plus">+</span> <span class="make">Electronics Workshop</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Learning">Learning</span></li><li><span class="process-token think" aria-label="THINK: Problem-solving">Problem-solving</span></li><li><span class="process-token make" aria-label="MAKE: Programming">Programming</span></li><li><span class="process-token make" aria-label="MAKE: Assembly">Assembly</span></li></ul>
             <p class="description">Neighbours, students and independent makers develop open-source software, build electronics and repair hardware. Shared computers, practical benches and collaborative hackathons support both individual learning and group problem-solving; demonstrations remain secondary.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, quiet computer work beside an electronics workshop, with K, a shared project room used for focused work and scheduled hackathons. Mark soldering extraction, equipment storage, power and group access.</p></div>
-            <p class="question">How can focused coding, collaborative problem-solving and practical bench work coexist?</p>
+            <div class="questions">
+              <p class="question">How can focused coding, collaborative problem-solving and practical bench work coexist?</p>
+              <p class="question">How can shared benches, power supplies and equipment storage adapt between individual projects and a group hackathon?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-20">
             <div class="card-top"><span class="card-id">20</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The House of Concentration</h4><p class="spaces"><span class="think">Quiet Study Cells</span> <span class="plus">+</span> <span class="make">Analogue Workroom</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Reading">Reading</span></li><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token make" aria-label="MAKE: Drawing">Drawing</span></li><li><span class="process-token make" aria-label="MAKE: Creation">Creation</span></li></ul>
             <p class="description">Writers, students and creative practitioners leave connected devices at the entrance to a technology-free day retreat. Reading and reflection alternate with handwriting, drawing and sustained creative work. Individual cells, shared tables and a courtyard establish a monastic rhythm of attention.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare P, small study cells within thick walls around a shared workroom, with O, a sequence from arrival to increasingly quiet rooms. Test device storage, daylight, acoustic thresholds and access to the courtyard.</p></div>
-            <p class="question">How can architecture support a deliberate withdrawal from distraction and a return to creative work?</p>
+            <div class="questions">
+              <p class="question">How can architecture support a deliberate withdrawal from distraction and a return to creative work?</p>
+              <p class="question">What sequence of thresholds, light and enclosure helps someone settle into an extended period of focused work?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-21">
             <div class="card-top"><span class="card-id">21</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag make">MAKE</span></span></div>
             <h4>The Individuation Atelier</h4><p class="spaces"><span class="think">Reflection Rooms</span> <span class="plus">+</span> <span class="make">Drawing and Clay Studio</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Introspection">Introspection</span></li><li><span class="process-token think" aria-label="THINK: Individuation">Individuation</span></li><li><span class="process-token make" aria-label="MAKE: Drawing">Drawing</span></li><li><span class="process-token make" aria-label="MAKE: Sculpting">Sculpting</span></li></ul>
             <p class="description">A space for introspection, dream journaling, drawing, clay work and symbolic exploration. Participants move between private reflection and creative practice, choosing when to encounter others. Individuation is an interpretive theme, without promising a psychological outcome.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare N, separate rooms for reflection and making, with M, rooms gathered around a shared courtyard. Mark personal storage, places to work alone, optional meeting points and the separation of clay work from journals.</p></div>
-            <p class="question">How can architecture offer solitude, personal territory and optional encounters with others?</p>
+            <div class="questions">
+              <p class="question">How can architecture offer solitude, personal territory and optional encounters with others?</p>
+              <p class="question">How can light, scale and material offer different settings for reflection without prescribing a particular experience?</p>
+            </div>
           </article>
         </div>
       </section>
@@ -478,64 +493,80 @@
             <h4>The Reclaimed Materials Exchange</h4><p class="spaces"><span class="make">Reclamation Workshop</span> <span class="plus">+</span> <span class="show">Materials Warehouse and Exchange</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li><li><span class="process-token make" aria-label="MAKE: Transformation">Transformation</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
             <p class="description">A neighbourhood cooperative receives, sorts, stores and repairs salvaged building components. Makers adapt materials for reuse, demonstrate techniques and exchange components with local residents and trades. Define a manageable range of materials for the available space.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare O, a sequence from deliveries through sorting and repair to exchange, with B, a workshop beside a materials warehouse. Separate public browsing from handling routes; test covered storage, dust and loading.</p></div>
-            <p class="question">How can a materials warehouse make reuse accessible while repair and deliveries run smoothly?</p>
+            <div class="questions">
+              <p class="question">How can a materials warehouse make reuse accessible while repair and deliveries run smoothly?</p>
+              <p class="question">How can structure, storage and loading areas accommodate materials whose sizes and quantities change?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-04">
             <div class="card-top"><span class="card-id">04</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Community Growing Exchange</h4><p class="spaces"><span class="make">Greenhouse</span> <span class="plus">+</span> <span class="show">Produce and Seed Exchange</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Growing">Growing</span></li><li><span class="process-token make" aria-label="MAKE: Cultivation">Cultivation</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li><li><span class="process-token show" aria-label="SHOW: Sharing">Sharing</span></li></ul>
             <p class="description">Residents collectively manage growing spaces and exchange produce, seeds and practical knowledge. Members decide what to grow and how to share the harvest; visitors can encounter cultivation and join seasonal activities.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, growing and exchange side by side, with F, interlocking cultivation and demonstration zones. Trace water, shared tool storage, deliveries and public access through changing seasons.</p></div>
-            <p class="question">How can collective growing support participation and a fair exchange of resources?</p>
+            <div class="questions">
+              <p class="question">How can collective growing support participation and a fair exchange of resources?</p>
+              <p class="question">How might the relationship between greenhouse, storage and exchange space change with the seasons?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-09">
             <div class="card-top"><span class="card-id">09</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Community Kitchen</h4><p class="spaces"><span class="make">Shared Kitchen</span> <span class="plus">+</span> <span class="show">Dining and Demonstration Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Preparation">Preparation</span></li><li><span class="process-token make" aria-label="MAKE: Cooking">Cooking</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Sharing">Sharing</span></li></ul>
             <p class="description">Neighbours prepare food together, exchange cooking knowledge and organise shared meals. A community-run programme connects everyday preparation with demonstrations, recipe exchanges and collective dining.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a kitchen beside a dining room, with C, an overlap for supervised cooking demonstrations. Trace ingredients, hot food, washing-up and visitors; test ventilation, cleaning and shared storage.</p></div>
-            <p class="question">How can preparing and sharing food become a collective neighbourhood practice?</p>
+            <div class="questions">
+              <p class="question">How can preparing and sharing food become a collective neighbourhood practice?</p>
+              <p class="question">How can different group sizes use the kitchen and dining space while preparation and washing-up continue?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-10">
             <div class="card-top"><span class="card-id">10</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Play Foundry</h4><p class="spaces"><span class="make">Toy and Game Workshop</span> <span class="plus">+</span> <span class="show">Play and Testing Space</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Prototyping">Prototyping</span></li><li><span class="process-token make" aria-label="MAKE: Playing">Playing</span></li><li><span class="process-token show" aria-label="SHOW: Participation">Participation</span></li><li><span class="process-token show" aria-label="SHOW: Interaction">Interaction</span></li></ul>
             <p class="description">Makers, children and families develop toys and games that others test through play. Watching, discussing and trying the work helps participants improve the next version; a community programme gives users a role in deciding what gets made.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare G, a main play space connected to protected making rooms, with C, an overlap for supervised testing. Mark tool safety, sightlines, storage and how toys move through the building.</p></div>
-            <p class="question">How can play become feedback for making?</p>
+            <div class="questions">
+              <p class="question">How can play become feedback for making?</p>
+              <p class="question">How can sightlines and thresholds let children explore freely while keeping tools and active making areas protected?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-11">
             <div class="card-top"><span class="card-id">11</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Textile Repair Cooperative</h4><p class="spaces"><span class="make">Shared Sewing Workshop</span> <span class="plus">+</span> <span class="show">Mending and Demonstration Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Sewing">Sewing</span></li><li><span class="process-token make" aria-label="MAKE: Repair">Repair</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
             <p class="description">Members share sewing machines, cutting tables and materials to alter, repair and make clothes. Open mending sessions and demonstrations allow neighbours to exchange skills, while fittings and personal garments have appropriate privacy.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, sewing beside a public mending room, with I, both linked by a shared demonstration table. Mark fabric storage, daylight, machine noise and private fitting space.</p></div>
-            <p class="question">How can shared equipment and teaching make garment repair part of everyday community life?</p>
+            <div class="questions">
+              <p class="question">How can shared equipment and teaching make garment repair part of everyday community life?</p>
+              <p class="question">Where can newcomers learn beside experienced makers while fittings and personal garments remain private?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-17">
             <div class="card-top"><span class="card-id">17</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Record Workshop and Listening Lounge</h4><p class="spaces"><span class="make">Record and Sleeve Workshop</span> <span class="plus">+</span> <span class="show">Listening Lounge</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Production">Production</span></li><li><span class="process-token make" aria-label="MAKE: Printing">Printing</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li><li><span class="process-token show" aria-label="SHOW: Exchange">Exchange</span></li></ul>
             <p class="description">Independent musicians, record makers and sleeve designers develop small editions and share finished records through listening sessions and exchanges. Define a small-scale record-making process suited to the building, with shared equipment and space to discuss the work.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a workshop beside a listening lounge, with O, a sequence from making and sleeve preparation to shared listening. Test vibration, acoustic separation, equipment access and record storage.</p></div>
-            <p class="question">How can making a physical record connect with the social experience of listening?</p>
+            <div class="questions">
+              <p class="question">How can making a physical record connect with the social experience of listening?</p>
+              <p class="question">What degree of acoustic and visual connection lets visitors encounter record making without interrupting it?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-22">
             <div class="card-top"><span class="card-id">22</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Community Music Studio</h4><p class="spaces"><span class="make">Rehearsal and Recording Rooms</span> <span class="plus">+</span> <span class="show">Live Session Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Composing">Composing</span></li><li><span class="process-token make" aria-label="MAKE: Production">Production</span></li><li><span class="process-token show" aria-label="SHOW: Performance">Performance</span></li><li><span class="process-token show" aria-label="SHOW: Broadcast">Broadcast</span></li></ul>
             <p class="description">Local musicians share rehearsal and music-production facilities, book recording sessions and develop work together. Releases and intimate live sessions give the music an audience; members help programme sessions and allocate access to equipment.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, acoustically separated recording and live rooms, with K, a rehearsal room used for scheduled public sessions. Trace instruments, performers and audiences; test communication between rooms and quiet servicing.</p></div>
-            <p class="question">How can private rehearsal and recording connect with sharing music with an audience?</p>
+            <div class="questions">
+              <p class="question">How can private rehearsal and recording connect with sharing music with an audience?</p>
+              <p class="question">How can musicians communicate between rehearsal, recording and control spaces while each room retains acoustic separation?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-23">
             <div class="card-top"><span class="card-id">23</span><span class="mode-pair"><span class="mode-tag make">MAKE</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Trades and Guild House</h4><p class="spaces"><span class="make">Shared Trade Workshops</span> <span class="plus">+</span> <span class="show">Demonstration and Teaching Hall</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token make" aria-label="MAKE: Craft">Craft</span></li><li><span class="process-token make" aria-label="MAKE: Construction">Construction</span></li><li><span class="process-token show" aria-label="SHOW: Demonstration">Demonstration</span></li><li><span class="process-token show" aria-label="SHOW: Education">Education</span></li></ul>
             <p class="description">A defined group of local trades shares workshops, tools and material stores. Experienced practitioners and apprentices work together, demonstrate techniques and exchange skills. Members agree how benches, equipment and teaching time are allocated.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare G, protected workshops connected to a teaching hall, with C, an overlap for supervised demonstrations. Choose compatible trades; mark extraction, noise, material handling and learner access.</p></div>
-            <p class="question">How can a shared workplace pass on practical knowledge between generations of tradespeople?</p>
+            <div class="questions">
+              <p class="question">How can a shared workplace pass on practical knowledge between generations of tradespeople?</p>
+              <p class="question">What should be shared between trades, and what needs its own space for tools, materials and safe working?</p>
+            </div>
           </article>
         </div>
       </section>
@@ -548,64 +579,80 @@
             <h4>The Co-working Commons</h4><p class="spaces"><span class="think">Laptop Workspace and Meeting Rooms</span> <span class="plus">+</span> <span class="show">Event and Exchange Space</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Networking">Networking</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
             <p class="description">Freelancers, remote workers, students and small teams arrive with laptops to use shared desks, quiet work areas and bookable meeting rooms. A communal kitchen, informal encounters, talks and networking events connect independent work with exchange. Define who operates the space and how people book and access it.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, focused work beside meeting and event rooms, with K, a shared room used for daytime work and evening events. Mark power, calls, kitchen noise, secure storage and event access after working hours.</p></div>
-            <p class="question">How can a shared laptop workspace protect concentration while supporting meetings, everyday encounters and events?</p>
+            <div class="questions">
+              <p class="question">How can a shared laptop workspace protect concentration while supporting meetings, everyday encounters and events?</p>
+              <p class="question">How can meeting rooms and event spaces remain accessible after desk areas have closed?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-05">
             <div class="card-top"><span class="card-id">05</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Neighbourhood Assembly</h4><p class="spaces"><span class="think">Community Research Studio</span> <span class="plus">+</span> <span class="show">Assembly and Consultation Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Debate">Debate</span></li><li><span class="process-token show" aria-label="SHOW: Participation">Participation</span></li></ul>
             <p class="description">Residents investigate local issues, develop proposals and debate decisions with planners and facilitators. The community helps direct research, set meeting agendas and decide how proposals develop; focused preparation supports collective discussion.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a research studio beside an assembly room, with C, a shared area for reviewing proposals. Mark public access, confidential work, drawing displays and storage between meetings.</p></div>
-            <p class="question">How can residents shape decisions while having space to investigate and prepare proposals?</p>
+            <div class="questions">
+              <p class="question">How can residents shape decisions while having space to investigate and prepare proposals?</p>
+              <p class="question">What spatial arrangements give quieter voices an equal opportunity to take part in an assembly?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-12">
             <div class="card-top"><span class="card-id">12</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Night Study Commons</h4><p class="spaces"><span class="think">Quiet Evening Study Room</span> <span class="plus">+</span> <span class="show">Peer Teaching and Discussion Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Study">Study</span></li><li><span class="process-token think" aria-label="THINK: Concentration">Concentration</span></li><li><span class="process-token show" aria-label="SHOW: Teaching">Teaching</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
             <p class="description">Students, shift workers and neighbours use an evening workspace for individual study, peer teaching and small discussion sessions. Shared learning resources and a clear booking arrangement support people whose working hours differ.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, quiet study beside a discussion room, with K, a room used for study and scheduled peer teaching. Test arrival after dark, independent access, task lighting and acoustic separation.</p></div>
-            <p class="question">How can a welcoming evening workspace support both sustained study and learning from others?</p>
+            <div class="questions">
+              <p class="question">How can a welcoming evening workspace support both sustained study and learning from others?</p>
+              <p class="question">How can entrances, lighting and circulation make arriving and leaving after dark feel clear and welcoming?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-13">
             <div class="card-top"><span class="card-id">13</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Community Radio House</h4><p class="spaces"><span class="think">Research and Interview Studio</span> <span class="plus">+</span> <span class="show">Recording and Broadcasting Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Investigation">Investigation</span></li><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token show" aria-label="SHOW: Broadcast">Broadcast</span></li><li><span class="process-token show" aria-label="SHOW: Communication">Communication</span></li></ul>
             <p class="description">Residents research local questions, prepare interviews and share oral histories through podcasts and radio. Contributors help set the editorial programme and have access to recording facilities; the emphasis is investigation and communication.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare A, an acoustically enclosed broadcasting room within a research studio, with B, adjacent preparation and recording rooms. Mark confidential interviews, sound isolation and contributor access.</p></div>
-            <p class="question">How can community research become a programme that neighbours help shape and hear?</p>
+            <div class="questions">
+              <p class="question">How can community research become a programme that neighbours help shape and hear?</p>
+              <p class="question">How can contributors move between preparation and broadcasting without interrupting a recording in progress?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-14">
             <div class="card-top"><span class="card-id">14</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Community Cinema</h4><p class="spaces"><span class="think">Film Research and Programming Room</span> <span class="plus">+</span> <span class="show">Small Cinema</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Planning">Planning</span></li><li><span class="process-token show" aria-label="SHOW: Screening">Screening</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
             <p class="description">A member-run cinema researches films and develops a programme for local audiences. Introductions, screenings and discussions connect preparation with public exchange; members help select themes and organise events.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, a programming room beside a small cinema, with K, a screening room used for private previews by day and public events in the evening. Test blackout, acoustics, equipment and audience arrival.</p></div>
-            <p class="question">How can a shared film programme connect focused research with a neighbourhood gathering?</p>
+            <div class="questions">
+              <p class="question">How can a shared film programme connect focused research with a neighbourhood gathering?</p>
+              <p class="question">How can the journey from street to screening room create a sense of gathering while accommodating late arrivals?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-15">
             <div class="card-top"><span class="card-id">15</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Writers’ Commons</h4><p class="spaces"><span class="think">Quiet Writing Rooms</span> <span class="plus">+</span> <span class="show">Editorial and Reading Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Research">Research</span></li><li><span class="process-token think" aria-label="THINK: Reflection">Reflection</span></li><li><span class="process-token show" aria-label="SHOW: Critique">Critique</span></li><li><span class="process-token show" aria-label="SHOW: Presentation">Presentation</span></li></ul>
             <p class="description">Writers share affordable workspace for research and sustained individual writing. Editorial circles, peer feedback and optional public readings create opportunities for exchange while participants retain control over when they share unfinished work.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare D, quiet writing rooms separated from a reading space, with P, individual writing rooms around a shared editorial room. Mark sound, personal storage, daylight and visitor access.</p></div>
-            <p class="question">How can writers protect time for concentration and choose when to share their work?</p>
+            <div class="questions">
+              <p class="question">How can writers protect time for concentration and choose when to share their work?</p>
+              <p class="question">What balance of individual rooms and shared tables would accommodate different writing routines?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-18">
             <div class="card-top"><span class="card-id">18</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Living Community Archive</h4><p class="spaces"><span class="think">Archive Study</span> <span class="plus">+</span> <span class="show">Exhibition and Conversation Room</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Investigation">Investigation</span></li><li><span class="process-token think" aria-label="THINK: Interpretation">Interpretation</span></li><li><span class="process-token show" aria-label="SHOW: Display">Display</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
             <p class="description">Residents collect, research and interpret neighbourhood documents, photographs and oral histories. Contributors help decide what becomes public through small exhibitions and conversations, while protected study and storage support careful investigation.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare B, archive study beside an exhibition room, with C, an overlap for interpretation and dialogue. Test document care, daylight, consent, private material and public access.</p></div>
-            <p class="question">How can a community investigate its history and decide how that history is shared?</p>
+            <div class="questions">
+              <p class="question">How can a community investigate its history and decide how that history is shared?</p>
+              <p class="question">Where can sensitive material be studied and stored while selected stories remain open to public discussion?</p>
+            </div>
           </article>
           <article class="archetype" id="archetype-24">
             <div class="card-top"><span class="card-id">24</span><span class="mode-pair"><span class="mode-tag think">THINK</span> + <span class="mode-tag show">SHOW</span></span></div>
             <h4>The Community Therapy House</h4><p class="spaces"><span class="think">Private Reflection Rooms</span> <span class="plus">+</span> <span class="show">Counselling and Small Group Rooms</span></p>
             <ul class="example-processes" aria-label="Processes in this example"><li><span class="process-token think" aria-label="THINK: Reflection">Reflection</span></li><li><span class="process-token think" aria-label="THINK: Introspection">Introspection</span></li><li><span class="process-token show" aria-label="SHOW: Expression">Expression</span></li><li><span class="process-token show" aria-label="SHOW: Dialogue">Dialogue</span></li></ul>
             <p class="description">Counsellors, facilitators and participants use private rooms for reflective practice, counselling conversations and small support groups. SHOW here means voluntary expression and dialogue. Participants choose what to share and whether to join others.</p>
-            <div class="sketch-prompt"><strong>Try in a sketch</strong><p>Compare D, separate reflection and conversation rooms, with O, a sequence offering choices between private and shared spaces. Test acoustic privacy, discreet arrival, waiting and routes that allow people to withdraw.</p></div>
-            <p class="question">How can architecture support private conversation and a choice between solitude and company?</p>
+            <div class="questions">
+              <p class="question">How can architecture support private conversation and a choice between solitude and company?</p>
+              <p class="question">How can arrival, waiting and departure protect a participant’s privacy and control over meeting others?</p>
+            </div>
           </article>
         </div>
       </section>

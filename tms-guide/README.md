@@ -5,7 +5,7 @@ Published at https://studio.salford-lab.xyz/tms-guide/.
 The self-contained `index.html` includes sixteen spatial strategies, 24 examples
 (eight per mode pair), mode-pair filters, process vocabulary and a print layout.
 The examples explore community work, shared resources, creative production and
-concentration, with suggested spaces, sketch comparisons and architectural questions.
+concentration, with suggested spaces and two leading architectural questions per example.
 
 Open the HTML file in a modern browser; no build step or installation is required.
 Without JavaScript, all examples and the THINK + MAKE strategies remain visible.
