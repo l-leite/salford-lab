@@ -1,13 +1,16 @@
-# Think, Make, Show — portable guide
+# Think, Make, Show — Modes of work
 
-Open `index.html` in any modern browser.
+Published at https://studio.salford-lab.xyz/tms-guide/.
 
-Move or copy this entire `tms-guide` folder wherever you need it. No installation, internet connection, build step or web server is required. Styles, scripts and diagrams are included in the HTML file.
+The self-contained `index.html` includes sixteen spatial strategies, 24 examples
+(eight per mode pair), mode-pair filters, process vocabulary and a print layout.
+The examples explore community work, shared resources, creative production and
+concentration, with suggested spaces, sketch comparisons and architectural questions.
 
-Files:
-- `index.html` — the complete student guide, with all 15 examples, filters and print layout.
-- `think_make_show_archetypes_codex_handoff.md` — the reference document linked from the guide.
+Open the HTML file in a modern browser; no build step or installation is required.
+Without JavaScript, all examples and the THINK + MAKE strategies remain visible.
+The Print guide button prints all 24 examples, including when a filter is selected.
+The header and footer link to the studio index when hosted in this repository.
 
-For web hosting, upload the folder contents together. Keep the reference document alongside `index.html` so its relative link continues to work.
-
-The Print guide button prints all 15 examples, even when a filter is selected.
+`think_make_show_archetypes_codex_handoff.md` is an earlier working reference;
+its example list predates this revision. Use the current guide and assessment brief.
