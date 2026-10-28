@@ -52,18 +52,32 @@ if ($Name -or $From) {
 }
 
 # --- rebuild landing page ------------------------------------------------
+# Keep the dates and descriptive labels already displayed on the landing page.
+$existing = @{}
+$indexPath = Join-Path $PSScriptRoot 'index.html'
+if (Test-Path $indexPath) {
+    $indexHtml = Get-Content $indexPath -Raw
+    foreach ($match in [regex]::Matches($indexHtml, '(?s)<li><a href="([^"/]+)/">.*?<span class="u">(.*?)</span>.*?<time datetime="(\d{4}-\d{2}-\d{2})"')) {
+        $existing[$match.Groups[1].Value] = @{ Label = $match.Groups[2].Value; Date = $match.Groups[3].Value }
+    }
+}
 $items = Get-ChildItem -Directory | Where-Object { $_.Name -notmatch '^[._]' -and (Test-Path (Join-Path $_.FullName 'index.html')) } | ForEach-Object {
     $h = Get-Content (Join-Path $_.FullName 'index.html') -Raw
     $t = if ($h -match '(?is)<title>\s*(.*?)\s*</title>') { $Matches[1] } else { $_.Name }
+    $isDS2A = $_.Name -in @('precedents', 'tms-guide') -or $t -match '(?i)\b(?:DS2A|Design Studio 2A)\b'
+    $t = $t -replace '(?i)\b(?:DS2A|Design Studio 2A)\b\s*(?:—|–|-|:)?\s*', '' -replace '\s+—\s+', ': '
     # published date = commit that first added the page; today if not yet committed
     $first = git log --diff-filter=A --format=%aI --reverse -- "$($_.Name)/index.html" 2>$null | Select-Object -First 1
     $d = if ($first) { [datetime]::Parse($first, [cultureinfo]::InvariantCulture) } else { Get-Date }
-    [pscustomobject]@{ Name = $_.Name; Title = $t; Date = $d }
+    if ($existing.ContainsKey($_.Name)) { $d = [datetime]::ParseExact($existing[$_.Name].Date, 'yyyy-MM-dd', [cultureinfo]::InvariantCulture) }
+    $label = if ($existing.ContainsKey($_.Name)) { $existing[$_.Name].Label } else { '/'+$_.Name }
+    [pscustomobject]@{ Name = $_.Name; Title = $t; Date = $d; Label = $label; IsDS2A = $isDS2A }
 } | Sort-Object Date -Descending
 
 $links = ($items | ForEach-Object {
     $when = $_.Date.ToString('d MMM yyyy', [cultureinfo]::InvariantCulture)
-    "      <li><a href=`"$($_.Name)/`"><span class=`"main`"><span class=`"t`">$($_.Title)</span><span class=`"u`">/$($_.Name)</span></span><time datetime=`"$($_.Date.ToString('yyyy-MM-dd'))`">$when</time></a></li>"
+    $tag = if ($_.IsDS2A) { ' <span class=`"tag`">DS2A</span>' -replace '`"', '"' } else { '' }
+    "      <li><a href=`"$($_.Name)/`"><span class=`"main`"><span class=`"t`">$($_.Title)$tag</span><span class=`"u`">$($_.Label)</span></span><time datetime=`"$($_.Date.ToString('yyyy-MM-dd'))`">$when</time></a></li>"
 }) -join "`n"
 
 @"
@@ -86,6 +100,7 @@ $links = ($items | ForEach-Object {
   a { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:1rem 0; color:inherit; text-decoration:none; }
   a:hover .t { color:var(--accent); }
   .main { display:flex; flex-direction:column; min-width:0; }
+  .tag { display:inline-block; margin-left:.5rem; padding:.05rem .4rem; border:1px solid var(--line); border-radius:.3rem; color:var(--muted); font-size:.7rem; vertical-align:middle; white-space:nowrap; }
   .u { color:var(--muted); font-size:.85rem; font-family:ui-monospace,Consolas,monospace; }
   time { color:var(--muted); font-size:.9rem; white-space:nowrap; font-variant-numeric:tabular-nums; }
 </style>
